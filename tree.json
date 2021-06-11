@@ -1,0 +1,3401 @@
+{
+	"name": "megaCEO",
+	 "children": [
+	{
+    "name": "2016-2017",
+   "children": [
+      {
+        "name": "landFill",
+       "children": [
+          {
+            "Reference_Year": "2016-2017",
+            "name": "North East",
+            "Type": "landFill",
+            "value": "19209.28"
+          },
+          {
+            "Reference_Year": "2016-2017",
+            "name": "Goulburn Valley",
+            "Type": "landFill",
+            "value": "38970.3799"
+          },
+          {
+            "Reference_Year": "2016-2017",
+            "name": "Gippsland",
+            "Type": "landFill",
+            "value": "52006.5903"
+          },
+          {
+            "Reference_Year": "2016-2017",
+            "name": "Grampians Central West",
+            "Type": "landFill",
+            "value": "53731.01"
+          },
+          {
+            "Reference_Year": "2016-2017",
+            "name": "Loddon Mallee",
+            "Type": "landFill",
+            "value": "59729.8898"
+          },
+          {
+            "Reference_Year": "2016-2017",
+            "name": "Barwon South West",
+            "Type": "landFill",
+            "value": "75247.6"
+          },
+          {
+            "Reference_Year": "2016-2017",
+            "name": "Metropolitan",
+            "Type": "landFill",
+            "value": "877806.17"
+          }
+        ]
+      },
+      {
+        "name": "recyclingProcessed",
+       "children": [
+          {
+            "Reference_Year": "2016-2017",
+            "name": "North East",
+            "Type": "recyclingProcessed",
+            "value": "14072.69"
+          },
+          {
+            "Reference_Year": "2016-2017",
+            "name": "Goulburn Valley",
+            "Type": "recyclingProcessed",
+            "value": "20024.0199"
+          },
+          {
+            "Reference_Year": "2016-2017",
+            "name": "Grampians Central West",
+            "Type": "recyclingProcessed",
+            "value": "22854.8869"
+          },
+          {
+            "Reference_Year": "2016-2017",
+            "name": "Loddon Mallee",
+            "Type": "recyclingProcessed",
+            "value": "23509.9802"
+          },
+          {
+            "Reference_Year": "2016-2017",
+            "name": "Gippsland",
+            "Type": "recyclingProcessed",
+            "value": "24743.3801"
+          },
+          {
+            "Reference_Year": "2016-2017",
+            "name": "Barwon South West",
+            "Type": "recyclingProcessed",
+            "value": "43306.69"
+          },
+          {
+            "Reference_Year": "2016-2017",
+            "name": "Metropolitan",
+            "Type": "recyclingProcessed",
+            "value": "403825.0913"
+          }
+        ]
+      },
+      {
+        "name": "gardenProcessed",
+       "children": [
+          {
+            "Reference_Year": "2016-2017",
+            "name": "Grampians Central West",
+            "Type": "gardenProcessed",
+            "value": "10121.4"
+          },
+          {
+            "Reference_Year": "2016-2017",
+            "name": "Loddon Mallee",
+            "Type": "gardenProcessed",
+            "value": "13246.5"
+          },
+          {
+            "Reference_Year": "2016-2017",
+            "name": "Goulburn Valley",
+            "Type": "gardenProcessed",
+            "value": "13874"
+          },
+          {
+            "Reference_Year": "2016-2017",
+            "name": "North East",
+            "Type": "gardenProcessed",
+            "value": "15688.6"
+          },
+          {
+            "Reference_Year": "2016-2017",
+            "name": "Gippsland",
+            "Type": "gardenProcessed",
+            "value": "21309.5601"
+          },
+          {
+            "Reference_Year": "2016-2017",
+            "name": "Barwon South West",
+            "Type": "gardenProcessed",
+            "value": "44620.84"
+          },
+          {
+            "Reference_Year": "2016-2017",
+            "name": "Metropolitan",
+            "Type": "gardenProcessed",
+            "value": "343738.3792"
+          }
+        ]
+      },
+      {
+        "name": "Wastage",
+       "children": [
+          {
+            "Reference_Year": "2016-2017",
+            "name": "Barwon South West",
+            "Type": "Wastage",
+            "value": "620.89"
+          },
+          {
+            "Reference_Year": "2016-2017",
+            "name": "Goulburn Valley",
+            "Type": "Wastage",
+            "value": "744.6701"
+          },
+          {
+            "Reference_Year": "2016-2017",
+            "name": "North East",
+            "Type": "Wastage",
+            "value": "940.11"
+          },
+          {
+            "Reference_Year": "2016-2017",
+            "name": "Gippsland",
+            "Type": "Wastage",
+            "value": "2168.5901"
+          },
+          {
+            "Reference_Year": "2016-2017",
+            "name": "Grampians Central West",
+            "Type": "Wastage",
+            "value": "2437.5231"
+          },
+          {
+            "Reference_Year": "2016-2017",
+            "name": "Loddon Mallee",
+            "Type": "Wastage",
+            "value": "2939.8396"
+          },
+          {
+            "Reference_Year": "2016-2017",
+            "name": "Metropolitan",
+            "Type": "Wastage",
+            "value": "29556.3995"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "2015-2016",
+   "children": [
+      {
+        "name": "landFill",
+       "children": [
+          {
+            "Reference_Year": "2015-2016",
+            "name": "North East",
+            "Type": "landFill",
+            "value": "19403.7902"
+          },
+          {
+            "Reference_Year": "2015-2016",
+            "name": "Goulburn Valley",
+            "Type": "landFill",
+            "value": "40670.0005"
+          },
+          {
+            "Reference_Year": "2015-2016",
+            "name": "Gippsland",
+            "Type": "landFill",
+            "value": "50867.4199"
+          },
+          {
+            "Reference_Year": "2015-2016",
+            "name": "Grampians Central West",
+            "Type": "landFill",
+            "value": "53961.8204"
+          },
+          {
+            "Reference_Year": "2015-2016",
+            "name": "Loddon Mallee",
+            "Type": "landFill",
+            "value": "62528.04"
+          },
+          {
+            "Reference_Year": "2015-2016",
+            "name": "Barwon South West",
+            "Type": "landFill",
+            "value": "72331.6299"
+          },
+          {
+            "Reference_Year": "2015-2016",
+            "name": "Metropolitan",
+            "Type": "landFill",
+            "value": "860554.5103"
+          }
+        ]
+      },
+      {
+        "name": "recyclingProcessed",
+       "children": [
+          {
+            "Reference_Year": "2015-2016",
+            "name": "North East",
+            "Type": "recyclingProcessed",
+            "value": "13663.6899"
+          },
+          {
+            "Reference_Year": "2015-2016",
+            "name": "Goulburn Valley",
+            "Type": "recyclingProcessed",
+            "value": "20177.6398"
+          },
+          {
+            "Reference_Year": "2015-2016",
+            "name": "Loddon Mallee",
+            "Type": "recyclingProcessed",
+            "value": "23991.4003"
+          },
+          {
+            "Reference_Year": "2015-2016",
+            "name": "Gippsland",
+            "Type": "recyclingProcessed",
+            "value": "24340.3098"
+          },
+          {
+            "Reference_Year": "2015-2016",
+            "name": "Grampians Central West",
+            "Type": "recyclingProcessed",
+            "value": "24348.3197"
+          },
+          {
+            "Reference_Year": "2015-2016",
+            "name": "Barwon South West",
+            "Type": "recyclingProcessed",
+            "value": "43743.7461"
+          },
+          {
+            "Reference_Year": "2015-2016",
+            "name": "Metropolitan",
+            "Type": "recyclingProcessed",
+            "value": "408707.0216"
+          }
+        ]
+      },
+      {
+        "name": "gardenProcessed",
+       "children": [
+          {
+            "Reference_Year": "2015-2016",
+            "name": "Grampians Central West",
+            "Type": "gardenProcessed",
+            "value": "384"
+          },
+          {
+            "Reference_Year": "2015-2016",
+            "name": "Loddon Mallee",
+            "Type": "gardenProcessed",
+            "value": "3111.5"
+          },
+          {
+            "Reference_Year": "2015-2016",
+            "name": "Goulburn Valley",
+            "Type": "gardenProcessed",
+            "value": "13828.9004"
+          },
+          {
+            "Reference_Year": "2015-2016",
+            "name": "North East",
+            "Type": "gardenProcessed",
+            "value": "13866.2302"
+          },
+          {
+            "Reference_Year": "2015-2016",
+            "name": "Gippsland",
+            "Type": "gardenProcessed",
+            "value": "18922.54"
+          },
+          {
+            "Reference_Year": "2015-2016",
+            "name": "Barwon South West",
+            "Type": "gardenProcessed",
+            "value": "38366.7"
+          },
+          {
+            "Reference_Year": "2015-2016",
+            "name": "Metropolitan",
+            "Type": "gardenProcessed",
+            "value": "302465.18"
+          }
+        ]
+      },
+      {
+        "name": "Wastage",
+       "children": [
+          {
+            "Reference_Year": "2015-2016",
+            "name": "Goulburn Valley",
+            "Type": "Wastage",
+            "value": "138.6"
+          },
+          {
+            "Reference_Year": "2015-2016",
+            "name": "Barwon South West",
+            "Type": "Wastage",
+            "value": "299.194"
+          },
+          {
+            "Reference_Year": "2015-2016",
+            "name": "North East",
+            "Type": "Wastage",
+            "value": "699.0001"
+          },
+          {
+            "Reference_Year": "2015-2016",
+            "name": "Grampians Central West",
+            "Type": "Wastage",
+            "value": "1125.0801"
+          },
+          {
+            "Reference_Year": "2015-2016",
+            "name": "Loddon Mallee",
+            "Type": "Wastage",
+            "value": "1518.1097"
+          },
+          {
+            "Reference_Year": "2015-2016",
+            "name": "Gippsland",
+            "Type": "Wastage",
+            "value": "1631.0198"
+          },
+          {
+            "Reference_Year": "2015-2016",
+            "name": "Metropolitan",
+            "Type": "Wastage",
+            "value": "28850.4903"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "2017-2018",
+   "children": [
+      {
+        "name": "landFill",
+       "children": [
+          {
+            "Reference_Year": "2017-2018",
+            "name": "North East",
+            "Type": "landFill",
+            "value": "19764.8203"
+          },
+          {
+            "Reference_Year": "2017-2018",
+            "name": "Goulburn Valley",
+            "Type": "landFill",
+            "value": "37733.5596"
+          },
+          {
+            "Reference_Year": "2017-2018",
+            "name": "Gippsland",
+            "Type": "landFill",
+            "value": "48338.7701"
+          },
+          {
+            "Reference_Year": "2017-2018",
+            "name": "Grampians Central West",
+            "Type": "landFill",
+            "value": "52442.4795"
+          },
+          {
+            "Reference_Year": "2017-2018",
+            "name": "Loddon Mallee",
+            "Type": "landFill",
+            "value": "59096.3399"
+          },
+          {
+            "Reference_Year": "2017-2018",
+            "name": "Barwon South West",
+            "Type": "landFill",
+            "value": "77400.4102"
+          },
+          {
+            "Reference_Year": "2017-2018",
+            "name": "Metropolitan",
+            "Type": "landFill",
+            "value": "885954.1895"
+          }
+        ]
+      },
+      {
+        "name": "recyclingProcessed",
+       "children": [
+          {
+            "Reference_Year": "2017-2018",
+            "name": "North East",
+            "Type": "recyclingProcessed",
+            "value": "12760.74"
+          },
+          {
+            "Reference_Year": "2017-2018",
+            "name": "Goulburn Valley",
+            "Type": "recyclingProcessed",
+            "value": "17840.0903"
+          },
+          {
+            "Reference_Year": "2017-2018",
+            "name": "Grampians Central West",
+            "Type": "recyclingProcessed",
+            "value": "22168.5504"
+          },
+          {
+            "Reference_Year": "2017-2018",
+            "name": "Gippsland",
+            "Type": "recyclingProcessed",
+            "value": "23806.1397"
+          },
+          {
+            "Reference_Year": "2017-2018",
+            "name": "Loddon Mallee",
+            "Type": "recyclingProcessed",
+            "value": "24769.26"
+          },
+          {
+            "Reference_Year": "2017-2018",
+            "name": "Barwon South West",
+            "Type": "recyclingProcessed",
+            "value": "40286.47"
+          },
+          {
+            "Reference_Year": "2017-2018",
+            "name": "Metropolitan",
+            "Type": "recyclingProcessed",
+            "value": "380055.4607"
+          }
+        ]
+      },
+      {
+        "name": "gardenProcessed",
+       "children": [
+          {
+            "Reference_Year": "2017-2018",
+            "name": "Grampians Central West",
+            "Type": "gardenProcessed",
+            "value": "9857.2596"
+          },
+          {
+            "Reference_Year": "2017-2018",
+            "name": "Goulburn Valley",
+            "Type": "gardenProcessed",
+            "value": "12456.5898"
+          },
+          {
+            "Reference_Year": "2017-2018",
+            "name": "Loddon Mallee",
+            "Type": "gardenProcessed",
+            "value": "13896.8"
+          },
+          {
+            "Reference_Year": "2017-2018",
+            "name": "North East",
+            "Type": "gardenProcessed",
+            "value": "14867.9199"
+          },
+          {
+            "Reference_Year": "2017-2018",
+            "name": "Gippsland",
+            "Type": "gardenProcessed",
+            "value": "28269.1502"
+          },
+          {
+            "Reference_Year": "2017-2018",
+            "name": "Barwon South West",
+            "Type": "gardenProcessed",
+            "value": "43585.6702"
+          },
+          {
+            "Reference_Year": "2017-2018",
+            "name": "Metropolitan",
+            "Type": "gardenProcessed",
+            "value": "329067.5305"
+          }
+        ]
+      },
+      {
+        "name": "Wastage",
+       "children": [
+          {
+            "Reference_Year": "2017-2018",
+            "name": "North East",
+            "Type": "Wastage",
+            "value": "1498.2701"
+          },
+          {
+            "Reference_Year": "2017-2018",
+            "name": "Goulburn Valley",
+            "Type": "Wastage",
+            "value": "2026.9899"
+          },
+          {
+            "Reference_Year": "2017-2018",
+            "name": "Gippsland",
+            "Type": "Wastage",
+            "value": "2096.7902"
+          },
+          {
+            "Reference_Year": "2017-2018",
+            "name": "Grampians Central West",
+            "Type": "Wastage",
+            "value": "2800.19"
+          },
+          {
+            "Reference_Year": "2017-2018",
+            "name": "Loddon Mallee",
+            "Type": "Wastage",
+            "value": "3385.2797"
+          },
+          {
+            "Reference_Year": "2017-2018",
+            "name": "Barwon South West",
+            "Type": "Wastage",
+            "value": "3976.6102"
+          },
+          {
+            "Reference_Year": "2017-2018",
+            "name": "Metropolitan",
+            "Type": "Wastage",
+            "value": "45111.2794"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "2018-2019",
+   "children": [
+      {
+        "name": "landFill",
+       "children": [
+          {
+            "Reference_Year": "2018-2019",
+            "name": "North East",
+            "Type": "landFill",
+            "value": "20204.5799"
+          },
+          {
+            "Reference_Year": "2018-2019",
+            "name": "Goulburn Valley",
+            "Type": "landFill",
+            "value": "37130.4503"
+          },
+          {
+            "Reference_Year": "2018-2019",
+            "name": "Gippsland",
+            "Type": "landFill",
+            "value": "46894.3203"
+          },
+          {
+            "Reference_Year": "2018-2019",
+            "name": "Grampians Central West",
+            "Type": "landFill",
+            "value": "54791.2098"
+          },
+          {
+            "Reference_Year": "2018-2019",
+            "name": "Loddon Mallee",
+            "Type": "landFill",
+            "value": "57132.5796"
+          },
+          {
+            "Reference_Year": "2018-2019",
+            "name": "Barwon South West",
+            "Type": "landFill",
+            "value": "73478.8203"
+          },
+          {
+            "Reference_Year": "2018-2019",
+            "name": "Metropolitan",
+            "Type": "landFill",
+            "value": "891073.2403"
+          }
+        ]
+      },
+      {
+        "name": "recyclingProcessed",
+       "children": [
+          {
+            "Reference_Year": "2018-2019",
+            "name": "North East",
+            "Type": "recyclingProcessed",
+            "value": "12291.9699"
+          },
+          {
+            "Reference_Year": "2018-2019",
+            "name": "Goulburn Valley",
+            "Type": "recyclingProcessed",
+            "value": "18169.3599"
+          },
+          {
+            "Reference_Year": "2018-2019",
+            "name": "Grampians Central West",
+            "Type": "recyclingProcessed",
+            "value": "20094.9901"
+          },
+          {
+            "Reference_Year": "2018-2019",
+            "name": "Gippsland",
+            "Type": "recyclingProcessed",
+            "value": "23285.8601"
+          },
+          {
+            "Reference_Year": "2018-2019",
+            "name": "Loddon Mallee",
+            "Type": "recyclingProcessed",
+            "value": "23445.7601"
+          },
+          {
+            "Reference_Year": "2018-2019",
+            "name": "Barwon South West",
+            "Type": "recyclingProcessed",
+            "value": "40084.8506"
+          },
+          {
+            "Reference_Year": "2018-2019",
+            "name": "Metropolitan",
+            "Type": "recyclingProcessed",
+            "value": "368550.939"
+          }
+        ]
+      },
+      {
+        "name": "gardenProcessed",
+       "children": [
+          {
+            "Reference_Year": "2018-2019",
+            "name": "Grampians Central West",
+            "Type": "gardenProcessed",
+            "value": "10191.0197"
+          },
+          {
+            "Reference_Year": "2018-2019",
+            "name": "Goulburn Valley",
+            "Type": "gardenProcessed",
+            "value": "11831.4398"
+          },
+          {
+            "Reference_Year": "2018-2019",
+            "name": "North East",
+            "Type": "gardenProcessed",
+            "value": "13764.16"
+          },
+          {
+            "Reference_Year": "2018-2019",
+            "name": "Loddon Mallee",
+            "Type": "gardenProcessed",
+            "value": "14104.86"
+          },
+          {
+            "Reference_Year": "2018-2019",
+            "name": "Gippsland",
+            "Type": "gardenProcessed",
+            "value": "29202.8401"
+          },
+          {
+            "Reference_Year": "2018-2019",
+            "name": "Barwon South West",
+            "Type": "gardenProcessed",
+            "value": "48222.0701"
+          },
+          {
+            "Reference_Year": "2018-2019",
+            "name": "Metropolitan",
+            "Type": "gardenProcessed",
+            "value": "316100.9098"
+          }
+        ]
+      },
+      {
+        "name": "Wastage",
+       "children": [
+          {
+            "Reference_Year": "2018-2019",
+            "name": "North East",
+            "Type": "Wastage",
+            "value": "1484.2001"
+          },
+          {
+            "Reference_Year": "2018-2019",
+            "name": "Goulburn Valley",
+            "Type": "Wastage",
+            "value": "2442.92"
+          },
+          {
+            "Reference_Year": "2018-2019",
+            "name": "Loddon Mallee",
+            "Type": "Wastage",
+            "value": "2667.4798"
+          },
+          {
+            "Reference_Year": "2018-2019",
+            "name": "Gippsland",
+            "Type": "Wastage",
+            "value": "3181.9597"
+          },
+          {
+            "Reference_Year": "2018-2019",
+            "name": "Grampians Central West",
+            "Type": "Wastage",
+            "value": "3887.24"
+          },
+          {
+            "Reference_Year": "2018-2019",
+            "name": "Barwon South West",
+            "Type": "Wastage",
+            "value": "4304.48"
+          },
+          {
+            "Reference_Year": "2018-2019",
+            "name": "Metropolitan",
+            "Type": "Wastage",
+            "value": "41233.0706"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "2003-2004",
+   "children": [
+      {
+        "name": "landFill",
+       "children": [
+          {
+            "Reference_Year": "2003-2004",
+            "name": "North East",
+            "Type": "landFill",
+            "value": "23685.7998"
+          },
+          {
+            "Reference_Year": "2003-2004",
+            "name": "Goulburn Valley",
+            "Type": "landFill",
+            "value": "45035.75"
+          },
+          {
+            "Reference_Year": "2003-2004",
+            "name": "Grampians Central West",
+            "Type": "landFill",
+            "value": "45335.9599"
+          },
+          {
+            "Reference_Year": "2003-2004",
+            "name": "Barwon South West",
+            "Type": "landFill",
+            "value": "54746.1402"
+          },
+          {
+            "Reference_Year": "2003-2004",
+            "name": "Gippsland",
+            "Type": "landFill",
+            "value": "59109.1709"
+          },
+          {
+            "Reference_Year": "2003-2004",
+            "name": "Loddon Mallee",
+            "Type": "landFill",
+            "value": "63352.75"
+          },
+          {
+            "Reference_Year": "2003-2004",
+            "name": "Metropolitan",
+            "Type": "landFill",
+            "value": "770921.9512"
+          }
+        ]
+      },
+      {
+        "name": "recyclingProcessed",
+       "children": [
+          {
+            "Reference_Year": "2003-2004",
+            "name": "North East",
+            "Type": "recyclingProcessed",
+            "value": "8766.7799"
+          },
+          {
+            "Reference_Year": "2003-2004",
+            "name": "Goulburn Valley",
+            "Type": "recyclingProcessed",
+            "value": "9776.71"
+          },
+          {
+            "Reference_Year": "2003-2004",
+            "name": "Grampians Central West",
+            "Type": "recyclingProcessed",
+            "value": "10909.7499"
+          },
+          {
+            "Reference_Year": "2003-2004",
+            "name": "Gippsland",
+            "Type": "recyclingProcessed",
+            "value": "13584.7301"
+          },
+          {
+            "Reference_Year": "2003-2004",
+            "name": "Loddon Mallee",
+            "Type": "recyclingProcessed",
+            "value": "15544.0899"
+          },
+          {
+            "Reference_Year": "2003-2004",
+            "name": "Barwon South West",
+            "Type": "recyclingProcessed",
+            "value": "30418.8608"
+          },
+          {
+            "Reference_Year": "2003-2004",
+            "name": "Metropolitan",
+            "Type": "recyclingProcessed",
+            "value": "304917.2721"
+          }
+        ]
+      },
+      {
+        "name": "gardenProcessed",
+       "children": [
+          {
+            "Reference_Year": "2003-2004",
+            "name": "Grampians Central West",
+            "Type": "gardenProcessed",
+            "value": "1090"
+          },
+          {
+            "Reference_Year": "2003-2004",
+            "name": "North East",
+            "Type": "gardenProcessed",
+            "value": "1228"
+          },
+          {
+            "Reference_Year": "2003-2004",
+            "name": "Gippsland",
+            "Type": "gardenProcessed",
+            "value": "1312.95"
+          },
+          {
+            "Reference_Year": "2003-2004",
+            "name": "Barwon South West",
+            "Type": "gardenProcessed",
+            "value": "28961.0298"
+          },
+          {
+            "Reference_Year": "2003-2004",
+            "name": "Metropolitan",
+            "Type": "gardenProcessed",
+            "value": "136062.4302"
+          }
+        ]
+      },
+      {
+        "name": "Wastage",
+       "children": [
+          {
+            "Reference_Year": "2003-2004",
+            "name": "Grampians Central West",
+            "Type": "Wastage",
+            "value": "1035.9201"
+          },
+          {
+            "Reference_Year": "2003-2004",
+            "name": "North East",
+            "Type": "Wastage",
+            "value": "1209"
+          },
+          {
+            "Reference_Year": "2003-2004",
+            "name": "Loddon Mallee",
+            "Type": "Wastage",
+            "value": "1548.5401"
+          },
+          {
+            "Reference_Year": "2003-2004",
+            "name": "Goulburn Valley",
+            "Type": "Wastage",
+            "value": "1752.57"
+          },
+          {
+            "Reference_Year": "2003-2004",
+            "name": "Gippsland",
+            "Type": "Wastage",
+            "value": "2148.9098"
+          },
+          {
+            "Reference_Year": "2003-2004",
+            "name": "Barwon South West",
+            "Type": "Wastage",
+            "value": "5219.1096"
+          },
+          {
+            "Reference_Year": "2003-2004",
+            "name": "Metropolitan",
+            "Type": "Wastage",
+            "value": "35020.8396"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "2006-2007",
+   "children": [
+      {
+        "name": "landFill",
+       "children": [
+          {
+            "Reference_Year": "2006-2007",
+            "name": "North East",
+            "Type": "landFill",
+            "value": "23812.9"
+          },
+          {
+            "Reference_Year": "2006-2007",
+            "name": "Goulburn Valley",
+            "Type": "landFill",
+            "value": "36988"
+          },
+          {
+            "Reference_Year": "2006-2007",
+            "name": "Gippsland",
+            "Type": "landFill",
+            "value": "42860.0796"
+          },
+          {
+            "Reference_Year": "2006-2007",
+            "name": "Grampians Central West",
+            "Type": "landFill",
+            "value": "43782.5901"
+          },
+          {
+            "Reference_Year": "2006-2007",
+            "name": "Loddon Mallee",
+            "Type": "landFill",
+            "value": "53463.5098"
+          },
+          {
+            "Reference_Year": "2006-2007",
+            "name": "Barwon South West",
+            "Type": "landFill",
+            "value": "63341.9597"
+          },
+          {
+            "Reference_Year": "2006-2007",
+            "name": "Metropolitan",
+            "Type": "landFill",
+            "value": "735430.1817"
+          }
+        ]
+      },
+      {
+        "name": "recyclingProcessed",
+       "children": [
+          {
+            "Reference_Year": "2006-2007",
+            "name": "North East",
+            "Type": "recyclingProcessed",
+            "value": "10523.2898"
+          },
+          {
+            "Reference_Year": "2006-2007",
+            "name": "Grampians Central West",
+            "Type": "recyclingProcessed",
+            "value": "16050.07"
+          },
+          {
+            "Reference_Year": "2006-2007",
+            "name": "Goulburn Valley",
+            "Type": "recyclingProcessed",
+            "value": "16542.21"
+          },
+          {
+            "Reference_Year": "2006-2007",
+            "name": "Gippsland",
+            "Type": "recyclingProcessed",
+            "value": "19559.89"
+          },
+          {
+            "Reference_Year": "2006-2007",
+            "name": "Loddon Mallee",
+            "Type": "recyclingProcessed",
+            "value": "21082.1801"
+          },
+          {
+            "Reference_Year": "2006-2007",
+            "name": "Barwon South West",
+            "Type": "recyclingProcessed",
+            "value": "37701.2998"
+          },
+          {
+            "Reference_Year": "2006-2007",
+            "name": "Metropolitan",
+            "Type": "recyclingProcessed",
+            "value": "383734.1728"
+          }
+        ]
+      },
+      {
+        "name": "gardenProcessed",
+       "children": [
+          {
+            "Reference_Year": "2006-2007",
+            "name": "Grampians Central West",
+            "Type": "gardenProcessed",
+            "value": "80"
+          },
+          {
+            "Reference_Year": "2006-2007",
+            "name": "North East",
+            "Type": "gardenProcessed",
+            "value": "1851"
+          },
+          {
+            "Reference_Year": "2006-2007",
+            "name": "Goulburn Valley",
+            "Type": "gardenProcessed",
+            "value": "4610"
+          },
+          {
+            "Reference_Year": "2006-2007",
+            "name": "Gippsland",
+            "Type": "gardenProcessed",
+            "value": "10810"
+          },
+          {
+            "Reference_Year": "2006-2007",
+            "name": "Barwon South West",
+            "Type": "gardenProcessed",
+            "value": "21142.1391"
+          },
+          {
+            "Reference_Year": "2006-2007",
+            "name": "Metropolitan",
+            "Type": "gardenProcessed",
+            "value": "202628.5698"
+          }
+        ]
+      },
+      {
+        "name": "Wastage",
+       "children": [
+          {
+            "Reference_Year": "2006-2007",
+            "name": "North East",
+            "Type": "Wastage",
+            "value": "1318.5502"
+          },
+          {
+            "Reference_Year": "2006-2007",
+            "name": "Grampians Central West",
+            "Type": "Wastage",
+            "value": "1699.57"
+          },
+          {
+            "Reference_Year": "2006-2007",
+            "name": "Goulburn Valley",
+            "Type": "Wastage",
+            "value": "2113.4301"
+          },
+          {
+            "Reference_Year": "2006-2007",
+            "name": "Loddon Mallee",
+            "Type": "Wastage",
+            "value": "3300.2897"
+          },
+          {
+            "Reference_Year": "2006-2007",
+            "name": "Gippsland",
+            "Type": "Wastage",
+            "value": "3456.0997"
+          },
+          {
+            "Reference_Year": "2006-2007",
+            "name": "Barwon South West",
+            "Type": "Wastage",
+            "value": "7820.529"
+          },
+          {
+            "Reference_Year": "2006-2007",
+            "name": "Metropolitan",
+            "Type": "Wastage",
+            "value": "40793.8964"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "2004-2005",
+   "children": [
+      {
+        "name": "landFill",
+       "children": [
+          {
+            "Reference_Year": "2004-2005",
+            "name": "North East",
+            "Type": "landFill",
+            "value": "24464.52"
+          },
+          {
+            "Reference_Year": "2004-2005",
+            "name": "Gippsland",
+            "Type": "landFill",
+            "value": "40688.6004"
+          },
+          {
+            "Reference_Year": "2004-2005",
+            "name": "Goulburn Valley",
+            "Type": "landFill",
+            "value": "41333"
+          },
+          {
+            "Reference_Year": "2004-2005",
+            "name": "Grampians Central West",
+            "Type": "landFill",
+            "value": "46481.3"
+          },
+          {
+            "Reference_Year": "2004-2005",
+            "name": "Loddon Mallee",
+            "Type": "landFill",
+            "value": "56500.5303"
+          },
+          {
+            "Reference_Year": "2004-2005",
+            "name": "Barwon South West",
+            "Type": "landFill",
+            "value": "58809.41"
+          },
+          {
+            "Reference_Year": "2004-2005",
+            "name": "Metropolitan",
+            "Type": "landFill",
+            "value": "755427.3809"
+          }
+        ]
+      },
+      {
+        "name": "recyclingProcessed",
+       "children": [
+          {
+            "Reference_Year": "2004-2005",
+            "name": "Goulburn Valley",
+            "Type": "recyclingProcessed",
+            "value": "11009.7402"
+          },
+          {
+            "Reference_Year": "2004-2005",
+            "name": "North East",
+            "Type": "recyclingProcessed",
+            "value": "12432.2698"
+          },
+          {
+            "Reference_Year": "2004-2005",
+            "name": "Grampians Central West",
+            "Type": "recyclingProcessed",
+            "value": "13388.6202"
+          },
+          {
+            "Reference_Year": "2004-2005",
+            "name": "Gippsland",
+            "Type": "recyclingProcessed",
+            "value": "17249.3701"
+          },
+          {
+            "Reference_Year": "2004-2005",
+            "name": "Loddon Mallee",
+            "Type": "recyclingProcessed",
+            "value": "17283.8598"
+          },
+          {
+            "Reference_Year": "2004-2005",
+            "name": "Barwon South West",
+            "Type": "recyclingProcessed",
+            "value": "34054.3201"
+          },
+          {
+            "Reference_Year": "2004-2005",
+            "name": "Metropolitan",
+            "Type": "recyclingProcessed",
+            "value": "339659.32"
+          }
+        ]
+      },
+      {
+        "name": "gardenProcessed",
+       "children": [
+          {
+            "Reference_Year": "2004-2005",
+            "name": "North East",
+            "Type": "gardenProcessed",
+            "value": "528"
+          },
+          {
+            "Reference_Year": "2004-2005",
+            "name": "Grampians Central West",
+            "Type": "gardenProcessed",
+            "value": "1010"
+          },
+          {
+            "Reference_Year": "2004-2005",
+            "name": "Gippsland",
+            "Type": "gardenProcessed",
+            "value": "11104"
+          },
+          {
+            "Reference_Year": "2004-2005",
+            "name": "Barwon South West",
+            "Type": "gardenProcessed",
+            "value": "31198.01"
+          },
+          {
+            "Reference_Year": "2004-2005",
+            "name": "Metropolitan",
+            "Type": "gardenProcessed",
+            "value": "182020.3208"
+          }
+        ]
+      },
+      {
+        "name": "Wastage",
+       "children": [
+          {
+            "Reference_Year": "2004-2005",
+            "name": "North East",
+            "Type": "Wastage",
+            "value": "737.37"
+          },
+          {
+            "Reference_Year": "2004-2005",
+            "name": "Grampians Central West",
+            "Type": "Wastage",
+            "value": "1012.36"
+          },
+          {
+            "Reference_Year": "2004-2005",
+            "name": "Loddon Mallee",
+            "Type": "Wastage",
+            "value": "2073.6701"
+          },
+          {
+            "Reference_Year": "2004-2005",
+            "name": "Goulburn Valley",
+            "Type": "Wastage",
+            "value": "3233.9696"
+          },
+          {
+            "Reference_Year": "2004-2005",
+            "name": "Barwon South West",
+            "Type": "Wastage",
+            "value": "3297.61"
+          },
+          {
+            "Reference_Year": "2004-2005",
+            "name": "Gippsland",
+            "Type": "Wastage",
+            "value": "4681.3"
+          },
+          {
+            "Reference_Year": "2004-2005",
+            "name": "Metropolitan",
+            "Type": "Wastage",
+            "value": "48950.8159"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "2005-2006",
+   "children": [
+      {
+        "name": "landFill",
+       "children": [
+          {
+            "Reference_Year": "2005-2006",
+            "name": "North East",
+            "Type": "landFill",
+            "value": "24549.52"
+          },
+          {
+            "Reference_Year": "2005-2006",
+            "name": "Gippsland",
+            "Type": "landFill",
+            "value": "41099.54"
+          },
+          {
+            "Reference_Year": "2005-2006",
+            "name": "Grampians Central West",
+            "Type": "landFill",
+            "value": "43606.2298"
+          },
+          {
+            "Reference_Year": "2005-2006",
+            "name": "Goulburn Valley",
+            "Type": "landFill",
+            "value": "46615"
+          },
+          {
+            "Reference_Year": "2005-2006",
+            "name": "Loddon Mallee",
+            "Type": "landFill",
+            "value": "58344.2803"
+          },
+          {
+            "Reference_Year": "2005-2006",
+            "name": "Barwon South West",
+            "Type": "landFill",
+            "value": "65146.6499"
+          },
+          {
+            "Reference_Year": "2005-2006",
+            "name": "Metropolitan",
+            "Type": "landFill",
+            "value": "743882.4766"
+          }
+        ]
+      },
+      {
+        "name": "recyclingProcessed",
+       "children": [
+          {
+            "Reference_Year": "2005-2006",
+            "name": "North East",
+            "Type": "recyclingProcessed",
+            "value": "10223.99"
+          },
+          {
+            "Reference_Year": "2005-2006",
+            "name": "Grampians Central West",
+            "Type": "recyclingProcessed",
+            "value": "15220.7"
+          },
+          {
+            "Reference_Year": "2005-2006",
+            "name": "Goulburn Valley",
+            "Type": "recyclingProcessed",
+            "value": "15273.56"
+          },
+          {
+            "Reference_Year": "2005-2006",
+            "name": "Loddon Mallee",
+            "Type": "recyclingProcessed",
+            "value": "18224.0901"
+          },
+          {
+            "Reference_Year": "2005-2006",
+            "name": "Gippsland",
+            "Type": "recyclingProcessed",
+            "value": "18589.3499"
+          },
+          {
+            "Reference_Year": "2005-2006",
+            "name": "Barwon South West",
+            "Type": "recyclingProcessed",
+            "value": "34919.1102"
+          },
+          {
+            "Reference_Year": "2005-2006",
+            "name": "Metropolitan",
+            "Type": "recyclingProcessed",
+            "value": "362531.7705"
+          }
+        ]
+      },
+      {
+        "name": "gardenProcessed",
+       "children": [
+          {
+            "Reference_Year": "2005-2006",
+            "name": "Grampians Central West",
+            "Type": "gardenProcessed",
+            "value": "76"
+          },
+          {
+            "Reference_Year": "2005-2006",
+            "name": "Goulburn Valley",
+            "Type": "gardenProcessed",
+            "value": "318"
+          },
+          {
+            "Reference_Year": "2005-2006",
+            "name": "North East",
+            "Type": "gardenProcessed",
+            "value": "1645"
+          },
+          {
+            "Reference_Year": "2005-2006",
+            "name": "Gippsland",
+            "Type": "gardenProcessed",
+            "value": "11109"
+          },
+          {
+            "Reference_Year": "2005-2006",
+            "name": "Barwon South West",
+            "Type": "gardenProcessed",
+            "value": "30996.6695"
+          },
+          {
+            "Reference_Year": "2005-2006",
+            "name": "Metropolitan",
+            "Type": "gardenProcessed",
+            "value": "208455.1391"
+          }
+        ]
+      },
+      {
+        "name": "Wastage",
+       "children": [
+          {
+            "Reference_Year": "2005-2006",
+            "name": "Goulburn Valley",
+            "Type": "Wastage",
+            "value": "1526.6999"
+          },
+          {
+            "Reference_Year": "2005-2006",
+            "name": "North East",
+            "Type": "Wastage",
+            "value": "1919.3498"
+          },
+          {
+            "Reference_Year": "2005-2006",
+            "name": "Grampians Central West",
+            "Type": "Wastage",
+            "value": "2033"
+          },
+          {
+            "Reference_Year": "2005-2006",
+            "name": "Barwon South West",
+            "Type": "Wastage",
+            "value": "3224.0903"
+          },
+          {
+            "Reference_Year": "2005-2006",
+            "name": "Loddon Mallee",
+            "Type": "Wastage",
+            "value": "3552.6801"
+          },
+          {
+            "Reference_Year": "2005-2006",
+            "name": "Gippsland",
+            "Type": "Wastage",
+            "value": "4326.8201"
+          },
+          {
+            "Reference_Year": "2005-2006",
+            "name": "Metropolitan",
+            "Type": "Wastage",
+            "value": "49410.6718"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "2009-2010",
+   "children": [
+      {
+        "name": "landFill",
+       "children": [
+          {
+            "Reference_Year": "2009-2010",
+            "name": "North East",
+            "Type": "landFill",
+            "value": "25734.51"
+          },
+          {
+            "Reference_Year": "2009-2010",
+            "name": "Goulburn Valley",
+            "Type": "landFill",
+            "value": "37478"
+          },
+          {
+            "Reference_Year": "2009-2010",
+            "name": "Gippsland",
+            "Type": "landFill",
+            "value": "43691.627"
+          },
+          {
+            "Reference_Year": "2009-2010",
+            "name": "Grampians Central West",
+            "Type": "landFill",
+            "value": "46857.95"
+          },
+          {
+            "Reference_Year": "2009-2010",
+            "name": "Loddon Mallee",
+            "Type": "landFill",
+            "value": "54771.55"
+          },
+          {
+            "Reference_Year": "2009-2010",
+            "name": "Barwon South West",
+            "Type": "landFill",
+            "value": "65860.1899"
+          },
+          {
+            "Reference_Year": "2009-2010",
+            "name": "Metropolitan",
+            "Type": "landFill",
+            "value": "782123.397"
+          }
+        ]
+      },
+      {
+        "name": "recyclingProcessed",
+       "children": [
+          {
+            "Reference_Year": "2009-2010",
+            "name": "North East",
+            "Type": "recyclingProcessed",
+            "value": "11151.8399"
+          },
+          {
+            "Reference_Year": "2009-2010",
+            "name": "Goulburn Valley",
+            "Type": "recyclingProcessed",
+            "value": "19428.3197"
+          },
+          {
+            "Reference_Year": "2009-2010",
+            "name": "Grampians Central West",
+            "Type": "recyclingProcessed",
+            "value": "20290.0496"
+          },
+          {
+            "Reference_Year": "2009-2010",
+            "name": "Gippsland",
+            "Type": "recyclingProcessed",
+            "value": "24329.75"
+          },
+          {
+            "Reference_Year": "2009-2010",
+            "name": "Loddon Mallee",
+            "Type": "recyclingProcessed",
+            "value": "24919.2899"
+          },
+          {
+            "Reference_Year": "2009-2010",
+            "name": "Barwon South West",
+            "Type": "recyclingProcessed",
+            "value": "41180.1301"
+          },
+          {
+            "Reference_Year": "2009-2010",
+            "name": "Metropolitan",
+            "Type": "recyclingProcessed",
+            "value": "424661.4405"
+          }
+        ]
+      },
+      {
+        "name": "gardenProcessed",
+       "children": [
+          {
+            "Reference_Year": "2009-2010",
+            "name": "Grampians Central West",
+            "Type": "gardenProcessed",
+            "value": "100"
+          },
+          {
+            "Reference_Year": "2009-2010",
+            "name": "North East",
+            "Type": "gardenProcessed",
+            "value": "2252"
+          },
+          {
+            "Reference_Year": "2009-2010",
+            "name": "Goulburn Valley",
+            "Type": "gardenProcessed",
+            "value": "6267"
+          },
+          {
+            "Reference_Year": "2009-2010",
+            "name": "Gippsland",
+            "Type": "gardenProcessed",
+            "value": "16273.9299"
+          },
+          {
+            "Reference_Year": "2009-2010",
+            "name": "Barwon South West",
+            "Type": "gardenProcessed",
+            "value": "35978.8"
+          },
+          {
+            "Reference_Year": "2009-2010",
+            "name": "Metropolitan",
+            "Type": "gardenProcessed",
+            "value": "244064.3099"
+          }
+        ]
+      },
+      {
+        "name": "Wastage",
+       "children": [
+          {
+            "Reference_Year": "2009-2010",
+            "name": "Goulburn Valley",
+            "Type": "Wastage",
+            "value": "941.6202"
+          },
+          {
+            "Reference_Year": "2009-2010",
+            "name": "North East",
+            "Type": "Wastage",
+            "value": "1683.9902"
+          },
+          {
+            "Reference_Year": "2009-2010",
+            "name": "Grampians Central West",
+            "Type": "Wastage",
+            "value": "2001.602"
+          },
+          {
+            "Reference_Year": "2009-2010",
+            "name": "Loddon Mallee",
+            "Type": "Wastage",
+            "value": "2688.22"
+          },
+          {
+            "Reference_Year": "2009-2010",
+            "name": "Gippsland",
+            "Type": "Wastage",
+            "value": "4795.7898"
+          },
+          {
+            "Reference_Year": "2009-2010",
+            "name": "Barwon South West",
+            "Type": "Wastage",
+            "value": "5481.7399"
+          },
+          {
+            "Reference_Year": "2009-2010",
+            "name": "Metropolitan",
+            "Type": "Wastage",
+            "value": "39575.8905"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "2007-2008",
+   "children": [
+      {
+        "name": "landFill",
+       "children": [
+          {
+            "Reference_Year": "2007-2008",
+            "name": "North East",
+            "Type": "landFill",
+            "value": "25755"
+          },
+          {
+            "Reference_Year": "2007-2008",
+            "name": "Goulburn Valley",
+            "Type": "landFill",
+            "value": "34280.3501"
+          },
+          {
+            "Reference_Year": "2007-2008",
+            "name": "Gippsland",
+            "Type": "landFill",
+            "value": "42215.46"
+          },
+          {
+            "Reference_Year": "2007-2008",
+            "name": "Grampians Central West",
+            "Type": "landFill",
+            "value": "46661.9102"
+          },
+          {
+            "Reference_Year": "2007-2008",
+            "name": "Loddon Mallee",
+            "Type": "landFill",
+            "value": "52481.8742"
+          },
+          {
+            "Reference_Year": "2007-2008",
+            "name": "Barwon South West",
+            "Type": "landFill",
+            "value": "59548.4997"
+          },
+          {
+            "Reference_Year": "2007-2008",
+            "name": "Metropolitan",
+            "Type": "landFill",
+            "value": "752093.6993"
+          }
+        ]
+      },
+      {
+        "name": "recyclingProcessed",
+       "children": [
+          {
+            "Reference_Year": "2007-2008",
+            "name": "North East",
+            "Type": "recyclingProcessed",
+            "value": "10119.8199"
+          },
+          {
+            "Reference_Year": "2007-2008",
+            "name": "Goulburn Valley",
+            "Type": "recyclingProcessed",
+            "value": "17557.8298"
+          },
+          {
+            "Reference_Year": "2007-2008",
+            "name": "Grampians Central West",
+            "Type": "recyclingProcessed",
+            "value": "17679.56"
+          },
+          {
+            "Reference_Year": "2007-2008",
+            "name": "Gippsland",
+            "Type": "recyclingProcessed",
+            "value": "20158.4999"
+          },
+          {
+            "Reference_Year": "2007-2008",
+            "name": "Loddon Mallee",
+            "Type": "recyclingProcessed",
+            "value": "21813.112"
+          },
+          {
+            "Reference_Year": "2007-2008",
+            "name": "Barwon South West",
+            "Type": "recyclingProcessed",
+            "value": "40116.3498"
+          },
+          {
+            "Reference_Year": "2007-2008",
+            "name": "Metropolitan",
+            "Type": "recyclingProcessed",
+            "value": "414717.853"
+          }
+        ]
+      },
+      {
+        "name": "gardenProcessed",
+       "children": [
+          {
+            "Reference_Year": "2007-2008",
+            "name": "Grampians Central West",
+            "Type": "gardenProcessed",
+            "value": "80"
+          },
+          {
+            "Reference_Year": "2007-2008",
+            "name": "North East",
+            "Type": "gardenProcessed",
+            "value": "2031.7"
+          },
+          {
+            "Reference_Year": "2007-2008",
+            "name": "Goulburn Valley",
+            "Type": "gardenProcessed",
+            "value": "4971"
+          },
+          {
+            "Reference_Year": "2007-2008",
+            "name": "Gippsland",
+            "Type": "gardenProcessed",
+            "value": "15343"
+          },
+          {
+            "Reference_Year": "2007-2008",
+            "name": "Barwon South West",
+            "Type": "gardenProcessed",
+            "value": "30036.2"
+          },
+          {
+            "Reference_Year": "2007-2008",
+            "name": "Metropolitan",
+            "Type": "gardenProcessed",
+            "value": "201255.9509"
+          }
+        ]
+      },
+      {
+        "name": "Wastage",
+       "children": [
+          {
+            "Reference_Year": "2007-2008",
+            "name": "North East",
+            "Type": "Wastage",
+            "value": "1504.5101"
+          },
+          {
+            "Reference_Year": "2007-2008",
+            "name": "Goulburn Valley",
+            "Type": "Wastage",
+            "value": "1881.5801"
+          },
+          {
+            "Reference_Year": "2007-2008",
+            "name": "Grampians Central West",
+            "Type": "Wastage",
+            "value": "3167.8601"
+          },
+          {
+            "Reference_Year": "2007-2008",
+            "name": "Loddon Mallee",
+            "Type": "Wastage",
+            "value": "3185.5102"
+          },
+          {
+            "Reference_Year": "2007-2008",
+            "name": "Gippsland",
+            "Type": "Wastage",
+            "value": "3838.47"
+          },
+          {
+            "Reference_Year": "2007-2008",
+            "name": "Barwon South West",
+            "Type": "Wastage",
+            "value": "5467.2102"
+          },
+          {
+            "Reference_Year": "2007-2008",
+            "name": "Metropolitan",
+            "Type": "Wastage",
+            "value": "45776.9885"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "2008-2009",
+   "children": [
+      {
+        "name": "landFill",
+       "children": [
+          {
+            "Reference_Year": "2008-2009",
+            "name": "North East",
+            "Type": "landFill",
+            "value": "25819.95"
+          },
+          {
+            "Reference_Year": "2008-2009",
+            "name": "Goulburn Valley",
+            "Type": "landFill",
+            "value": "33893.28"
+          },
+          {
+            "Reference_Year": "2008-2009",
+            "name": "Gippsland",
+            "Type": "landFill",
+            "value": "42610.5298"
+          },
+          {
+            "Reference_Year": "2008-2009",
+            "name": "Grampians Central West",
+            "Type": "landFill",
+            "value": "46043.32"
+          },
+          {
+            "Reference_Year": "2008-2009",
+            "name": "Loddon Mallee",
+            "Type": "landFill",
+            "value": "53920.3621"
+          },
+          {
+            "Reference_Year": "2008-2009",
+            "name": "Barwon South West",
+            "Type": "landFill",
+            "value": "63312.2797"
+          },
+          {
+            "Reference_Year": "2008-2009",
+            "name": "Metropolitan",
+            "Type": "landFill",
+            "value": "759061.7144"
+          }
+        ]
+      },
+      {
+        "name": "recyclingProcessed",
+       "children": [
+          {
+            "Reference_Year": "2008-2009",
+            "name": "North East",
+            "Type": "recyclingProcessed",
+            "value": "10827.07"
+          },
+          {
+            "Reference_Year": "2008-2009",
+            "name": "Goulburn Valley",
+            "Type": "recyclingProcessed",
+            "value": "18456.3801"
+          },
+          {
+            "Reference_Year": "2008-2009",
+            "name": "Grampians Central West",
+            "Type": "recyclingProcessed",
+            "value": "20185.24"
+          },
+          {
+            "Reference_Year": "2008-2009",
+            "name": "Gippsland",
+            "Type": "recyclingProcessed",
+            "value": "23046.2899"
+          },
+          {
+            "Reference_Year": "2008-2009",
+            "name": "Loddon Mallee",
+            "Type": "recyclingProcessed",
+            "value": "25377.3899"
+          },
+          {
+            "Reference_Year": "2008-2009",
+            "name": "Barwon South West",
+            "Type": "recyclingProcessed",
+            "value": "38898.75"
+          },
+          {
+            "Reference_Year": "2008-2009",
+            "name": "Metropolitan",
+            "Type": "recyclingProcessed",
+            "value": "417916.2807"
+          }
+        ]
+      },
+      {
+        "name": "gardenProcessed",
+       "children": [
+          {
+            "Reference_Year": "2008-2009",
+            "name": "Grampians Central West",
+            "Type": "gardenProcessed",
+            "value": "100"
+          },
+          {
+            "Reference_Year": "2008-2009",
+            "name": "North East",
+            "Type": "gardenProcessed",
+            "value": "1570.5"
+          },
+          {
+            "Reference_Year": "2008-2009",
+            "name": "Goulburn Valley",
+            "Type": "gardenProcessed",
+            "value": "5593"
+          },
+          {
+            "Reference_Year": "2008-2009",
+            "name": "Gippsland",
+            "Type": "gardenProcessed",
+            "value": "13770"
+          },
+          {
+            "Reference_Year": "2008-2009",
+            "name": "Barwon South West",
+            "Type": "gardenProcessed",
+            "value": "27633"
+          },
+          {
+            "Reference_Year": "2008-2009",
+            "name": "Metropolitan",
+            "Type": "gardenProcessed",
+            "value": "207068.4598"
+          }
+        ]
+      },
+      {
+        "name": "Wastage",
+       "children": [
+          {
+            "Reference_Year": "2008-2009",
+            "name": "North East",
+            "Type": "Wastage",
+            "value": "1446.3799"
+          },
+          {
+            "Reference_Year": "2008-2009",
+            "name": "Goulburn Valley",
+            "Type": "Wastage",
+            "value": "1517.4998"
+          },
+          {
+            "Reference_Year": "2008-2009",
+            "name": "Grampians Central West",
+            "Type": "Wastage",
+            "value": "1818.882"
+          },
+          {
+            "Reference_Year": "2008-2009",
+            "name": "Loddon Mallee",
+            "Type": "Wastage",
+            "value": "3222.02"
+          },
+          {
+            "Reference_Year": "2008-2009",
+            "name": "Gippsland",
+            "Type": "Wastage",
+            "value": "4361.9003"
+          },
+          {
+            "Reference_Year": "2008-2009",
+            "name": "Barwon South West",
+            "Type": "Wastage",
+            "value": "5675.6101"
+          },
+          {
+            "Reference_Year": "2008-2009",
+            "name": "Metropolitan",
+            "Type": "Wastage",
+            "value": "46248.0894"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "2001-2002",
+   "children": [
+      {
+        "name": "landFill",
+       "children": [
+          {
+            "Reference_Year": "2001-2002",
+            "name": "North East",
+            "Type": "landFill",
+            "value": "26866.5996"
+          },
+          {
+            "Reference_Year": "2001-2002",
+            "name": "Grampians Central West",
+            "Type": "landFill",
+            "value": "44344.29"
+          },
+          {
+            "Reference_Year": "2001-2002",
+            "name": "Goulburn Valley",
+            "Type": "landFill",
+            "value": "46602"
+          },
+          {
+            "Reference_Year": "2001-2002",
+            "name": "Loddon Mallee",
+            "Type": "landFill",
+            "value": "56278.4004"
+          },
+          {
+            "Reference_Year": "2001-2002",
+            "name": "Gippsland",
+            "Type": "landFill",
+            "value": "56883.2998"
+          },
+          {
+            "Reference_Year": "2001-2002",
+            "name": "Barwon South West",
+            "Type": "landFill",
+            "value": "72577.4"
+          },
+          {
+            "Reference_Year": "2001-2002",
+            "name": "Metropolitan",
+            "Type": "landFill",
+            "value": "804340.8418"
+          }
+        ]
+      },
+      {
+        "name": "recyclingProcessed",
+       "children": [
+          {
+            "Reference_Year": "2001-2002",
+            "name": "Grampians Central West",
+            "Type": "recyclingProcessed",
+            "value": "10066.1499"
+          },
+          {
+            "Reference_Year": "2001-2002",
+            "name": "Goulburn Valley",
+            "Type": "recyclingProcessed",
+            "value": "10557.4899"
+          },
+          {
+            "Reference_Year": "2001-2002",
+            "name": "North East",
+            "Type": "recyclingProcessed",
+            "value": "10692.5"
+          },
+          {
+            "Reference_Year": "2001-2002",
+            "name": "Gippsland",
+            "Type": "recyclingProcessed",
+            "value": "11075.38"
+          },
+          {
+            "Reference_Year": "2001-2002",
+            "name": "Loddon Mallee",
+            "Type": "recyclingProcessed",
+            "value": "12196.0299"
+          },
+          {
+            "Reference_Year": "2001-2002",
+            "name": "Barwon South West",
+            "Type": "recyclingProcessed",
+            "value": "17931.0297"
+          },
+          {
+            "Reference_Year": "2001-2002",
+            "name": "Metropolitan",
+            "Type": "recyclingProcessed",
+            "value": "262940.7798"
+          }
+        ]
+      },
+      {
+        "name": "gardenProcessed",
+       "children": [
+          {
+            "Reference_Year": "2001-2002",
+            "name": "North East",
+            "Type": "gardenProcessed",
+            "value": "585"
+          },
+          {
+            "Reference_Year": "2001-2002",
+            "name": "Barwon South West",
+            "Type": "gardenProcessed",
+            "value": "865"
+          },
+          {
+            "Reference_Year": "2001-2002",
+            "name": "Grampians Central West",
+            "Type": "gardenProcessed",
+            "value": "1512"
+          },
+          {
+            "Reference_Year": "2001-2002",
+            "name": "Gippsland",
+            "Type": "gardenProcessed",
+            "value": "1523.35"
+          },
+          {
+            "Reference_Year": "2001-2002",
+            "name": "Metropolitan",
+            "Type": "gardenProcessed",
+            "value": "109834.93"
+          }
+        ]
+      },
+      {
+        "name": "Wastage",
+       "children": [
+          {
+            "Reference_Year": "2001-2002",
+            "name": "Goulburn Valley",
+            "Type": "Wastage",
+            "value": "464.2"
+          },
+          {
+            "Reference_Year": "2001-2002",
+            "name": "North East",
+            "Type": "Wastage",
+            "value": "708.5803"
+          },
+          {
+            "Reference_Year": "2001-2002",
+            "name": "Loddon Mallee",
+            "Type": "Wastage",
+            "value": "1037"
+          },
+          {
+            "Reference_Year": "2001-2002",
+            "name": "Gippsland",
+            "Type": "Wastage",
+            "value": "1419.02"
+          },
+          {
+            "Reference_Year": "2001-2002",
+            "name": "Grampians Central West",
+            "Type": "Wastage",
+            "value": "1605.5121"
+          },
+          {
+            "Reference_Year": "2001-2002",
+            "name": "Barwon South West",
+            "Type": "Wastage",
+            "value": "2998.92"
+          },
+          {
+            "Reference_Year": "2001-2002",
+            "name": "Metropolitan",
+            "Type": "Wastage",
+            "value": "18032.8792"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "2011-2012",
+   "children": [
+      {
+        "name": "landFill",
+       "children": [
+          {
+            "Reference_Year": "2011-2012",
+            "name": "North East",
+            "Type": "landFill",
+            "value": "26972.3403"
+          },
+          {
+            "Reference_Year": "2011-2012",
+            "name": "Goulburn Valley",
+            "Type": "landFill",
+            "value": "39142.46"
+          },
+          {
+            "Reference_Year": "2011-2012",
+            "name": "Gippsland",
+            "Type": "landFill",
+            "value": "46928.0796"
+          },
+          {
+            "Reference_Year": "2011-2012",
+            "name": "Grampians Central West",
+            "Type": "landFill",
+            "value": "54784.42"
+          },
+          {
+            "Reference_Year": "2011-2012",
+            "name": "Loddon Mallee",
+            "Type": "landFill",
+            "value": "57829.78"
+          },
+          {
+            "Reference_Year": "2011-2012",
+            "name": "Barwon South West",
+            "Type": "landFill",
+            "value": "65505.02"
+          },
+          {
+            "Reference_Year": "2011-2012",
+            "name": "Metropolitan",
+            "Type": "landFill",
+            "value": "820146.8692"
+          }
+        ]
+      },
+      {
+        "name": "recyclingProcessed",
+       "children": [
+          {
+            "Reference_Year": "2011-2012",
+            "name": "North East",
+            "Type": "recyclingProcessed",
+            "value": "12661.5601"
+          },
+          {
+            "Reference_Year": "2011-2012",
+            "name": "Grampians Central West",
+            "Type": "recyclingProcessed",
+            "value": "19603.6"
+          },
+          {
+            "Reference_Year": "2011-2012",
+            "name": "Goulburn Valley",
+            "Type": "recyclingProcessed",
+            "value": "21601.3199"
+          },
+          {
+            "Reference_Year": "2011-2012",
+            "name": "Gippsland",
+            "Type": "recyclingProcessed",
+            "value": "24733.0704"
+          },
+          {
+            "Reference_Year": "2011-2012",
+            "name": "Loddon Mallee",
+            "Type": "recyclingProcessed",
+            "value": "24787.5"
+          },
+          {
+            "Reference_Year": "2011-2012",
+            "name": "Barwon South West",
+            "Type": "recyclingProcessed",
+            "value": "42056.51"
+          },
+          {
+            "Reference_Year": "2011-2012",
+            "name": "Metropolitan",
+            "Type": "recyclingProcessed",
+            "value": "429601.5391"
+          }
+        ]
+      },
+      {
+        "name": "gardenProcessed",
+       "children": [
+          {
+            "Reference_Year": "2011-2012",
+            "name": "Grampians Central West",
+            "Type": "gardenProcessed",
+            "value": "1149.97"
+          },
+          {
+            "Reference_Year": "2011-2012",
+            "name": "North East",
+            "Type": "gardenProcessed",
+            "value": "2669"
+          },
+          {
+            "Reference_Year": "2011-2012",
+            "name": "Loddon Mallee",
+            "Type": "gardenProcessed",
+            "value": "3576.16"
+          },
+          {
+            "Reference_Year": "2011-2012",
+            "name": "Goulburn Valley",
+            "Type": "gardenProcessed",
+            "value": "6874.7598"
+          },
+          {
+            "Reference_Year": "2011-2012",
+            "name": "Gippsland",
+            "Type": "gardenProcessed",
+            "value": "17226.2505"
+          },
+          {
+            "Reference_Year": "2011-2012",
+            "name": "Barwon South West",
+            "Type": "gardenProcessed",
+            "value": "38158"
+          },
+          {
+            "Reference_Year": "2011-2012",
+            "name": "Metropolitan",
+            "Type": "gardenProcessed",
+            "value": "315669.1904"
+          }
+        ]
+      },
+      {
+        "name": "Wastage",
+       "children": [
+          {
+            "Reference_Year": "2011-2012",
+            "name": "Goulburn Valley",
+            "Type": "Wastage",
+            "value": "189.8003"
+          },
+          {
+            "Reference_Year": "2011-2012",
+            "name": "North East",
+            "Type": "Wastage",
+            "value": "1769.3"
+          },
+          {
+            "Reference_Year": "2011-2012",
+            "name": "Loddon Mallee",
+            "Type": "Wastage",
+            "value": "2120.8502"
+          },
+          {
+            "Reference_Year": "2011-2012",
+            "name": "Grampians Central West",
+            "Type": "Wastage",
+            "value": "2780.8299"
+          },
+          {
+            "Reference_Year": "2011-2012",
+            "name": "Gippsland",
+            "Type": "Wastage",
+            "value": "3723.1396"
+          },
+          {
+            "Reference_Year": "2011-2012",
+            "name": "Barwon South West",
+            "Type": "Wastage",
+            "value": "5260.8299"
+          },
+          {
+            "Reference_Year": "2011-2012",
+            "name": "Metropolitan",
+            "Type": "Wastage",
+            "value": "39557.9642"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "2012-2013",
+   "children": [
+      {
+        "name": "landFill",
+       "children": [
+          {
+            "Reference_Year": "2012-2013",
+            "name": "North East",
+            "Type": "landFill",
+            "value": "27249.9102"
+          },
+          {
+            "Reference_Year": "2012-2013",
+            "name": "Goulburn Valley",
+            "Type": "landFill",
+            "value": "37878"
+          },
+          {
+            "Reference_Year": "2012-2013",
+            "name": "Gippsland",
+            "Type": "landFill",
+            "value": "44482.2002"
+          },
+          {
+            "Reference_Year": "2012-2013",
+            "name": "Grampians Central West",
+            "Type": "landFill",
+            "value": "53637.4099"
+          },
+          {
+            "Reference_Year": "2012-2013",
+            "name": "Loddon Mallee",
+            "Type": "landFill",
+            "value": "58033.1204"
+          },
+          {
+            "Reference_Year": "2012-2013",
+            "name": "Barwon South West",
+            "Type": "landFill",
+            "value": "67553.3002"
+          },
+          {
+            "Reference_Year": "2012-2013",
+            "name": "Metropolitan",
+            "Type": "landFill",
+            "value": "813316.0411"
+          }
+        ]
+      },
+      {
+        "name": "recyclingProcessed",
+       "children": [
+          {
+            "Reference_Year": "2012-2013",
+            "name": "North East",
+            "Type": "recyclingProcessed",
+            "value": "12955.2001"
+          },
+          {
+            "Reference_Year": "2012-2013",
+            "name": "Goulburn Valley",
+            "Type": "recyclingProcessed",
+            "value": "19939.9301"
+          },
+          {
+            "Reference_Year": "2012-2013",
+            "name": "Grampians Central West",
+            "Type": "recyclingProcessed",
+            "value": "20149.27"
+          },
+          {
+            "Reference_Year": "2012-2013",
+            "name": "Gippsland",
+            "Type": "recyclingProcessed",
+            "value": "24862.17"
+          },
+          {
+            "Reference_Year": "2012-2013",
+            "name": "Loddon Mallee",
+            "Type": "recyclingProcessed",
+            "value": "25101"
+          },
+          {
+            "Reference_Year": "2012-2013",
+            "name": "Barwon South West",
+            "Type": "recyclingProcessed",
+            "value": "43079.7894"
+          },
+          {
+            "Reference_Year": "2012-2013",
+            "name": "Metropolitan",
+            "Type": "recyclingProcessed",
+            "value": "418397.5323"
+          }
+        ]
+      },
+      {
+        "name": "gardenProcessed",
+       "children": [
+          {
+            "Reference_Year": "2012-2013",
+            "name": "Grampians Central West",
+            "Type": "gardenProcessed",
+            "value": "1055.28"
+          },
+          {
+            "Reference_Year": "2012-2013",
+            "name": "North East",
+            "Type": "gardenProcessed",
+            "value": "2996"
+          },
+          {
+            "Reference_Year": "2012-2013",
+            "name": "Loddon Mallee",
+            "Type": "gardenProcessed",
+            "value": "3362.9"
+          },
+          {
+            "Reference_Year": "2012-2013",
+            "name": "Goulburn Valley",
+            "Type": "gardenProcessed",
+            "value": "6653"
+          },
+          {
+            "Reference_Year": "2012-2013",
+            "name": "Gippsland",
+            "Type": "gardenProcessed",
+            "value": "17287.1658"
+          },
+          {
+            "Reference_Year": "2012-2013",
+            "name": "Barwon South West",
+            "Type": "gardenProcessed",
+            "value": "37043.6001"
+          },
+          {
+            "Reference_Year": "2012-2013",
+            "name": "Metropolitan",
+            "Type": "gardenProcessed",
+            "value": "289203.2608"
+          }
+        ]
+      },
+      {
+        "name": "Wastage",
+       "children": [
+          {
+            "Reference_Year": "2012-2013",
+            "name": "Goulburn Valley",
+            "Type": "Wastage",
+            "value": "164"
+          },
+          {
+            "Reference_Year": "2012-2013",
+            "name": "North East",
+            "Type": "Wastage",
+            "value": "838.5399"
+          },
+          {
+            "Reference_Year": "2012-2013",
+            "name": "Barwon South West",
+            "Type": "Wastage",
+            "value": "1342.4501"
+          },
+          {
+            "Reference_Year": "2012-2013",
+            "name": "Loddon Mallee",
+            "Type": "Wastage",
+            "value": "1898.71"
+          },
+          {
+            "Reference_Year": "2012-2013",
+            "name": "Grampians Central West",
+            "Type": "Wastage",
+            "value": "2624.9301"
+          },
+          {
+            "Reference_Year": "2012-2013",
+            "name": "Gippsland",
+            "Type": "Wastage",
+            "value": "4522.2042"
+          },
+          {
+            "Reference_Year": "2012-2013",
+            "name": "Metropolitan",
+            "Type": "Wastage",
+            "value": "34593.0132"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "2014-2015",
+   "children": [
+      {
+        "name": "landFill",
+       "children": [
+          {
+            "Reference_Year": "2014-2015",
+            "name": "North East",
+            "Type": "landFill",
+            "value": "27849.7498"
+          },
+          {
+            "Reference_Year": "2014-2015",
+            "name": "Goulburn Valley",
+            "Type": "landFill",
+            "value": "39018.4502"
+          },
+          {
+            "Reference_Year": "2014-2015",
+            "name": "Gippsland",
+            "Type": "landFill",
+            "value": "49582.2798"
+          },
+          {
+            "Reference_Year": "2014-2015",
+            "name": "Grampians Central West",
+            "Type": "landFill",
+            "value": "55456.9604"
+          },
+          {
+            "Reference_Year": "2014-2015",
+            "name": "Loddon Mallee",
+            "Type": "landFill",
+            "value": "59878.9801"
+          },
+          {
+            "Reference_Year": "2014-2015",
+            "name": "Barwon South West",
+            "Type": "landFill",
+            "value": "71944.12"
+          },
+          {
+            "Reference_Year": "2014-2015",
+            "name": "Metropolitan",
+            "Type": "landFill",
+            "value": "855004.8887"
+          }
+        ]
+      },
+      {
+        "name": "recyclingProcessed",
+       "children": [
+          {
+            "Reference_Year": "2014-2015",
+            "name": "North East",
+            "Type": "recyclingProcessed",
+            "value": "13319.4699"
+          },
+          {
+            "Reference_Year": "2014-2015",
+            "name": "Grampians Central West",
+            "Type": "recyclingProcessed",
+            "value": "21493.5545"
+          },
+          {
+            "Reference_Year": "2014-2015",
+            "name": "Gippsland",
+            "Type": "recyclingProcessed",
+            "value": "22856.3504"
+          },
+          {
+            "Reference_Year": "2014-2015",
+            "name": "Goulburn Valley",
+            "Type": "recyclingProcessed",
+            "value": "22976.22"
+          },
+          {
+            "Reference_Year": "2014-2015",
+            "name": "Loddon Mallee",
+            "Type": "recyclingProcessed",
+            "value": "25504.9801"
+          },
+          {
+            "Reference_Year": "2014-2015",
+            "name": "Barwon South West",
+            "Type": "recyclingProcessed",
+            "value": "43017.9109"
+          },
+          {
+            "Reference_Year": "2014-2015",
+            "name": "Metropolitan",
+            "Type": "recyclingProcessed",
+            "value": "406995.7006"
+          }
+        ]
+      },
+      {
+        "name": "gardenProcessed",
+       "children": [
+          {
+            "Reference_Year": "2014-2015",
+            "name": "Grampians Central West",
+            "Type": "gardenProcessed",
+            "value": "372.41"
+          },
+          {
+            "Reference_Year": "2014-2015",
+            "name": "Loddon Mallee",
+            "Type": "gardenProcessed",
+            "value": "2637.73"
+          },
+          {
+            "Reference_Year": "2014-2015",
+            "name": "North East",
+            "Type": "gardenProcessed",
+            "value": "3644"
+          },
+          {
+            "Reference_Year": "2014-2015",
+            "name": "Goulburn Valley",
+            "Type": "gardenProcessed",
+            "value": "9008.3999"
+          },
+          {
+            "Reference_Year": "2014-2015",
+            "name": "Gippsland",
+            "Type": "gardenProcessed",
+            "value": "18253.46"
+          },
+          {
+            "Reference_Year": "2014-2015",
+            "name": "Barwon South West",
+            "Type": "gardenProcessed",
+            "value": "38426"
+          },
+          {
+            "Reference_Year": "2014-2015",
+            "name": "Metropolitan",
+            "Type": "gardenProcessed",
+            "value": "308117.1403"
+          }
+        ]
+      },
+      {
+        "name": "Wastage",
+       "children": [
+          {
+            "Reference_Year": "2014-2015",
+            "name": "Goulburn Valley",
+            "Type": "Wastage",
+            "value": "317.2002"
+          },
+          {
+            "Reference_Year": "2014-2015",
+            "name": "North East",
+            "Type": "Wastage",
+            "value": "726.5502"
+          },
+          {
+            "Reference_Year": "2014-2015",
+            "name": "Barwon South West",
+            "Type": "Wastage",
+            "value": "783.37"
+          },
+          {
+            "Reference_Year": "2014-2015",
+            "name": "Loddon Mallee",
+            "Type": "Wastage",
+            "value": "1481.8301"
+          },
+          {
+            "Reference_Year": "2014-2015",
+            "name": "Grampians Central West",
+            "Type": "Wastage",
+            "value": "1811.3852"
+          },
+          {
+            "Reference_Year": "2014-2015",
+            "name": "Gippsland",
+            "Type": "Wastage",
+            "value": "3105.7096"
+          },
+          {
+            "Reference_Year": "2014-2015",
+            "name": "Metropolitan",
+            "Type": "Wastage",
+            "value": "29032.4099"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "2010-2011",
+   "children": [
+      {
+        "name": "landFill",
+       "children": [
+          {
+            "Reference_Year": "2010-2011",
+            "name": "North East",
+            "Type": "landFill",
+            "value": "27904.0601"
+          },
+          {
+            "Reference_Year": "2010-2011",
+            "name": "Goulburn Valley",
+            "Type": "landFill",
+            "value": "36913.2598"
+          },
+          {
+            "Reference_Year": "2010-2011",
+            "name": "Gippsland",
+            "Type": "landFill",
+            "value": "45584.1899"
+          },
+          {
+            "Reference_Year": "2010-2011",
+            "name": "Grampians Central West",
+            "Type": "landFill",
+            "value": "50203.1298"
+          },
+          {
+            "Reference_Year": "2010-2011",
+            "name": "Loddon Mallee",
+            "Type": "landFill",
+            "value": "66096.4569"
+          },
+          {
+            "Reference_Year": "2010-2011",
+            "name": "Barwon South West",
+            "Type": "landFill",
+            "value": "66712.49"
+          },
+          {
+            "Reference_Year": "2010-2011",
+            "name": "Metropolitan",
+            "Type": "landFill",
+            "value": "805594.5089"
+          }
+        ]
+      },
+      {
+        "name": "recyclingProcessed",
+       "children": [
+          {
+            "Reference_Year": "2010-2011",
+            "name": "North East",
+            "Type": "recyclingProcessed",
+            "value": "12270.73"
+          },
+          {
+            "Reference_Year": "2010-2011",
+            "name": "Goulburn Valley",
+            "Type": "recyclingProcessed",
+            "value": "21145.1"
+          },
+          {
+            "Reference_Year": "2010-2011",
+            "name": "Loddon Mallee",
+            "Type": "recyclingProcessed",
+            "value": "23595.5702"
+          },
+          {
+            "Reference_Year": "2010-2011",
+            "name": "Gippsland",
+            "Type": "recyclingProcessed",
+            "value": "24179.509"
+          },
+          {
+            "Reference_Year": "2010-2011",
+            "name": "Grampians Central West",
+            "Type": "recyclingProcessed",
+            "value": "24227.91"
+          },
+          {
+            "Reference_Year": "2010-2011",
+            "name": "Barwon South West",
+            "Type": "recyclingProcessed",
+            "value": "41156.6496"
+          },
+          {
+            "Reference_Year": "2010-2011",
+            "name": "Metropolitan",
+            "Type": "recyclingProcessed",
+            "value": "424180.0317"
+          }
+        ]
+      },
+      {
+        "name": "gardenProcessed",
+       "children": [
+          {
+            "Reference_Year": "2010-2011",
+            "name": "Grampians Central West",
+            "Type": "gardenProcessed",
+            "value": "270"
+          },
+          {
+            "Reference_Year": "2010-2011",
+            "name": "North East",
+            "Type": "gardenProcessed",
+            "value": "2361"
+          },
+          {
+            "Reference_Year": "2010-2011",
+            "name": "Goulburn Valley",
+            "Type": "gardenProcessed",
+            "value": "7310"
+          },
+          {
+            "Reference_Year": "2010-2011",
+            "name": "Gippsland",
+            "Type": "gardenProcessed",
+            "value": "20181.48"
+          },
+          {
+            "Reference_Year": "2010-2011",
+            "name": "Barwon South West",
+            "Type": "gardenProcessed",
+            "value": "36767"
+          },
+          {
+            "Reference_Year": "2010-2011",
+            "name": "Metropolitan",
+            "Type": "gardenProcessed",
+            "value": "307506.1404"
+          }
+        ]
+      },
+      {
+        "name": "Wastage",
+       "children": [
+          {
+            "Reference_Year": "2010-2011",
+            "name": "Goulburn Valley",
+            "Type": "Wastage",
+            "value": "600"
+          },
+          {
+            "Reference_Year": "2010-2011",
+            "name": "Grampians Central West",
+            "Type": "Wastage",
+            "value": "1374.703"
+          },
+          {
+            "Reference_Year": "2010-2011",
+            "name": "North East",
+            "Type": "Wastage",
+            "value": "1961.72"
+          },
+          {
+            "Reference_Year": "2010-2011",
+            "name": "Loddon Mallee",
+            "Type": "Wastage",
+            "value": "2092.4"
+          },
+          {
+            "Reference_Year": "2010-2011",
+            "name": "Gippsland",
+            "Type": "Wastage",
+            "value": "4183.2809"
+          },
+          {
+            "Reference_Year": "2010-2011",
+            "name": "Barwon South West",
+            "Type": "Wastage",
+            "value": "5244.6208"
+          },
+          {
+            "Reference_Year": "2010-2011",
+            "name": "Metropolitan",
+            "Type": "Wastage",
+            "value": "52004.9014"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "2002-2003",
+   "children": [
+      {
+        "name": "landFill",
+       "children": [
+          {
+            "Reference_Year": "2002-2003",
+            "name": "North East",
+            "Type": "landFill",
+            "value": "28730.8999"
+          },
+          {
+            "Reference_Year": "2002-2003",
+            "name": "Goulburn Valley",
+            "Type": "landFill",
+            "value": "45569.7002"
+          },
+          {
+            "Reference_Year": "2002-2003",
+            "name": "Grampians Central West",
+            "Type": "landFill",
+            "value": "46770"
+          },
+          {
+            "Reference_Year": "2002-2003",
+            "name": "Gippsland",
+            "Type": "landFill",
+            "value": "51017.5004"
+          },
+          {
+            "Reference_Year": "2002-2003",
+            "name": "Barwon South West",
+            "Type": "landFill",
+            "value": "54101.1201"
+          },
+          {
+            "Reference_Year": "2002-2003",
+            "name": "Loddon Mallee",
+            "Type": "landFill",
+            "value": "61029.4502"
+          },
+          {
+            "Reference_Year": "2002-2003",
+            "name": "Metropolitan",
+            "Type": "landFill",
+            "value": "769823.8984"
+          }
+        ]
+      },
+      {
+        "name": "recyclingProcessed",
+       "children": [
+          {
+            "Reference_Year": "2002-2003",
+            "name": "North East",
+            "Type": "recyclingProcessed",
+            "value": "6802.15"
+          },
+          {
+            "Reference_Year": "2002-2003",
+            "name": "Goulburn Valley",
+            "Type": "recyclingProcessed",
+            "value": "7420.46"
+          },
+          {
+            "Reference_Year": "2002-2003",
+            "name": "Grampians Central West",
+            "Type": "recyclingProcessed",
+            "value": "9999.75"
+          },
+          {
+            "Reference_Year": "2002-2003",
+            "name": "Gippsland",
+            "Type": "recyclingProcessed",
+            "value": "11767.2321"
+          },
+          {
+            "Reference_Year": "2002-2003",
+            "name": "Loddon Mallee",
+            "Type": "recyclingProcessed",
+            "value": "14101.39"
+          },
+          {
+            "Reference_Year": "2002-2003",
+            "name": "Barwon South West",
+            "Type": "recyclingProcessed",
+            "value": "24945.7496"
+          },
+          {
+            "Reference_Year": "2002-2003",
+            "name": "Metropolitan",
+            "Type": "recyclingProcessed",
+            "value": "295290.7593"
+          }
+        ]
+      },
+      {
+        "name": "gardenProcessed",
+       "children": [
+          {
+            "Reference_Year": "2002-2003",
+            "name": "Loddon Mallee",
+            "Type": "gardenProcessed",
+            "value": "40"
+          },
+          {
+            "Reference_Year": "2002-2003",
+            "name": "North East",
+            "Type": "gardenProcessed",
+            "value": "644"
+          },
+          {
+            "Reference_Year": "2002-2003",
+            "name": "Gippsland",
+            "Type": "gardenProcessed",
+            "value": "1195.8"
+          },
+          {
+            "Reference_Year": "2002-2003",
+            "name": "Grampians Central West",
+            "Type": "gardenProcessed",
+            "value": "2140"
+          },
+          {
+            "Reference_Year": "2002-2003",
+            "name": "Barwon South West",
+            "Type": "gardenProcessed",
+            "value": "9307.2"
+          },
+          {
+            "Reference_Year": "2002-2003",
+            "name": "Metropolitan",
+            "Type": "gardenProcessed",
+            "value": "124468.04"
+          }
+        ]
+      },
+      {
+        "name": "Wastage",
+       "children": [
+          {
+            "Reference_Year": "2002-2003",
+            "name": "North East",
+            "Type": "Wastage",
+            "value": "471.6"
+          },
+          {
+            "Reference_Year": "2002-2003",
+            "name": "Grampians Central West",
+            "Type": "Wastage",
+            "value": "1154.94"
+          },
+          {
+            "Reference_Year": "2002-2003",
+            "name": "Loddon Mallee",
+            "Type": "Wastage",
+            "value": "1452.9399"
+          },
+          {
+            "Reference_Year": "2002-2003",
+            "name": "Gippsland",
+            "Type": "Wastage",
+            "value": "1574.3371"
+          },
+          {
+            "Reference_Year": "2002-2003",
+            "name": "Goulburn Valley",
+            "Type": "Wastage",
+            "value": "2748.56"
+          },
+          {
+            "Reference_Year": "2002-2003",
+            "name": "Barwon South West",
+            "Type": "Wastage",
+            "value": "5125.3813"
+          },
+          {
+            "Reference_Year": "2002-2003",
+            "name": "Metropolitan",
+            "Type": "Wastage",
+            "value": "17883.4106"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "2013-2014",
+   "children": [
+      {
+        "name": "landFill",
+       "children": [
+          {
+            "Reference_Year": "2013-2014",
+            "name": "North East",
+            "Type": "landFill",
+            "value": "29628.1794"
+          },
+          {
+            "Reference_Year": "2013-2014",
+            "name": "Goulburn Valley",
+            "Type": "landFill",
+            "value": "38140.75"
+          },
+          {
+            "Reference_Year": "2013-2014",
+            "name": "Gippsland",
+            "Type": "landFill",
+            "value": "48285.6797"
+          },
+          {
+            "Reference_Year": "2013-2014",
+            "name": "Grampians Central West",
+            "Type": "landFill",
+            "value": "52602.7301"
+          },
+          {
+            "Reference_Year": "2013-2014",
+            "name": "Loddon Mallee",
+            "Type": "landFill",
+            "value": "59559.3199"
+          },
+          {
+            "Reference_Year": "2013-2014",
+            "name": "Barwon South West",
+            "Type": "landFill",
+            "value": "70907.9599"
+          },
+          {
+            "Reference_Year": "2013-2014",
+            "name": "Metropolitan",
+            "Type": "landFill",
+            "value": "831857.9619"
+          }
+        ]
+      },
+      {
+        "name": "recyclingProcessed",
+       "children": [
+          {
+            "Reference_Year": "2013-2014",
+            "name": "North East",
+            "Type": "recyclingProcessed",
+            "value": "12997.62"
+          },
+          {
+            "Reference_Year": "2013-2014",
+            "name": "Grampians Central West",
+            "Type": "recyclingProcessed",
+            "value": "21030.7301"
+          },
+          {
+            "Reference_Year": "2013-2014",
+            "name": "Goulburn Valley",
+            "Type": "recyclingProcessed",
+            "value": "21657.37"
+          },
+          {
+            "Reference_Year": "2013-2014",
+            "name": "Loddon Mallee",
+            "Type": "recyclingProcessed",
+            "value": "23849.0698"
+          },
+          {
+            "Reference_Year": "2013-2014",
+            "name": "Gippsland",
+            "Type": "recyclingProcessed",
+            "value": "25307.4304"
+          },
+          {
+            "Reference_Year": "2013-2014",
+            "name": "Barwon South West",
+            "Type": "recyclingProcessed",
+            "value": "40721.2795"
+          },
+          {
+            "Reference_Year": "2013-2014",
+            "name": "Metropolitan",
+            "Type": "recyclingProcessed",
+            "value": "408555.5802"
+          }
+        ]
+      },
+      {
+        "name": "gardenProcessed",
+       "children": [
+          {
+            "Reference_Year": "2013-2014",
+            "name": "Grampians Central West",
+            "Type": "gardenProcessed",
+            "value": "1200"
+          },
+          {
+            "Reference_Year": "2013-2014",
+            "name": "Loddon Mallee",
+            "Type": "gardenProcessed",
+            "value": "2907.66"
+          },
+          {
+            "Reference_Year": "2013-2014",
+            "name": "North East",
+            "Type": "gardenProcessed",
+            "value": "3294"
+          },
+          {
+            "Reference_Year": "2013-2014",
+            "name": "Goulburn Valley",
+            "Type": "gardenProcessed",
+            "value": "9140"
+          },
+          {
+            "Reference_Year": "2013-2014",
+            "name": "Gippsland",
+            "Type": "gardenProcessed",
+            "value": "17907"
+          },
+          {
+            "Reference_Year": "2013-2014",
+            "name": "Barwon South West",
+            "Type": "gardenProcessed",
+            "value": "41226.7199"
+          },
+          {
+            "Reference_Year": "2013-2014",
+            "name": "Metropolitan",
+            "Type": "gardenProcessed",
+            "value": "308791.8505"
+          }
+        ]
+      },
+      {
+        "name": "Wastage",
+       "children": [
+          {
+            "Reference_Year": "2013-2014",
+            "name": "Goulburn Valley",
+            "Type": "Wastage",
+            "value": "160"
+          },
+          {
+            "Reference_Year": "2013-2014",
+            "name": "North East",
+            "Type": "Wastage",
+            "value": "1191.9801"
+          },
+          {
+            "Reference_Year": "2013-2014",
+            "name": "Loddon Mallee",
+            "Type": "Wastage",
+            "value": "1559.68"
+          },
+          {
+            "Reference_Year": "2013-2014",
+            "name": "Grampians Central West",
+            "Type": "Wastage",
+            "value": "2377.9899"
+          },
+          {
+            "Reference_Year": "2013-2014",
+            "name": "Barwon South West",
+            "Type": "Wastage",
+            "value": "2553.8711"
+          },
+          {
+            "Reference_Year": "2013-2014",
+            "name": "Gippsland",
+            "Type": "Wastage",
+            "value": "3998.1298"
+          },
+          {
+            "Reference_Year": "2013-2014",
+            "name": "Metropolitan",
+            "Type": "Wastage",
+            "value": "36312.7207"
+          }
+			]
+		  }
+		]
+	  }
+	]
+}
