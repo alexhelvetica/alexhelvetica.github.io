@@ -70,7 +70,7 @@ d3.select("#melbourne")
 	});
 
 function init(){
-	dataset = d3.csv("geoPath.csv")
+	dataset = d3.csv("geopath.csv")
 		.then(function(data){
 			dataset = data;
 		});
