@@ -32,8 +32,8 @@
 
 		<main>
 			<div id="choropleth">		
-				<h2>Choropleth</h2>
 				<div class="HTMLtext">
+					<h2>Choropleth</h2>
 					<div class="interactiveElements">
 						<h3>Year Selection</h3>
 						
@@ -92,6 +92,11 @@
 						<input type="radio" id="wasteProcessed" name="wasteType" value="wasteProcessed">
 							<label for="wasteProcessed">Waste Processed</label>
 					</div>
+					
+					<p>This Visualisation shows waste generation by Local Government Area (LGA).</br>
+					The darker the shade of the colour, the more waste that LGA produced in that category.</br>
+					Areas without a Local Government (French Island, and Ski Resorts..) will be black and value will be undefined. They have no available data, and most likely don't offer kerbside waste collection.</br>
+					Some Local Governments do not have kerbside Garden Waste collection. Most LGAs have free Garden Waste drop-off sites. Check your Local Government's website for more information.</p>
 				</div>
 				
 				<div class="visualisations">
@@ -100,32 +105,33 @@
 			</div>
 
 			<div id="line">
-			<h2>Line</h2>
 				<div class="HTMLtext">
-					
-						<div class="1interactiveElements">
-							<h3>Waste Per Capita</h3>
-								<label class="switch">
-									<input type="checkbox" id="lineWasteModifier">
-									<span class="slider"></span>
-								</label>
-						</div>
-							<!--
-						 <input type="radio" id="landFill" name="lineWasteType" value="landFill" checked="checked">
-							<label for="landFill">Land Fill</label>
-						<input type="radio" id="recyclingTotal" name="lineWasteType" value="recyclingTotal">
-							<label for="recyclingTotal">Recycling</label>
-						<input type="radio" id="recyclingProcessed" name="lineWasteType" value="recyclingProcessed">
-							<label for="recyclingProcessed">Recycling Processed</label>
-						<input type="radio" id="gardenTotal" name="lineWasteType" value="gardenTotal">
-							<label for="gardenTotal">Garden Total</label>
-						<input type="radio" id="gardenProcessed" name="lineWasteType" value="gardenProcessed">
-							<label for="gardenProcessed">Garden Processed</label>
-						<input type="radio" id="wasteTotal" name="lineWasteType" value="wasteTotal">
-							<label for="wasteTotal">Waste Total</label>
-						<input type="radio" id="wasteProcessed" name="lineWasteType" value="wasteProcessed">
-							<label for="wasteProcessed">Waste Processed</label>
-					-->
+					<h2>Line</h2>
+					<div class="1interactiveElements">
+						<h3>Waste Per Capita</h3>
+							<label class="switch">
+								<input type="checkbox" id="lineWasteModifier">
+								<span class="slider"></span>
+							</label>
+					</div>
+					<p>This visualisation displays the total waste generated for the state for each year. </br>
+					It is itemised by Landfill, Recycling and Garden Waste (Both Total received, and amount successfully processed), and Recycling/Garden waste not processed. </p>
+						<!--
+					 <input type="radio" id="landFill" name="lineWasteType" value="landFill" checked="checked">
+						<label for="landFill">Land Fill</label>
+					<input type="radio" id="recyclingTotal" name="lineWasteType" value="recyclingTotal">
+						<label for="recyclingTotal">Recycling</label>
+					<input type="radio" id="recyclingProcessed" name="lineWasteType" value="recyclingProcessed">
+						<label for="recyclingProcessed">Recycling Processed</label>
+					<input type="radio" id="gardenTotal" name="lineWasteType" value="gardenTotal">
+						<label for="gardenTotal">Garden Total</label>
+					<input type="radio" id="gardenProcessed" name="lineWasteType" value="gardenProcessed">
+						<label for="gardenProcessed">Garden Processed</label>
+					<input type="radio" id="wasteTotal" name="lineWasteType" value="wasteTotal">
+						<label for="wasteTotal">Waste Total</label>
+					<input type="radio" id="wasteProcessed" name="lineWasteType" value="wasteProcessed">
+						<label for="wasteProcessed">Waste Processed</label>
+				-->
 				</div>
 				<div class="visualisations">
 					<p id="lineChart"></p>
@@ -133,9 +139,9 @@
 			</div>		
 
 			<div id="tree">
-				<h2>Tree Map</h2>
+		
 				<div class="HTMLtext">
-				
+					<h2>Tree Map</h2>
 					<div class="1interactiveElements">
 					<h3>Year Selection</h3>
 						<select name="Year Selection" id="treeYearSelection">
@@ -159,6 +165,9 @@
 							  <option value="17">2018-2019</option>	-->
 						</select>
 					</div>
+					
+					<p>This Visualisation displays waste produced by WRRG (Waste Recovery Group, which is made-up of groups of LGAs).</br>
+					Tree maps work a lot like pie charts; The visualisation shows 100% of the data, and box in the visualisation is proportional to amount that that WRRG generated towards that waste category by the total waste of all categories</p>
 				</div>
 				<div class="visualisations">
 					<p id="treeChart"></p>
