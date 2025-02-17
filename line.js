@@ -16,99 +16,99 @@ var lineLGA;
 
 //Waste Per Capita vs Total Selector
 d3.select("#lineWasteModifier")
-	.on("change", function(){
-		lineWasteModifier = this;		
-		
+	.on("change", function () {
+		lineWasteModifier = this;
+
 		lineVisUpdate();
 	});
 
 //Waste Category Update
 d3.selectAll('input[name="lineWasteType"]')
-	.on("change", function(){
+	.on("change", function () {
 		lineWasteType = this.value;
 
 		lineVisUpdate();
 	});
 
 
-function lineInit(){
+function lineInit() {
 	d3.csv("linev2.csv")
-		.then(function(data){
+		.then(function (data) {
 			lineCsv = data;
 			lineJson = d3.nest()
 				.key((d) => d.Type)
 				.entries(lineCsv);
-		
-		console.log(lineJson);
-		lineVis()
-	})
+
+			console.log(lineJson);
+			lineVis()
+		})
 }
 
 
-function lineGetXScale(){
+function lineGetXScale() {
 	lineXScale = d3.scaleLinear()
 		.domain(d3.extent(lineCsv, (d) => d.Reference_Year))
-		.range([padding,w]);
-	
+		.range([padding, w]);
+
 	lineXAxis = d3.axisBottom()
 		.ticks(5)
 		.scale(lineXScale);
-		
+
 	lineSvg.append("g")
 		.attr("transform", "translate(0, " + (h - padding) + ")")
 		.call(lineXAxis);
 }
 
-function lineGetYScale(){
+function lineGetYScale() {
 	lineYScale = d3.scaleLinear()
-		.domain([0, d3.max(lineCsv, (d) => lineCheckedThing(d)*1.5)])
-		.range([h-padding,0]);
-		
+		.domain([0, d3.max(lineCsv, (d) => lineCheckedThing(d) * 1.5)])
+		.range([h - padding, 0]);
+
 	lineYAxis = d3.axisRight()
 		.ticks(5)
 		.scale(lineYScale);
-	
+
 	lineSvg.append("g")
-		.attr("class","yAxis")
+		.attr("class", "yAxis")
 		.attr("transform", "translate(" + padding + "," + 0 + ")")
 		.call(lineYAxis);
 }
 
-function lineGetColor(d){
-	switch(d){
+function lineGetColor(d) {
+	switch (d) {
 		case "gardenTotal":
 			return "#79994e";
 		case "gardenProcessed":
-			return "#a3cf69";	
+			return "#a3cf69";
 		case "recyclingTotal":
 			return "#ccc652";
 		case "recyclingProcessed":
-			return "#f7ec0f";	
+			return "#f7ec0f";
 		case "landFill":
 			return "#e2231b";
 		case "Wastage":
-			return "#fff5f0";	
+			return "#fff5f0";
 		default:
 			return "black";
 	}
 }
 
 
-function lineVis(){
+function lineVis() {
 	lineSvg = d3.select("#lineChart")
 		.append("svg")
-		.attr("width",w)
-		.attr("height",h);
+		.attr("width", w)
+		.attr("height", h);
 
 	lineGetXScale();
-	
+
 	lineGetYScale();
 
 	//alert(padding);
 	//console.log("1" + padding);
 
 
-	lineLGA = lineJson.map(function(d){ return d.key })
+	lineLGA = lineJson.map(function (d) { return d.key })
 
 	//closest x to mouse??
 	/*
@@ -123,10 +123,10 @@ function lineVis(){
 */
 	lineColor = d3.scaleOrdinal()
 		.domain(lineLGA)
-		.range(['#e41a1c','#377eb8','#4daf4a','#984ea3','#ff7f00','#ffff33','#a65628','#f781bf','#999999'])
+		.range(['#e41a1c', '#377eb8', '#4daf4a', '#984ea3', '#ff7f00', '#ffff33', '#a65628', '#f781bf', '#999999'])
 
 	lineDraw();
-	
+
 	//rect to find mouse position
 	/*
 	lineSvg
@@ -141,44 +141,44 @@ function lineVis(){
 */
 }
 
-function lineDraw(){
-	 // Draw the line
+function lineDraw() {
+	// Draw the line
 	lineSvg.selectAll(".line")
 		.data(lineJson)
 		.enter()
 		.append("path")
-        .attr("fill", "none")
-        .attr("stroke", function(d){ return lineGetColor(d.key) })
-        .attr("stroke-width", 5)
-		.attr("class","line")
-        .attr("d", function(d){
-          return d3.line()
-            .x(function(d) { return lineXScale(d.Reference_Year); })
-            .y(function(d) { return lineYScale(lineCheckedThing(d)); })
-            (d.values)
-        })
-		.on("mouseover", function(event, d){ 
-			var object =  d3.select(this);
+		.attr("fill", "none")
+		.attr("stroke", function (d) { return lineGetColor(d.key) })
+		.attr("stroke-width", 5)
+		.attr("class", "line")
+		.attr("d", function (d) {
+			return d3.line()
+				.x(function (d) { return lineXScale(d.Reference_Year); })
+				.y(function (d) { return lineYScale(lineCheckedThing(d)); })
+				(d.values)
+		})
+		.on("mouseover", function (event, d) {
+			var object = d3.select(this);
 
 			d3.select(this)
-				.attr("stroke","orange")
+				.attr("stroke", "orange")
 				.attr("stroke-width", 10)
 				.append("title")
 				.text((d) => lineCategories(d.key));
 			lineSvg.append("text")
-				.attr("class","lineText SVGText SVGHeading")
+				.attr("class", "lineText SVGText SVGHeading")
 				.attr("x", 650)
 				.attr("y", 40)
 				.attr("textLength", "550px")
 				.text(lineCategories(lineJson[d].key) /*eval("lineJson[d].values[0]." + lineWasteType)*/);
-		lineSvg.append("text")
-				.attr("class","lineText SVGText")
+			lineSvg.append("text")
+				.attr("class", "lineText SVGText")
 				.attr("x", 700)
 				.attr("y", 60)
 				.attr("dy", "0em")
 				.text(lineJson[d].values[0].Value + " Tonnes");
 		})
-		.on("mouseout", function(event, d){ 
+		.on("mouseout", function (event, d) {
 			d3.select(this)
 				.attr("stroke", lineGetColor(lineJson[d].key))
 				.attr("stroke-width", 5);
@@ -186,8 +186,8 @@ function lineDraw(){
 		});
 }
 
-function lineCategories(category){ 
-	switch(category){
+function lineCategories(category) {
+	switch (category) {
 		case "landFill":
 			return "Land Fill";
 		case "recyclingProcessed":
@@ -203,41 +203,41 @@ function lineCategories(category){
 	}
 }
 
-function lineCheckedThing(d){
+function lineCheckedThing(d) {
 	if (lineWasteModifier.checked)
 		return +d.Value /*+eval("d." + lineWasteType)*/ / +d.Estimated_Adult_Population;
 	return +d.Value /*+eval("d." + lineWasteType)*/;
-} 
+}
 
-function lineVisUpdate(){
+function lineVisUpdate() {
 	//alert("why");
-		
+
 	lineSvg.selectAll(".line").remove();
 	lineSvg.selectAll(".yAxis").remove();
-	
+
 	lineGetYScale();
 	lineDraw();
 }
 
 /*
 function mouseover() {
-    focus.style("opacity", 1)
-    focusText.style("opacity",1)
+	focus.style("opacity", 1)
+	focusText.style("opacity",1)
 }
 
 function mousemove() {
-    // recover coordinate we need
-    var x0 = x.invert(d3.mouse(this)[0]);
-    var i = bisect(data, x0, 1);
-    selectedData = data[i]
-    focusText
-      .html("x:" + selectedData.x + "  -  " + "y:" + selectedData.y)
-      .attr("x", x(selectedData.x)+15)
-      .attr("y", y(selectedData.y))
+	// recover coordinate we need
+	var x0 = x.invert(d3.mouse(this)[0]);
+	var i = bisect(data, x0, 1);
+	selectedData = data[i]
+	focusText
+	  .html("x:" + selectedData.x + "  -  " + "y:" + selectedData.y)
+	  .attr("x", x(selectedData.x)+15)
+	  .attr("y", y(selectedData.y))
 }
  function mouseout() {
-    focus.style("opacity", 0)
-    focusText.style("opacity", 0)
+	focus.style("opacity", 0)
+	focusText.style("opacity", 0)
 }
 
 */
