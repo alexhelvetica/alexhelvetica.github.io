@@ -18,7 +18,6 @@ var lineLGA;
 d3.select("#lineWasteModifier")
 	.on("change", function () {
 		lineWasteModifier = this;
-
 		lineVisUpdate();
 	});
 
@@ -26,7 +25,6 @@ d3.select("#lineWasteModifier")
 d3.selectAll('input[name="lineWasteType"]')
 	.on("change", function () {
 		lineWasteType = this.value;
-
 		lineVisUpdate();
 	});
 
@@ -165,18 +163,20 @@ function lineDraw() {
 				.attr("stroke-width", 10)
 				.append("title")
 				.text((d) => lineCategories(d.key));
+
 			lineSvg.append("text")
 				.attr("class", "lineText SVGText SVGHeading")
 				.attr("x", 650)
 				.attr("y", 40)
 				.attr("textLength", "550px")
 				.text(lineCategories(lineJson[d].key) /*eval("lineJson[d].values[0]." + lineWasteType)*/);
+
 			lineSvg.append("text")
 				.attr("class", "lineText SVGText")
 				.attr("x", 700)
 				.attr("y", 60)
 				.attr("dy", "0em")
-				.text(lineJson[d].values[0].Value + " Tonnes");
+				.text(`${lineJson[d].values[0].Value} Tonnes`);
 		})
 		.on("mouseout", function (event, d) {
 			d3.select(this)
@@ -190,14 +190,19 @@ function lineCategories(category) {
 	switch (category) {
 		case "landFill":
 			return "Land Fill";
+
 		case "recyclingProcessed":
 			return "Recycling Processed";
+
 		case "gardenProcessed":
 			return "Garden Waste Processed";
+
 		case "recyclingTotal":
 			return "Recycling Total";
+
 		case "gardenTotal":
 			return "Garden Waste Total";
+
 		case "Wastage":
 			return "Recycling/Garden Wastage";
 	}
