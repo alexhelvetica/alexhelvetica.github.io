@@ -1,6 +1,5 @@
 var treeYearSelect  = document.getElementById("treeYearSelection").value;
 
-//var treeCsv;
 var treeJson;
 
 var treeSvg;
@@ -33,7 +32,6 @@ function treeInit(){
 function treeInit_GenerateJson(){
 	d3.csv("tree great waste.csv")
 		.then(function(data){
-			treeCsv = data;
 			treeJson = d3.nest()
 				.key((d) => d.Reference_Year)
 				.key((d) => d.Type)
