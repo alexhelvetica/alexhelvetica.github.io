@@ -37,7 +37,6 @@ export function createLine() {
         })
 }
 
-
 function lineGetXScale() {
     lineXScale = d3.scaleLinear()
         .domain(d3.extent(lineCsv, (d) => d.Reference_Year))
@@ -207,26 +206,3 @@ function lineVisUpdate() {
     lineGetYScale();
     lineDraw();
 }
-
-/*
-function mouseover() {
-    focus.style("opacity", 1)
-    focusText.style("opacity",1)
-}
-
-function mousemove() {
-    // recover coordinate we need
-    var x0 = x.invert(d3.mouse(this)[0]);
-    var i = bisect(data, x0, 1);
-    selectedData = data[i]
-    focusText
-      .html(`x: ${selectedData.x}  -  y: ${selectedData.y}`)
-      .attr("x", x(selectedData.x)+15)
-      .attr("y", y(selectedData.y))
-}
- function mouseout() {
-    focus.style("opacity", 0)
-    focusText.style("opacity", 0)
-}
-
-*/

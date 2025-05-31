@@ -31,16 +31,6 @@ export function createTree() {
         });
 }
 
-// function treeInit_GenerateJson() {
-//     d3.csv("tree great waste.csv")
-//         .then(function (data) {
-//             treeJson = d3.nest()
-//                 .key((d) => d.Reference_Year)
-//                 .key((d) => d.Type)
-//                 .entries(data);
-//         })
-// }
-
 function treeOpacitySet() {
     // And a opacity scale	----------------------------------------------------------------- need to fix
     treeOpacity = d3.scaleLinear()
@@ -106,8 +96,6 @@ function treeVis() {
 
     treeText();
 }
-
-
 
 function treeText() {
     // and to add the text labels

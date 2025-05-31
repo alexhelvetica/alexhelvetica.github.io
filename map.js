@@ -15,21 +15,6 @@ var geoPathjson;
 var color;
 var city;
 
-function getWidth() {
-    if (self.innerWidth) {
-        return self.innerWidth;
-    }
-
-    if (document.documentElement && document.documentElement.clientWidth) {
-        return document.documentElement.clientWidth;
-    }
-
-    if (document.body) {
-        return document.body.clientWidth;
-    }
-}
-
-
 //Waste Year Selection Update
 d3.select("#YearSelection")
     .on("change", function () {
@@ -212,8 +197,6 @@ function setPath() {
             d3.selectAll(".LGAText").remove();
         });
 }
-
-
 
 function setGeoPathFill(d) {
     if (eval(`d.properties.${wasteType}`) != undefined) { //if LGA is not in dataset. Will be ares without an LGA, or the 3 LGAs that make up the former Delatite LGA for the 2001-2002 data.
