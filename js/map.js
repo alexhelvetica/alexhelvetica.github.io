@@ -9,7 +9,6 @@ var mapView = document.getElementById("melbourne");
 
 var svg;
 var projection;
-var path;
 
 var geoPathjson;
 var color;
@@ -81,21 +80,21 @@ function getGeoPathProjection() {
 }
 
 function getGeoPathPath() {
-    path = d3.geoPath()
+    return d3.geoPath()
         .projection(projection);
 }
 
 function getGeoPath() {
     getGeoPathCanvas();
     getGeoPathProjection();
-    getGeoPathPath();
+    var path = getGeoPathPath();
 
     d3.json("LGA_VIC.json")
         .then(function (json) {
             getGeoPathJson(json);
         }).then(function () {
             getColor();
-            setPath();
+            setPath(path);
             setCities();
         })
 }
@@ -153,7 +152,7 @@ function getColor() {
         ]);
 }
 
-function setPath() {
+function setPath(path) {
     svg.selectAll("path")
         .data(geoPathjson.features)
         .enter()
@@ -161,9 +160,6 @@ function setPath() {
         .attr("d", path)
         .style("fill", (d) => setGeoPathFill(d))
         .on("mouseover", function (event, d) {
-            //var object =  d3.select(this);
-            //var xPosition = path.centroid(object.datum())[0];
-            //var yPosition = path.centroid(object.datum())[1];
             d3.select(this)
                 .style("fill", "orange")
                 .append("title")
@@ -196,7 +192,7 @@ function setNewPath() {
 
 function setNewProjection() {
     getGeoPathProjection();
-    getGeoPathPath();
+    var path = getGeoPathPath();
 
     svg.selectAll("path")
         .data(geoPathjson.features)
