@@ -177,9 +177,7 @@ function setPath() {
         .enter()
         .append("path")
         .attr("d", path)
-        .style("fill", function (d) {
-            return setGeoPathFill(d);
-        })
+        .style("fill", (d) => setGeoPathFill(d))
         .on("mouseover", function (event, d) {
             //var object =  d3.select(this);
             //var xPosition = path.centroid(object.datum())[0];
@@ -210,9 +208,7 @@ function setPath() {
         })
         .on("mouseout", function (event, d) {
             d3.select(this)
-                .style("fill", function (d) {
-                    return setGeoPathFill(d);
-                })
+                .style("fill", (d) => setGeoPathFill(d))
             d3.selectAll(".LGAText").remove();
         });
 }
@@ -234,9 +230,7 @@ function setNewPath() {
         .transition()
         .delay(0)
         .duration(0)
-        .style("fill", function (d) {
-            return setGeoPathFill(d);
-        });
+        .style("fill", (d) => setGeoPathFill(d));
 }
 
 function setNewProjection() {
