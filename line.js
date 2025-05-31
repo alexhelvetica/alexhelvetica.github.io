@@ -33,7 +33,6 @@ export function createLine() {
                 .key((d) => d.Type)
                 .entries(lineCsv);
 
-            console.log(lineJson);
             lineVis()
         })
 }
@@ -97,10 +96,6 @@ function lineVis() {
     lineGetXScale();
 
     lineGetYScale();
-
-    //alert(padding);
-    //console.log("1" + padding);
-
 
     lineLGA = lineJson.map((d) => d.key)
 
@@ -206,8 +201,6 @@ function lineCheckedThing(d) {
 }
 
 function lineVisUpdate() {
-    //alert("why");
-
     lineSvg.selectAll(".line").remove();
     lineSvg.selectAll(".yAxis").remove();
 

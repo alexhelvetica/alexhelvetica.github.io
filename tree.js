@@ -15,7 +15,6 @@ var treeOpacity;
 d3.select("#treeYearSelection")
     .on("change", function () {
         treeYearSelect = this.value;
-        //alert("fuck");
         treeVisUpdate();
     });
 
@@ -167,8 +166,6 @@ function treeGetTreeData() {
 }
 
 function treeVisUpdate() {
-    //alert(treeJson.children[+treeYearSelect].name);
-
     treeGetTreeData();
 
     var values = treeSvg.selectAll("rect")
