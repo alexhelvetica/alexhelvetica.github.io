@@ -4,7 +4,7 @@ import * as d3 from "https://cdn.jsdelivr.net/npm/d3@5/+esm";
 var lineWasteModifier = document.getElementById("lineWasteModifier");
 
 var lineJson;
-var lineSvg;
+var svg;
 var lineXScale;
 var lineYScale;
 
@@ -37,7 +37,7 @@ function lineGetXScale(data) {
         .ticks(5)
         .scale(lineXScale);
 
-    lineSvg.append("g")
+    svg.append("g")
         .attr("class", "xAxis")
         .attr("transform", `translate(0, ${height - padding})`)
         .call(lineXAxis);
@@ -52,7 +52,7 @@ function lineGetYScale(data) {
         .ticks(5)
         .scale(lineYScale);
 
-    lineSvg.append("g")
+    svg.append("g")
         .attr("class", "yAxis")
         .attr("transform", `translate(${padding}, 0)`)
         .call(lineYAxis);
@@ -78,7 +78,7 @@ function lineGetColor(d) {
 }
 
 function lineVis(data) {
-    lineSvg = createSvgCanvas(d3, "lineChart");
+    svg = createSvgCanvas(d3, "lineChart");
 
     lineGetXScale(data);
     lineGetYScale(data);
@@ -88,7 +88,7 @@ function lineVis(data) {
 
 function lineDraw() {
     // Draw the line
-    lineSvg.selectAll(".line")
+    svg.selectAll(".line")
         .data(lineJson)
         .enter()
         .append("path")
@@ -111,7 +111,7 @@ function lineDraw() {
                 .append("title")
                 .text((d) => getCommonName(d.key));
 
-            addSelectionHeading(lineSvg, getCommonName(lineJson[d].key), lineJson[d].values[0].Value);
+            addSelectionHeading(svg, getCommonName(lineJson[d].key), lineJson[d].values[0].Value);
         })
         .on("mouseout", function (event, d) {
             d3.select(this)
@@ -128,8 +128,8 @@ function lineCheckedThing(d) {
 }
 
 function lineVisUpdate() {
-    lineSvg.selectAll(".line").remove();
-    lineSvg.selectAll(".yAxis").remove();
+    svg.selectAll(".line").remove();
+    svg.selectAll(".yAxis").remove();
 
     lineGetYScale();
     lineDraw();

@@ -7,7 +7,7 @@ var wasteModifier = document.getElementById("wasteModifier");
 var wasteType = d3.select('input[name="wasteType"]:checked').node().value;
 var mapView = document.getElementById("melbourne");
 
-var geoPath;
+var svg;
 var projection;
 var path;
 
@@ -62,7 +62,7 @@ function replaceGeoPath() {
 }
 
 function getGeoPathCanvas() {
-    geoPath = createSvgCanvas(d3, "geoPath");
+    svg = createSvgCanvas(d3, "geoPath");
 }
 
 function getGeoPathProjection() {
@@ -154,7 +154,7 @@ function getColor() {
 }
 
 function setPath() {
-    geoPath.selectAll("path")
+    svg.selectAll("path")
         .data(geoPathjson.features)
         .enter()
         .append("path")
@@ -169,7 +169,7 @@ function setPath() {
                 .append("title")
                 .text((d) => `This Value is ${d.properties.LGA_name}`);
 
-            addSelectionHeading(geoPath, geoPathjson.features[d].properties.LGA_name, eval(`geoPathjson.features[d].properties.${wasteType}`));
+            addSelectionHeading(svg, geoPathjson.features[d].properties.LGA_name, eval(`geoPathjson.features[d].properties.${wasteType}`));
         })
         .on("mouseout", function (event, d) {
             d3.select(this)
@@ -186,7 +186,7 @@ function setGeoPathFill(d) {
 }
 
 function setNewPath() {
-    geoPath.selectAll("path")
+    svg.selectAll("path")
         .data(geoPathjson.features)
         .transition()
         .delay(0)
@@ -198,14 +198,14 @@ function setNewProjection() {
     getGeoPathProjection();
     getGeoPathPath();
 
-    geoPath.selectAll("path")
+    svg.selectAll("path")
         .data(geoPathjson.features)
         .transition()
         .delay(0)
         .duration(0)
         .attr("d", path);
 
-    geoPath.selectAll("text")
+    svg.selectAll("text")
         .data(city)
         .transition()
         .delay(0)
@@ -213,7 +213,7 @@ function setNewProjection() {
         .attr("x", (d) => projection([d.lon, d.lat])[0])
         .attr("y", (d) => projection([d.lon, d.lat])[1]);
 
-    geoPath.selectAll("circle")
+    svg.selectAll("circle")
         .data(city)
         .transition()
         .delay(0)
@@ -227,7 +227,7 @@ function setCities() {
         .then(function (data) {
             city = data;
 
-            geoPath.selectAll("text")
+            svg.selectAll("text")
                 .data(city)
                 .enter()
                 .append("text")
@@ -235,7 +235,7 @@ function setCities() {
                 .attr("y", (d) => projection([d.lon, d.lat])[1])
                 .text((d) => d.place);
 
-            geoPath.selectAll("circle")
+            svg.selectAll("circle")
                 .data(city)
                 .enter()
                 .append("circle")

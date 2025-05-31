@@ -5,7 +5,7 @@ var treeYearSelect = document.getElementById("treeYearSelection").value;
 
 var treeJson;
 
-var treeSvg;
+var svg;
 
 var treeHierarchy
 var treeColor;
@@ -19,7 +19,7 @@ d3.select("#treeYearSelection")
     });
 
 export function createTree() {
-    treeSvg = createSvgCanvas(d3, "treeChart");
+    svg = createSvgCanvas(d3, "treeChart");
 
     d3.json("tree.json")
         .then(function (data) {
@@ -50,7 +50,7 @@ function treeVis() {
     treeOpacitySet();
 
     // use this information to add rectangles:
-    treeSvg.selectAll("rect")
+    svg.selectAll("rect")
         .data(treeHierarchy.leaves())
         .enter()
         .append("rect")
@@ -67,7 +67,7 @@ function treeVis() {
                 .append("title")
                 .text((d) => `This Value is ${d.data.name} ${d.data.value}`);
 
-            addSelectionHeading(treeSvg, treeHierarchy.leaves()[d]?.data.name, treeHierarchy.leaves()[d]?.data.value);
+            addSelectionHeading(svg, treeHierarchy.leaves()[d]?.data.name, treeHierarchy.leaves()[d]?.data.value);
         })
         .on("mouseout", function (event, d) {
             d3.select(this)
@@ -80,7 +80,7 @@ function treeVis() {
 
 function treeText() {
     // Add title for the 3 groups
-    treeSvg.selectAll("titles")
+    svg.selectAll("titles")
         .data(treeHierarchy.descendants().filter((d) => d.depth == 1))
         .enter()
         .append("text")
@@ -108,7 +108,7 @@ function treeGetTreeData() {
 function treeVisUpdate() {
     treeGetTreeData();
 
-    var values = treeSvg.selectAll("rect")
+    var values = svg.selectAll("rect")
         .data(treeHierarchy.leaves());
 
     values.enter()
