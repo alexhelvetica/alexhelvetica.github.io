@@ -39,10 +39,6 @@ function treeOpacitySet() {
 
 //https://www.d3-graph-gallery.com/graph/treemap_custom.html
 function treeVis() {
-
-    treeSvg.append("g")
-        .attr("transform", `translate(${padding}, ${padding}`);
-
     // Then d3.treemap computes the position of each element of the hierarchy
     treeGetTreeData();
 
