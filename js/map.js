@@ -1,4 +1,4 @@
-import { w, h, padding, red, yellow, green, blue, addSelectionHeading, createSvgCanvas } from "./common.js";
+import { width, height, padding, red, yellow, green, blue, addSelectionHeading, createSvgCanvas } from "./common.js";
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@5/+esm";
 
 var dataset;
@@ -69,13 +69,13 @@ function getGeoPathProjection() {
     if (!mapView.checked) {
         projection = d3.geoMercator()
             .center([145.45, -36.5])
-            .translate([w / 2, h / 2])
+            .translate([width / 2, height / 2])
             .scale(7500);
     }
     else {
         projection = d3.geoMercator()
             .center([145, -37.94])
-            .translate([w / 2, h / 2])
+            .translate([width / 2, height / 2])
             .scale(34000);
     }
 }

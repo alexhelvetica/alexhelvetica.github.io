@@ -1,4 +1,4 @@
-import { w, h, padding, red, green, yellow, addSelectionHeading, getCommonName, createSvgCanvas } from "./common.js";
+import { width, height, padding, red, green, yellow, addSelectionHeading, getCommonName, createSvgCanvas } from "./common.js";
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@5/+esm";
 
 var lineWasteModifier = document.getElementById("lineWasteModifier");
@@ -39,23 +39,24 @@ export function createLine() {
 function lineGetXScale() {
     lineXScale = d3.scaleLinear()
         .domain(d3.extent(lineCsv, (d) => d.Reference_Year))
-        .range([padding, w]);
+        .range([padding, width]);
 
-    lineXAxis = d3.axisBottom()
+    var lineXAxis = d3.axisBottom()
         .ticks(5)
         .scale(lineXScale);
 
     lineSvg.append("g")
-        .attr("transform", `translate(0, ${h - padding})`)
+        .attr("class", "xAxis")
+        .attr("transform", `translate(0, ${height - padding})`)
         .call(lineXAxis);
 }
 
 function lineGetYScale() {
     lineYScale = d3.scaleLinear()
         .domain([0, d3.max(lineCsv, (d) => lineCheckedThing(d) * 1.5)])
-        .range([h - padding, 0]);
+        .range([height - padding, 0]);
 
-    lineYAxis = d3.axisRight()
+    var lineYAxis = d3.axisLeft()
         .ticks(5)
         .scale(lineYScale);
 

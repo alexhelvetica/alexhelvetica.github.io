@@ -1,4 +1,4 @@
-import { w, h, padding, red, yellow, green, addSelectionHeading, getCommonName, createSvgCanvas } from "./common.js";
+import { width, height, padding, red, yellow, green, addSelectionHeading, getCommonName, createSvgCanvas } from "./common.js";
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@5/+esm";
 
 var treeYearSelect = document.getElementById("treeYearSelection").value;
@@ -100,7 +100,7 @@ function treeGetTreeData() {
     treeHierarchy = d3.hierarchy(treeJson.children[+treeYearSelect]).sum((d) => d.value);
 
     d3.treemap()
-        .size([w, h])
+        .size([width, height])
         .paddingTop(50)
         .paddingRight(7)
         .paddingInner(3)      // Padding between each rectangle

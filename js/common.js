@@ -1,5 +1,5 @@
-export const w = 1200;
-export const h = 900;
+export const width = 1200;
+export const height = 900;
 export const padding = 40;
 export const red = ["#fff5f0", "#fee0d2", "#fcbba1", "#fc9272", "#fb6a4a", "#ef3b2c", "#cb181d", "#a50f15", "#67000d"];
 export const yellow = ["#FFFFF0", "#FDFD96", "#FFFDD0", "#FFFF31", "#FFFF00", "#FCF75E", "#FFF700", "#FFEF00", "#FBEC5D"];
@@ -49,6 +49,6 @@ export function getCommonName(name) {
 export function createSvgCanvas(d3, id) {
     return d3.select(`#${id}`)
         .append("svg")
-        .attr("width", w)
-        .attr("height", h);
+        .attr("width", width)
+        .attr("height", height);
 }
