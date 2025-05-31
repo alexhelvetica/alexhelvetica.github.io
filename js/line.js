@@ -103,8 +103,6 @@ function lineDraw() {
                 (d.values)
         )
         .on("mouseover", function (event, d) {
-            var object = d3.select(this);
-
             d3.select(this)
                 .attr("stroke", "orange")
                 .attr("stroke-width", 10)
