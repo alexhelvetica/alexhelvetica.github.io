@@ -1,4 +1,4 @@
-import { w, h, padding, red, yellow, green } from "./const.js";
+import { w, h, padding, red, yellow, green, addSelectionHeading } from "./common.js";
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@5/+esm";
 
 var treeYearSelect = document.getElementById("treeYearSelection").value;
@@ -74,19 +74,7 @@ function treeVis() {
                 .append("title")
                 .text((d) => `This Value is ${d.data.name} ${d.data.value}`);
 
-            treeSvg.append("text")
-                .attr("class", "SVGText SVGHeading")
-                .attr("x", 650)
-                .attr("y", padding)
-                .attr("textLength", "550px")
-                .text(treeHierarchy.leaves()[d]?.data.name);
-
-            treeSvg.append("text")
-                .attr("class", "SVGText")
-                .attr("x", 700)
-                .attr("y", 60)
-                .attr("dy", "0em")
-                .text(treeHierarchy.leaves()[d]?.data.value);
+            addSelectionHeading(treeSvg, treeHierarchy.leaves()[d]?.data.name, treeHierarchy.leaves()[d]?.data.value);
         })
         .on("mouseout", function (event, d) {
             d3.select(this)

@@ -1,4 +1,4 @@
-import { w, h, padding, red, green, yellow } from "./const.js";
+import { w, h, padding, red, green, yellow, addSelectionHeading } from "./common.js";
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@5/+esm";
 
 var lineWasteModifier = document.getElementById("lineWasteModifier");
@@ -150,18 +150,7 @@ function lineDraw() {
                 .append("title")
                 .text((d) => lineCategories(d.key));
 
-            lineSvg.append("text")
-                .attr("class", "SVGText SVGHeading")
-                .attr("x", 650)
-                .attr("y", padding)
-                .attr("textLength", "550px")
-                .text(lineCategories(lineJson[d].key) /*eval(`lineJson[d].values[0].${lineWasteType}`)*/);
-            lineSvg.append("text")
-                .attr("class", "SVGText")
-                .attr("x", 700)
-                .attr("y", 60)
-                .attr("dy", "0em")
-                .text(`${lineJson[d].values[0].Value} Tonnes`);
+            addSelectionHeading(lineSvg, lineCategories(lineJson[d].key), lineJson[d].values[0].Value);
         })
         .on("mouseout", function (event, d) {
             d3.select(this)

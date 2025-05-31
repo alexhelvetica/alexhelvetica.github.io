@@ -1,4 +1,4 @@
-import { w, h, padding, red, yellow, green, blue } from "./const.js";
+import { w, h, padding, red, yellow, green, blue, addSelectionHeading } from "./common.js";
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@5/+esm";
 
 var dataset;
@@ -171,24 +171,8 @@ function setPath() {
                 .style("fill", "orange")
                 .append("title")
                 .text((d) => `This Value is ${d.properties.LGA_name}`);
-            geoPath.append("text")
-                .attr("class", "SVGText SVGHeading")
-                .attr("x", 650)
-                .attr("y", padding)
-                .attr("textLength", "550px")
-                .text(geoPathjson.features[d].properties.LGA_name);
-                //.attr("font-size", "48px")
-                //.attr("overflow", "hidden")
-                //.attr("white-space", "nowrap")
-                //.attr("text-overflow", "ellipsis")
-                // .attr("text-anchor", "middle") 
-                //.attr("transform", "scale(2)")
-            geoPath.append("text")
-                .attr("class", "SVGText")
-                .attr("x", 700)
-                .attr("y", 60)
-                .attr("dy", "0em")
-                .text(eval(`geoPathjson.features[d].properties.${wasteType}`) + " Tonnes");
+
+            addSelectionHeading(geoPath, geoPathjson.features[d].properties.LGA_name, eval(`geoPathjson.features[d].properties.${wasteType}`));
         })
         .on("mouseout", function (event, d) {
             d3.select(this)
