@@ -86,24 +86,6 @@ function treeVis() {
 }
 
 function treeText() {
-    // and to add the text labels
-    /*
-    treeSvg.selectAll("textName")
-        .data(treeHierarchy.leaves())
-        .enter()
-        .append("text")
-        .attr("class", "treeText")
-        .attr("x", (d) => d.x0 + 5)    // +10 to adjust position (more right)
-        .attr("y", (d) => d.y0 + 20)    // +20 to adjust position (lower)
-        .text((d) => d.data.name)
-        .attr("font-size", "19px")
-        .attr("fill", (d) => 
-            d.data.Type == "recyclingProcessed" ? "black" : "white"
-        );
-
-    // and to add the text labels
-*/
-
     // Add title for the 3 groups
     treeSvg.selectAll("titles")
         .data(treeHierarchy.descendants().filter((d) => d.depth == 1))

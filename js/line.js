@@ -2,7 +2,6 @@ import { w, h, padding, red, green, yellow, addSelectionHeading, getCommonName }
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@5/+esm";
 
 var lineWasteModifier = document.getElementById("lineWasteModifier");
-//var lineWasteType = d3.select('input[name="lineWasteType"]:checked').node().value; 
 
 var lineCsv;
 var lineJson;
@@ -62,7 +61,7 @@ function lineGetYScale() {
 
     lineSvg.append("g")
         .attr("class", "yAxis")
-        .attr("transform", `translate(${padding}, ${0})`)
+        .attr("transform", `translate(${padding}, 0)`)
         .call(lineYAxis);
 }
 
@@ -93,36 +92,9 @@ function lineVis() {
         .attr("height", h);
 
     lineGetXScale();
-
     lineGetYScale();
-
-    lineLGA = lineJson.map((d) => d.key)
-
-    //closest x to mouse??
-    /*
-    var bisect = d3.bisector((d) => d.x).left;
-    
-    var focusText = lineSvg
-        .append("g")
-        .append("text")
-            .style("opacity", 0)
-            .attr("text-anchor", "left")
-            .attr("alignment-baseline", "middle")
-    */
+    lineLGA = lineJson.map((d) => d.key);
     lineDraw();
-
-    //rect to find mouse position
-    /*
-    lineSvg
-        .append("rect")
-        .style("fill", "none")
-        .style("pointer-events", "all")
-        .attr("width", width)
-        .attr("height", height)
-        .on("mouseover", mouseover)
-        .on("mousemove", mousemove)
-        .on("mouseout", mouseout);
-    */
 }
 
 function lineDraw() {
