@@ -172,20 +172,19 @@ function setPath() {
                 .append("title")
                 .text((d) => `This Value is ${d.properties.LGA_name}`);
             geoPath.append("text")
-                .attr("class", "LGAText SVGText SVGHeading")
-                .attr("id", "LGAName")
+                .attr("class", "SVGText SVGHeading")
                 .attr("x", 650)
-                .attr("y", 40)
+                .attr("y", padding)
+                .attr("textLength", "550px")
+                .text(geoPathjson.features[d].properties.LGA_name);
                 //.attr("font-size", "48px")
                 //.attr("overflow", "hidden")
                 //.attr("white-space", "nowrap")
-                //.attr("text-overflow", "ellipsis") 
-                .attr("textLength", "550px")
+                //.attr("text-overflow", "ellipsis")
                 // .attr("text-anchor", "middle") 
                 //.attr("transform", "scale(2)")
-                .text(geoPathjson.features[d].properties.LGA_name)
             geoPath.append("text")
-                .attr("class", "LGAText SVGText")
+                .attr("class", "SVGText")
                 .attr("x", 700)
                 .attr("y", 60)
                 .attr("dy", "0em")
@@ -194,7 +193,7 @@ function setPath() {
         .on("mouseout", function (event, d) {
             d3.select(this)
                 .style("fill", (d) => setGeoPathFill(d))
-            d3.selectAll(".LGAText").remove();
+            d3.selectAll("#geoPath .SVGText").remove();
         });
 }
 

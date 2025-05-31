@@ -75,14 +75,14 @@ function treeVis() {
                 .text((d) => `This Value is ${d.data.name} ${d.data.value}`);
 
             treeSvg.append("text")
-                .attr("class", "treeText SVGText SVGHeading")
+                .attr("class", "SVGText SVGHeading")
                 .attr("x", 650)
-                .attr("y", 40)
+                .attr("y", padding)
                 .attr("textLength", "550px")
                 .text(treeHierarchy.leaves()[d]?.data.name);
 
             treeSvg.append("text")
-                .attr("class", "treeText SVGText")
+                .attr("class", "SVGText")
                 .attr("x", 700)
                 .attr("y", 60)
                 .attr("dy", "0em")
@@ -91,7 +91,7 @@ function treeVis() {
         .on("mouseout", function (event, d) {
             d3.select(this)
                 .style("fill", (d) => treeColor(d.parent.data.name))
-            d3.selectAll(".treeText").remove();
+            d3.selectAll("#treeChart .SVGText").remove();
         });
 
     treeText();

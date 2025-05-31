@@ -151,13 +151,13 @@ function lineDraw() {
                 .text((d) => lineCategories(d.key));
 
             lineSvg.append("text")
-                .attr("class", "lineText SVGText SVGHeading")
+                .attr("class", "SVGText SVGHeading")
                 .attr("x", 650)
-                .attr("y", 40)
+                .attr("y", padding)
                 .attr("textLength", "550px")
                 .text(lineCategories(lineJson[d].key) /*eval(`lineJson[d].values[0].${lineWasteType}`)*/);
             lineSvg.append("text")
-                .attr("class", "lineText SVGText")
+                .attr("class", "SVGText")
                 .attr("x", 700)
                 .attr("y", 60)
                 .attr("dy", "0em")
@@ -167,7 +167,7 @@ function lineDraw() {
             d3.select(this)
                 .attr("stroke", lineGetColor(lineJson[d].key))
                 .attr("stroke-width", 5);
-            d3.selectAll(".lineText").remove();
+            d3.selectAll("#line .SVGText").remove();
         });
 }
 
