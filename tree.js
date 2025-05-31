@@ -72,13 +72,13 @@ function treeVis() {
         .data(treeHierarchy.leaves())
         .enter()
         .append("rect")
-        .attr('x', function (d) { return d.x0; })
-        .attr('y', function (d) { return d.y0; })
-        .attr('width', function (d) { return d.x1 - d.x0; })
-        .attr('height', function (d) { return d.y1 - d.y0; })
+        .attr('x', (d) => d.x0)
+        .attr('y', (d) => d.y0)
+        .attr('width', (d) => d.x1 - d.x0)
+        .attr('height', (d) => d.y1 - d.y0)
         .style("stroke", "black")
-        .style("fill", function (d) { return treeColor(d.parent.data.name) })
-        .style("opacity", function (d) { return treeOpacity(d.data.value) })
+        .style("fill", (d) => treeColor(d.parent.data.name))
+        .style("opacity", (d) => treeOpacity(d.data.value))
         .on("mouseover", function (event, d) {
             d3.select(this)
                 .style("fill", "orange")
@@ -101,7 +101,7 @@ function treeVis() {
         })
         .on("mouseout", function (event, d) {
             d3.select(this)
-                .style("fill", function (d) { return treeColor(d.parent.data.name) })
+                .style("fill", (d) => treeColor(d.parent.data.name))
             d3.selectAll(".treeText").remove();
         });
 
@@ -133,12 +133,12 @@ function treeText() {
 
     // Add title for the 3 groups
     treeSvg.selectAll("titles")
-        .data(treeHierarchy.descendants().filter(function (d) { return d.depth == 1 }))
+        .data(treeHierarchy.descendants().filter((d) => d.depth == 1))
         .enter()
         .append("text")
         .attr("class", "titles")
-        .attr("x", function (d) { return d.x0 })
-        .attr("y", function (d) { return d.y0 + 21 })
+        .attr("x", (d) => d.x0)
+        .attr("y", (d) => d.y0 + 21)
         .text(function (d) {
             switch (d.data.name) {
                 case "landFill":
@@ -181,12 +181,12 @@ function treeVisUpdate() {
         .merge(values)
         .transition()
         .duration(50)
-        .attr('x', function (d) { return d.x0; })
-        .attr('y', function (d) { return d.y0; })
-        .attr('width', function (d) { return d.x1 - d.x0; })
-        .attr('height', function (d) { return d.y1 - d.y0; })
-        .style("fill", function (d) { return treeColor(d.parent.data.name) })
-        .style("opacity", function (d) { return treeOpacity(d.data.value) });
+        .attr('x', (d) => d.x0)
+        .attr('y', (d) => d.y0)
+        .attr('width', (d) => d.x1 - d.x0)
+        .attr('height', (d) => d.y1 - d.y0)
+        .style("fill", (d) => treeColor(d.parent.data.name))
+        .style("opacity", (d) => treeOpacity(d.data.value));
 
     d3.selectAll(".titles").remove();
 
