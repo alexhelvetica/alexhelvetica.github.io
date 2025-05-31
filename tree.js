@@ -25,7 +25,7 @@ export function createTree() {
         .attr("width", w)
         .attr("height", h);
 
-    treeJson = d3.json("tree.json")
+    d3.json("tree.json")
         .then(function (data) {
             treeJson = data;
             treeVis();
