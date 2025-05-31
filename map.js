@@ -1,6 +1,6 @@
-var w = 1200/*getWidth() - 80*/;
-var h = 900 /*getWidth()*0.65*/;
-var padding = 40;
+import { w, h, padding } from "./const.js";
+import * as d3 from "https://cdn.jsdelivr.net/npm/d3@5/+esm";
+
 var dataset;
 
 var yearSelect = document.getElementById("YearSelection").value;
@@ -68,7 +68,7 @@ d3.select("#melbourne")
         setNewProjection();
     });
 
-function init() {
+export function createMap() {
     dataset = d3.csv("geopath.csv")
         .then(function (data) {
             dataset = data;
@@ -300,5 +300,3 @@ function setCities() {
                 .attr("fill", "red");
         });
 }
-
-window.onload = init();

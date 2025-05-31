@@ -1,3 +1,6 @@
+import { w, h, padding } from "./const.js";
+import * as d3 from "https://cdn.jsdelivr.net/npm/d3@5/+esm";
+
 var lineWasteModifier = document.getElementById("lineWasteModifier");
 //var lineWasteType = d3.select('input[name="lineWasteType"]:checked').node().value; 
 
@@ -23,7 +26,7 @@ d3.selectAll('input[name="lineWasteType"]')
     .on("change", () => lineVisUpdate());
 
 
-function lineInit() {
+export function createLine() {
     d3.csv("linev2.csv")
         .then(function (data) {
             lineCsv = data;
@@ -239,6 +242,3 @@ function mousemove() {
 }
 
 */
-
-
-window.onload = lineInit();

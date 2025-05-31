@@ -1,3 +1,6 @@
+import { w, h, padding } from "./const.js";
+import * as d3 from "https://cdn.jsdelivr.net/npm/d3@5/+esm";
+
 var treeYearSelect = document.getElementById("treeYearSelection").value;
 
 var treeJson;
@@ -16,7 +19,7 @@ d3.select("#treeYearSelection")
         treeVisUpdate();
     });
 
-function treeInit() {
+export function createTree() {
     treeSvg = d3.select("#treeChart")
         .append("svg")
         .attr("width", w)
@@ -29,15 +32,15 @@ function treeInit() {
         });
 }
 
-function treeInit_GenerateJson() {
-    d3.csv("tree great waste.csv")
-        .then(function (data) {
-            treeJson = d3.nest()
-                .key((d) => d.Reference_Year)
-                .key((d) => d.Type)
-                .entries(data);
-        })
-}
+// function treeInit_GenerateJson() {
+//     d3.csv("tree great waste.csv")
+//         .then(function (data) {
+//             treeJson = d3.nest()
+//                 .key((d) => d.Reference_Year)
+//                 .key((d) => d.Type)
+//                 .entries(data);
+//         })
+// }
 
 function treeOpacitySet() {
     // And a opacity scale	----------------------------------------------------------------- need to fix
@@ -189,6 +192,3 @@ function treeVisUpdate() {
 
     treeText();
 }
-
-
-window.onload = treeInit();
