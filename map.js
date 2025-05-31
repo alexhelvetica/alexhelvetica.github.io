@@ -1,17 +1,11 @@
-import { w, h, padding } from "./const.js";
+import { w, h, padding, red, yellow, green, blue } from "./const.js";
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@5/+esm";
 
 var dataset;
-
 var yearSelect = document.getElementById("YearSelection").value;
 var wasteModifier = document.getElementById("wasteModifier");
 var wasteType = d3.select('input[name="wasteType"]:checked').node().value;
 var mapView = document.getElementById("melbourne");
-
-var red = ['#fff5f0', '#fee0d2', '#fcbba1', '#fc9272', '#fb6a4a', '#ef3b2c', '#cb181d', '#a50f15', '#67000d'];
-var yellow = ['#FFFFF0', '#FDFD96', '#FFFDD0', '#FFFF31', '#FFFF00', '#FCF75E', '#FFF700', '#FFEF00', '#FBEC5D'];
-var green = ['#f7fcf5', '#e5f5e0', '#c7e9c0', '#a1d99b', '#74c476', '#41ab5d', '#238b45', '#006d2c', '#00441b'];
-var blue = ['#f2f0f7', '#cbc9e2', '#9e9ac8', '#756bb1', '#54278f'];
 
 var geoPath;
 var projection;
