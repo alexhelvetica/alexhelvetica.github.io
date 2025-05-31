@@ -3,17 +3,10 @@ import * as d3 from "https://cdn.jsdelivr.net/npm/d3@5/+esm";
 
 var lineWasteModifier = document.getElementById("lineWasteModifier");
 
-var lineCsv;
 var lineJson;
-
 var lineSvg;
-
 var lineXScale;
 var lineYScale;
-var lineYAxis;
-var lineXAxis;
-
-var lineLGA;
 
 //Waste Per Capita vs Total Selector
 d3.select("#lineWasteModifier")
@@ -27,18 +20,17 @@ d3.selectAll('input[name="lineWasteType"]')
 export function createLine() {
     d3.csv("linev2.csv")
         .then(function (data) {
-            lineCsv = data;
             lineJson = d3.nest()
                 .key((d) => d.Type)
-                .entries(lineCsv);
+                .entries(data);
 
-            lineVis();
+            lineVis(data);
         })
 }
 
-function lineGetXScale() {
+function lineGetXScale(data) {
     lineXScale = d3.scaleLinear()
-        .domain(d3.extent(lineCsv, (d) => d.Reference_Year))
+        .domain(d3.extent(data, (d) => d.Reference_Year))
         .range([padding, width]);
 
     var lineXAxis = d3.axisBottom()
@@ -51,9 +43,9 @@ function lineGetXScale() {
         .call(lineXAxis);
 }
 
-function lineGetYScale() {
+function lineGetYScale(data) {
     lineYScale = d3.scaleLinear()
-        .domain([0, d3.max(lineCsv, (d) => lineCheckedThing(d) * 1.5)])
+        .domain([0, d3.max(data, (d) => lineCheckedThing(d) * 1.5)])
         .range([height - padding, 0]);
 
     var lineYAxis = d3.axisLeft()
@@ -85,13 +77,12 @@ function lineGetColor(d) {
     }
 }
 
-
-function lineVis() {
+function lineVis(data) {
     lineSvg = createSvgCanvas(d3, "lineChart");
 
-    lineGetXScale();
-    lineGetYScale();
-    lineLGA = lineJson.map((d) => d.key);
+    lineGetXScale(data);
+    lineGetYScale(data);
+    lineJson.map((d) => d.key);
     lineDraw();
 }
 
