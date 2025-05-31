@@ -90,14 +90,14 @@ function treeVis() {
                 .attr("x", 650)
                 .attr("y", 40)
                 .attr("textLength", "550px")
-                .text(treeHierarchy.leaves()[d].data.name);
+                .text(treeHierarchy.leaves()[d]?.data.name);
 
             treeSvg.append("text")
                 .attr("class", "treeText SVGText")
                 .attr("x", 700)
                 .attr("y", 60)
                 .attr("dy", "0em")
-                .text(treeHierarchy.leaves()[d].data.value);
+                .text(treeHierarchy.leaves()[d]?.data.value);
         })
         .on("mouseout", function (event, d) {
             d3.select(this)
