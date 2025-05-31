@@ -33,7 +33,7 @@ export function createLine() {
                 .key((d) => d.Type)
                 .entries(lineCsv);
 
-            lineVis()
+            lineVis();
         })
 }
 
@@ -48,7 +48,7 @@ function lineGetXScale() {
         .scale(lineXScale);
 
     lineSvg.append("g")
-        .attr("transform", "translate(0, " + (h - padding) + ")")
+        .attr("transform", `translate(0, ${h - padding})`)
         .call(lineXAxis);
 }
 
@@ -63,7 +63,7 @@ function lineGetYScale() {
 
     lineSvg.append("g")
         .attr("class", "yAxis")
-        .attr("transform", "translate(" + padding + "," + 0 + ")")
+        .attr("transform", `translate(${padding}, ${0})`)
         .call(lineYAxis);
 }
 
@@ -156,7 +156,7 @@ function lineDraw() {
                 .attr("x", 650)
                 .attr("y", 40)
                 .attr("textLength", "550px")
-                .text(lineCategories(lineJson[d].key) /*eval("lineJson[d].values[0]." + lineWasteType)*/);
+                .text(lineCategories(lineJson[d].key) /*eval(`lineJson[d].values[0].${lineWasteType}`)*/);
             lineSvg.append("text")
                 .attr("class", "lineText SVGText")
                 .attr("x", 700)
@@ -196,8 +196,8 @@ function lineCategories(category) {
 
 function lineCheckedThing(d) {
     if (lineWasteModifier.checked)
-        return +d.Value /*+eval("d." + lineWasteType)*/ / +d.Estimated_Adult_Population;
-    return +d.Value /*+eval("d." + lineWasteType)*/;
+        return +d.Value /*+eval(`d.${lineWasteType}`)*/ / +d.Estimated_Adult_Population;
+    return +d.Value /*+eval(`d.${lineWasteType}`)*/;
 }
 
 function lineVisUpdate() {
@@ -220,7 +220,7 @@ function mousemove() {
     var i = bisect(data, x0, 1);
     selectedData = data[i]
     focusText
-      .html("x:" + selectedData.x + "  -  " + "y:" + selectedData.y)
+      .html(`x: ${selectedData.x}  -  y: ${selectedData.y}`)
       .attr("x", x(selectedData.x)+15)
       .attr("y", y(selectedData.y))
 }

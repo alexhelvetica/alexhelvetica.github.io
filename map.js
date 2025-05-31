@@ -163,10 +163,10 @@ function getColor() {
         .range(selectGeoPathColor())
         .domain([
             d3.min(geoPathjson.features, (d) =>
-                eval("d.properties." + wasteType) / (wasteModifier.checked ? d.properties.Population : 1)
+                eval(`d.properties.${wasteType}`) / (wasteModifier.checked ? d.properties.Population : 1)
             ),
             d3.max(geoPathjson.features, (d) =>
-                eval("d.properties." + wasteType) / (wasteModifier.checked ? d.properties.Population : 1)
+                eval(`d.properties.${wasteType}`) / (wasteModifier.checked ? d.properties.Population : 1)
             )
         ]);
 }
@@ -185,7 +185,7 @@ function setPath() {
             d3.select(this)
                 .style("fill", "orange")
                 .append("title")
-                .text((d) => "This Value is " + d.properties.LGA_name);
+                .text((d) => `This Value is ${d.properties.LGA_name}`);
             geoPath.append("text")
                 .attr("class", "LGAText SVGText SVGHeading")
                 .attr("id", "LGAName")
@@ -204,7 +204,7 @@ function setPath() {
                 .attr("x", 700)
                 .attr("y", 60)
                 .attr("dy", "0em")
-                .text(eval("geoPathjson.features[d].properties." + wasteType) + " Tonnes");
+                .text(eval(`geoPathjson.features[d].properties.${wasteType}`) + " Tonnes");
         })
         .on("mouseout", function (event, d) {
             d3.select(this)
@@ -216,10 +216,8 @@ function setPath() {
 
 
 function setGeoPathFill(d) {
-    if (eval("d.properties." + wasteType) != undefined) { //if LGA is not in dataset. Will be ares without an LGA, or the 3 LGAs that make up the former Delatite LGA for the 2001-2002 data.
-        if (wasteModifier.checked)
-            return color(eval("d.properties." + wasteType) / d.properties.Population);
-        return color(eval("d.properties." + wasteType));
+    if (eval(`d.properties.${wasteType}`) != undefined) { //if LGA is not in dataset. Will be ares without an LGA, or the 3 LGAs that make up the former Delatite LGA for the 2001-2002 data.
+        return color(eval(`d.properties.${wasteType}`) / (wasteModifier.checked ? d.properties.Population : 1));
     }
     return "black";
 }

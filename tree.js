@@ -54,7 +54,7 @@ function treeOpacitySet() {
 function treeVis() {
 
     treeSvg.append("g")
-        .attr("transform", "translate(" + padding + "," + padding + ")");
+        .attr("transform", `translate(${padding}, ${padding}`);
 
     // Then d3.treemap computes the position of each element of the hierarchy
     treeGetTreeData();
@@ -82,7 +82,7 @@ function treeVis() {
             d3.select(this)
                 .style("fill", "orange")
                 .append("title")
-                .text((d) => "This Value is " + d.data.name + " " + d.data.value);
+                .text((d) => `This Value is ${d.data.name} ${d.data.value}`);
 
             treeSvg.append("text")
                 .attr("class", "treeText SVGText SVGHeading")
@@ -112,20 +112,20 @@ function treeVis() {
 function treeText() {
     // and to add the text labels
     /*
-   treeSvg.selectAll("textName")
-       .data(treeHierarchy.leaves())
-       .enter()
-       .append("text")
+    treeSvg.selectAll("textName")
+        .data(treeHierarchy.leaves())
+        .enter()
+        .append("text")
         .attr("class", "treeText")
         .attr("x", (d) => d.x0 + 5)    // +10 to adjust position (more right)
         .attr("y", (d) => d.y0 + 20)    // +20 to adjust position (lower)
         .text((d) => d.data.name)
-         .attr("font-size", "19px")
+        .attr("font-size", "19px")
         .attr("fill", (d) => 
             d.data.Type == "recyclingProcessed" ? "black" : "white"
         );
 
-   // and to add the text labels
+    // and to add the text labels
 */
 
     // Add title for the 3 groups
