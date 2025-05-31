@@ -1,4 +1,4 @@
-import { w, h, padding, red, green, yellow, addSelectionHeading, getCommonName } from "./common.js";
+import { w, h, padding, red, green, yellow, addSelectionHeading, getCommonName, createSvgCanvas } from "./common.js";
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@5/+esm";
 
 var lineWasteModifier = document.getElementById("lineWasteModifier");
@@ -86,10 +86,7 @@ function lineGetColor(d) {
 
 
 function lineVis() {
-    lineSvg = d3.select("#lineChart")
-        .append("svg")
-        .attr("width", w)
-        .attr("height", h);
+    lineSvg = createSvgCanvas(d3, "lineChart");
 
     lineGetXScale();
     lineGetYScale();

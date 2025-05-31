@@ -45,3 +45,10 @@ export function getCommonName(name) {
             return "Garden Waste Total";
     }
 }
+
+export function createSvgCanvas(d3, id) {
+    return d3.select(`#${id}`)
+        .append("svg")
+        .attr("width", w)
+        .attr("height", h);
+}

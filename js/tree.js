@@ -1,4 +1,4 @@
-import { w, h, padding, red, yellow, green, addSelectionHeading, getCommonName } from "./common.js";
+import { w, h, padding, red, yellow, green, addSelectionHeading, getCommonName, createSvgCanvas } from "./common.js";
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@5/+esm";
 
 var treeYearSelect = document.getElementById("treeYearSelection").value;
@@ -19,10 +19,7 @@ d3.select("#treeYearSelection")
     });
 
 export function createTree() {
-    treeSvg = d3.select("#treeChart")
-        .append("svg")
-        .attr("width", w)
-        .attr("height", h);
+    treeSvg = createSvgCanvas(d3, "treeChart");
 
     d3.json("tree.json")
         .then(function (data) {

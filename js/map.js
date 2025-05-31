@@ -1,4 +1,4 @@
-import { w, h, padding, red, yellow, green, blue, addSelectionHeading } from "./common.js";
+import { w, h, padding, red, yellow, green, blue, addSelectionHeading, createSvgCanvas } from "./common.js";
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@5/+esm";
 
 var dataset;
@@ -62,10 +62,7 @@ function replaceGeoPath() {
 }
 
 function getGeoPathCanvas() {
-    geoPath = d3.select("#geoPath")
-        .append("svg")
-        .attr("width", w)
-        .attr("height", h);
+    geoPath = createSvgCanvas(d3, "geoPath");
 }
 
 function getGeoPathProjection() {
