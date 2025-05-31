@@ -23,9 +23,11 @@ footer {
 	padding: 14px 16px;
 	font-size: 14px
 }
+/*
 main {
- 	/*margin: 20px 20px 20px 20px;*/
+ 	margin: 20px 20px 20px 20px;
  }
+ */
 nav ul{
     list-style-type: none;
     margin: 0;
