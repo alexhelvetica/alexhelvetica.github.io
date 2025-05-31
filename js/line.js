@@ -1,4 +1,4 @@
-import { w, h, padding, red, green, yellow, addSelectionHeading } from "./common.js";
+import { w, h, padding, red, green, yellow, addSelectionHeading, getCommonName } from "./common.js";
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@5/+esm";
 
 var lineWasteModifier = document.getElementById("lineWasteModifier");
@@ -148,9 +148,9 @@ function lineDraw() {
                 .attr("stroke", "orange")
                 .attr("stroke-width", 10)
                 .append("title")
-                .text((d) => lineCategories(d.key));
+                .text((d) => getCommonName(d.key));
 
-            addSelectionHeading(lineSvg, lineCategories(lineJson[d].key), lineJson[d].values[0].Value);
+            addSelectionHeading(lineSvg, getCommonName(lineJson[d].key), lineJson[d].values[0].Value);
         })
         .on("mouseout", function (event, d) {
             d3.select(this)
@@ -158,28 +158,6 @@ function lineDraw() {
                 .attr("stroke-width", 5);
             d3.selectAll("#line .SVGText").remove();
         });
-}
-
-function lineCategories(category) {
-    switch (category) {
-        case "landFill":
-            return "Land Fill";
-
-        case "recyclingProcessed":
-            return "Recycling Processed";
-
-        case "gardenProcessed":
-            return "Garden Waste Processed";
-
-        case "recyclingTotal":
-            return "Recycling Total";
-
-        case "gardenTotal":
-            return "Garden Waste Total";
-
-        case "Wastage":
-            return "Recycling/Garden Wastage";
-    }
 }
 
 function lineCheckedThing(d) {

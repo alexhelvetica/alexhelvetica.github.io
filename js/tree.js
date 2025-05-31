@@ -1,4 +1,4 @@
-import { w, h, padding, red, yellow, green, addSelectionHeading } from "./common.js";
+import { w, h, padding, red, yellow, green, addSelectionHeading, getCommonName } from "./common.js";
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@5/+esm";
 
 var treeYearSelect = document.getElementById("treeYearSelection").value;
@@ -112,18 +112,7 @@ function treeText() {
         .attr("class", "titles")
         .attr("x", (d) => d.x0)
         .attr("y", (d) => d.y0 + 21)
-        .text(function (d) {
-            switch (d.data.name) {
-                case "landFill":
-                    return "Land Fill";
-                case "recyclingProcessed":
-                    return "Recycling Processed";
-                case "gardenProcessed":
-                    return "Garden Waste Processed";
-                case "Wastage":
-                    return "Recycling/Garden Wastage";
-            }
-        })
+        .text((d) => getCommonName(d.data.name))
         .attr("font-size", "19px")
         .attr("fill", "black");
 }

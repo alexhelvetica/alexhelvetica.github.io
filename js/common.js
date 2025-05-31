@@ -26,3 +26,22 @@ export function addSelectionHeading(obj, name, value) {
         .attr("dy", "0em")
         .text(`${value} Tonnes`);
 }
+
+export function getCommonName(name) {
+    switch (name) {
+        case "landFill":
+            return "Land Fill";
+        case "Wastage":
+            return "Recycling/Garden Wastage";
+
+        case "recyclingProcessed":
+            return "Recycling Processed";
+        case "recyclingTotal":
+            return "Recycling Total";
+
+        case "gardenProcessed":
+            return "Garden Waste Processed";
+        case "gardenTotal":
+            return "Garden Waste Total";
+    }
+}
