@@ -1,4 +1,4 @@
-import { w, h, padding } from "./const.js";
+import { w, h, padding, red, green, yellow } from "./const.js";
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@5/+esm";
 
 var lineWasteModifier = document.getElementById("lineWasteModifier");
@@ -14,7 +14,6 @@ var lineYScale;
 var lineYAxis;
 var lineXAxis;
 
-var lineColor;
 var lineLGA;
 
 //Waste Per Capita vs Total Selector
@@ -72,17 +71,17 @@ function lineGetYScale() {
 function lineGetColor(d) {
     switch (d) {
         case "gardenTotal":
-            return "#79994e";
+            return green[8];
         case "gardenProcessed":
-            return "#a3cf69";
+            return green[4];
         case "recyclingTotal":
-            return "#ccc652";
+            return yellow[8];
         case "recyclingProcessed":
-            return "#f7ec0f";
+            return yellow[4];
         case "landFill":
-            return "#e2231b";
+            return red[4];
         case "Wastage":
-            return "#fff5f0";
+            return red[8];
         default:
             return "black";
     }
@@ -116,10 +115,6 @@ function lineVis() {
             .attr("text-anchor", "left")
             .attr("alignment-baseline", "middle")
 */
-    lineColor = d3.scaleOrdinal()
-        .domain(lineLGA)
-        .range(['#e41a1c', '#377eb8', '#4daf4a', '#984ea3', '#ff7f00', '#ffff33', '#a65628', '#f781bf', '#999999'])
-
     lineDraw();
 
     //rect to find mouse position

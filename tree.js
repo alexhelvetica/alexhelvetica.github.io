@@ -1,4 +1,4 @@
-import { w, h, padding } from "./const.js";
+import { w, h, padding, red, yellow, green } from "./const.js";
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@5/+esm";
 
 var treeYearSelect = document.getElementById("treeYearSelection").value;
@@ -63,7 +63,7 @@ function treeVis() {
     // prepare a color scale
     treeColor = d3.scaleOrdinal()
         .domain(["landFill", "recyclingWastage", "recyclingProcessed", "gardenWastage", "gardenProcessed"])
-        .range(['#e2231b', '#FBEC5D', '#f7ec0f', '#00441b', '#a3cf69']);
+        .range([red[4], yellow[8], yellow[4], green[8], green[4]]);
 
     treeOpacitySet();
 
