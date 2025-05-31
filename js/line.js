@@ -103,8 +103,8 @@ function lineVis() {
     var bisect = d3.bisector((d) => d.x).left;
     
     var focusText = lineSvg
-        .append('g')
-        .append('text')
+        .append("g")
+        .append("text")
             .style("opacity", 0)
             .attr("text-anchor", "left")
             .attr("alignment-baseline", "middle")
@@ -114,15 +114,15 @@ function lineVis() {
     //rect to find mouse position
     /*
     lineSvg
-        .append('rect')
+        .append("rect")
         .style("fill", "none")
         .style("pointer-events", "all")
-        .attr('width', width)
-        .attr('height', height)
-        .on('mouseover', mouseover)
-        .on('mousemove', mousemove)
-        .on('mouseout', mouseout);
-*/
+        .attr("width", width)
+        .attr("height", height)
+        .on("mouseover", mouseover)
+        .on("mousemove", mousemove)
+        .on("mouseout", mouseout);
+    */
 }
 
 function lineDraw() {
