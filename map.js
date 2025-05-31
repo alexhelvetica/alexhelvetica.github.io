@@ -63,7 +63,7 @@ d3.select("#melbourne")
     });
 
 export function createMap() {
-    dataset = d3.csv("geopath.csv")
+    d3.csv("geopath.csv")
         .then(function (data) {
             dataset = data;
         });
@@ -108,7 +108,7 @@ function getGeoPath() {
     getGeoPathProjection();
     getGeoPathPath();
 
-    geoPathjson = d3.json("LGA_VIC.json")
+    d3.json("LGA_VIC.json")
         .then(function (json) {
             getGeoPathJson(json);
         }).then(function () {
@@ -262,7 +262,7 @@ function setNewProjection() {
 }
 
 function setCities() {
-    city = d3.csv("VIC_city.csv")
+    d3.csv("VIC_city.csv")
         .then(function (data) {
             city = data;
 
