@@ -117,16 +117,14 @@ function treeText() {
        .data(treeHierarchy.leaves())
        .enter()
        .append("text")
-       .attr("class","treeText")
-         .attr("x", function(d){ return d.x0+5})    // +10 to adjust position (more right)
-         .attr("y", function(d){ return d.y0+20})    // +20 to adjust position (lower)
-         .text(function(d){ return d.data.name})
+        .attr("class", "treeText")
+        .attr("x", (d) => d.x0 + 5)    // +10 to adjust position (more right)
+        .attr("y", (d) => d.y0 + 20)    // +20 to adjust position (lower)
+        .text((d) => d.data.name)
          .attr("font-size", "19px")
-          .attr("fill", function(d){
-                       if (d.data.Type == "recyclingProcessed")
-               return "black";
-           return "white";
-          });
+        .attr("fill", (d) => 
+            d.data.Type == "recyclingProcessed" ? "black" : "white"
+        );
 
    // and to add the text labels
 */

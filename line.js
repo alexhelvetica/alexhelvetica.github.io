@@ -102,19 +102,19 @@ function lineVis() {
     //console.log("1" + padding);
 
 
-    lineLGA = lineJson.map(function (d) { return d.key })
+    lineLGA = lineJson.map((d) => d.key)
 
     //closest x to mouse??
     /*
-    var bisect = d3.bisector(function(d) { return d.x; }).left;
-
+    var bisect = d3.bisector((d) => d.x).left;
+    
     var focusText = lineSvg
         .append('g')
         .append('text')
             .style("opacity", 0)
             .attr("text-anchor", "left")
             .attr("alignment-baseline", "middle")
-*/
+    */
     lineDraw();
 
     //rect to find mouse position
@@ -138,15 +138,15 @@ function lineDraw() {
         .enter()
         .append("path")
         .attr("fill", "none")
-        .attr("stroke", function (d) { return lineGetColor(d.key) })
+        .attr("stroke", (d) => lineGetColor(d.key))
         .attr("stroke-width", 5)
         .attr("class", "line")
-        .attr("d", function (d) {
-            return d3.line()
-                .x(function (d) { return lineXScale(d.Reference_Year); })
-                .y(function (d) { return lineYScale(lineCheckedThing(d)); })
+        .attr("d", (d) =>
+            d3.line()
+                .x((d) => lineXScale(d.Reference_Year))
+                .y((d) => lineYScale(lineCheckedThing(d)))
                 (d.values)
-        })
+        )
         .on("mouseover", function (event, d) {
             var object = d3.select(this);
 
