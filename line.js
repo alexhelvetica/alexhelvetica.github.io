@@ -16,11 +16,11 @@ var lineLGA;
 
 //Waste Per Capita vs Total Selector
 d3.select("#lineWasteModifier")
-	.on("change", () => lineVisUpdate());
+    .on("change", () => lineVisUpdate());
 
 //Waste Category Update
 d3.selectAll('input[name="lineWasteType"]')
-	.on("change", () => lineVisUpdate());
+    .on("change", () => lineVisUpdate());
 
 
 function lineInit() {
