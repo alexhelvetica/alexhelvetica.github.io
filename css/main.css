@@ -85,8 +85,7 @@ SVG {
     /*background-color: black;*/
 }
 
-.interactiveElements,
-.interactiveElements1 {
+.interactiveElements {
     background-color: #E8EEE3;
     margin: 0px 0px 10px 10px;
     overflow: hidden;
