@@ -162,16 +162,12 @@ function getColor() {
     color = d3.scaleQuantize()
         .range(selectGeoPathColor())
         .domain([
-            d3.min(geoPathjson.features, function (d) {
-                if (wasteModifier.checked)
-                    return eval("d.properties." + wasteType) / d.properties.Population;
-                return eval("d.properties." + wasteType);
-            }),
-            d3.max(geoPathjson.features, function (d) {
-                if (wasteModifier.checked)
-                    return eval("d.properties." + wasteType) / d.properties.Population;
-                return eval("d.properties." + wasteType);
-            })
+            d3.min(geoPathjson.features, (d) =>
+                eval("d.properties." + wasteType) / (wasteModifier.checked ? d.properties.Population : 1)
+            ),
+            d3.max(geoPathjson.features, (d) =>
+                eval("d.properties." + wasteType) / (wasteModifier.checked ? d.properties.Population : 1)
+            )
         ]);
 }
 
