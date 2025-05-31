@@ -11,7 +11,6 @@ var svg;
 var projection;
 
 var geoPathjson;
-var color;
 var city;
 
 //Waste Year Selection Update
@@ -56,8 +55,8 @@ export function createMap() {
 }
 
 function replaceGeoPath() {
-    getColor();
-    setNewPath();
+    var colour = getColour();
+    setNewPath(colour);
 }
 
 function getGeoPathCanvas() {
@@ -93,8 +92,8 @@ function getGeoPath() {
         .then(function (json) {
             getGeoPathJson(json);
         }).then(function () {
-            getColor();
-            setPath(path);
+            var colour = getColour();
+            setPath(path, colour);
             setCities();
         })
 }
@@ -139,8 +138,8 @@ function selectGeoPathColor() {
     }
 }
 
-function getColor() {
-    color = d3.scaleQuantize()
+function getColour() {
+    return d3.scaleQuantize()
         .range(selectGeoPathColor())
         .domain([
             d3.min(geoPathjson.features, (d) =>
@@ -152,13 +151,13 @@ function getColor() {
         ]);
 }
 
-function setPath(path) {
+function setPath(path, colour) {
     svg.selectAll("path")
         .data(geoPathjson.features)
         .enter()
         .append("path")
         .attr("d", path)
-        .style("fill", (d) => setGeoPathFill(d))
+        .style("fill", (d) => setGeoPathFill(d, colour))
         .on("mouseover", function (event, d) {
             d3.select(this)
                 .style("fill", "orange")
@@ -169,25 +168,25 @@ function setPath(path) {
         })
         .on("mouseout", function (event, d) {
             d3.select(this)
-                .style("fill", (d) => setGeoPathFill(d))
+                .style("fill", (d) => setGeoPathFill(d, colour))
             d3.selectAll("#geoPath .SVGText").remove();
         });
 }
 
-function setGeoPathFill(d) {
+function setGeoPathFill(d, colour) {
     if (eval(`d.properties.${wasteType}`) != undefined) { //if LGA is not in dataset. Will be ares without an LGA, or the 3 LGAs that make up the former Delatite LGA for the 2001-2002 data.
-        return color(eval(`d.properties.${wasteType}`) / (wasteModifier.checked ? d.properties.Population : 1));
+        return colour(eval(`d.properties.${wasteType}`) / (wasteModifier.checked ? d.properties.Population : 1));
     }
     return "black";
 }
 
-function setNewPath() {
+function setNewPath(colour) {
     svg.selectAll("path")
         .data(geoPathjson.features)
         .transition()
         .delay(0)
         .duration(0)
-        .style("fill", (d) => setGeoPathFill(d));
+        .style("fill", (d) => setGeoPathFill(d, colour));
 }
 
 function setNewProjection() {
