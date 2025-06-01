@@ -1,4 +1,4 @@
-import { width, height, padding, red, yellow, green, blue, addSelectionHeading, createSvgCanvas } from "./common.js";
+import { width, height, padding, red, yellow, green, blue, addSelectionHeading, removeSelectionHeading, createSvgCanvas } from "./common.js";
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@5/+esm";
 
 var dataset;
@@ -156,21 +156,17 @@ function setPath(path, colour) {
         .data(geoPathjson.features)
         .enter()
         .append("path")
+        .attr("class", "shape")
         .attr("d", path)
         .style("fill", (d) => setGeoPathFill(d, colour))
         .on("mouseover", function (event, d) {
-            d3.select(this)
-                .style("fill", "orange")
-                .append("title")
-                .text((d) => `This Value is ${d.properties.LGA_name}`);
-
             addSelectionHeading(svg, geoPathjson.features[d].properties.LGA_name, eval(`geoPathjson.features[d].properties.${wasteType}`));
         })
         .on("mouseout", function (event, d) {
-            d3.select(this)
-                .style("fill", (d) => setGeoPathFill(d, colour))
-            d3.selectAll("#geoPath .SVGText").remove();
-        });
+            removeSelectionHeading();
+        })
+        .append("title")
+        .text((d) => `This Value is ${d.properties.LGA_name} ${eval(`d.properties.${wasteType}`)} Tonnes`);
 }
 
 function setGeoPathFill(d, colour) {

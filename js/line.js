@@ -1,4 +1,4 @@
-import { width, height, padding, red, green, yellow, addSelectionHeading, getCommonName, createSvgCanvas } from "./common.js";
+import { width, height, padding, red, green, yellow, addSelectionHeading, removeSelectionHeading, getCommonName, createSvgCanvas } from "./common.js";
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@5/+esm";
 
 var lineWasteModifier = document.getElementById("lineWasteModifier");
@@ -92,10 +92,8 @@ function lineDraw() {
         .data(lineJson)
         .enter()
         .append("path")
-        .attr("fill", "none")
-        .attr("stroke", (d) => lineGetColor(d.key))
-        .attr("stroke-width", 5)
         .attr("class", "line")
+        .attr("stroke", (d) => lineGetColor(d.key))
         .attr("d", (d) =>
             d3.line()
                 .x((d) => lineXScale(d.Reference_Year))
@@ -103,20 +101,13 @@ function lineDraw() {
                 (d.values)
         )
         .on("mouseover", function (event, d) {
-            d3.select(this)
-                .attr("stroke", "orange")
-                .attr("stroke-width", 10)
-                .append("title")
-                .text((d) => getCommonName(d.key));
-
             addSelectionHeading(svg, getCommonName(lineJson[d].key), lineJson[d].values[0].Value);
         })
         .on("mouseout", function (event, d) {
-            d3.select(this)
-                .attr("stroke", lineGetColor(lineJson[d].key))
-                .attr("stroke-width", 5);
-            d3.selectAll("#line .SVGText").remove();
-        });
+            removeSelectionHeading();
+        })
+        .append("title")
+        .text((d) => getCommonName(d.key));
 }
 
 function lineCheckedThing(d) {

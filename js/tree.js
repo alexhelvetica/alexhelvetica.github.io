@@ -1,4 +1,4 @@
-import { width, height, padding, red, yellow, green, addSelectionHeading, getCommonName, createSvgCanvas } from "./common.js";
+import { width, height, padding, red, yellow, green, addSelectionHeading, removeSelectionHeading, getCommonName, createSvgCanvas } from "./common.js";
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@5/+esm";
 
 var treeYearSelect = document.getElementById("treeYearSelection").value;
@@ -54,26 +54,21 @@ function treeVis() {
         .data(treeHierarchy.leaves())
         .enter()
         .append("rect")
+        .attr("class", "shape")
         .attr("x", (d) => d.x0)
         .attr("y", (d) => d.y0)
         .attr("width", (d) => d.x1 - d.x0)
         .attr("height", (d) => d.y1 - d.y0)
-        .style("stroke", "black")
         .style("fill", (d) => treeColor(d.parent.data.name))
         .style("opacity", (d) => treeOpacity(d.data.value))
         .on("mouseover", function (event, d) {
-            d3.select(this)
-                .style("fill", "orange")
-                .append("title")
-                .text((d) => `This Value is ${d.data.name} ${d.data.value}`);
-
             addSelectionHeading(svg, treeHierarchy.leaves()[d]?.data.name, treeHierarchy.leaves()[d]?.data.value);
         })
         .on("mouseout", function (event, d) {
-            d3.select(this)
-                .style("fill", (d) => treeColor(d.parent.data.name))
-            d3.selectAll("#treeChart .SVGText").remove();
-        });
+            removeSelectionHeading();
+        })
+        .append("title")
+        .text((d) => `This Value is ${d.data.name} ${d.data.value} Tonnes`);
 
     treeText();
 }
@@ -93,7 +88,8 @@ function treeText() {
 }
 
 function treeGetTreeData() {
-    treeHierarchy = d3.hierarchy(treeJson.children[+treeYearSelect]).sum((d) => d.value);
+    treeHierarchy = d3.hierarchy(treeJson.children[+treeYearSelect])
+        .sum((d) => d.value);
 
     d3.treemap()
         .size([width, height])

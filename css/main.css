@@ -4,6 +4,23 @@
 	stroke-width: 1;
 }*/
 
+.line {
+    fill: none;
+    stroke-width: 5;
+}
+
+.line:hover {
+    stroke: orange !important;
+    stroke-width: 10;
+}
+
+.shape {
+    stroke: black;
+}
+
+.shape:hover {
+    fill: orange !important;
+}
 
 body {
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;

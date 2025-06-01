@@ -6,8 +6,8 @@ export const yellow = ["#FFFFF0", "#FDFD96", "#FFFDD0", "#FFFF31", "#FFFF00", "#
 export const green = ["#f7fcf5", "#e5f5e0", "#c7e9c0", "#a1d99b", "#74c476", "#41ab5d", "#238b45", "#006d2c", "#00441b"];
 export const blue = ["#f2f0f7", "#cbc9e2", "#9e9ac8", "#756bb1", "#54278f"];
 
-export function addSelectionHeading(obj, name, value) {
-    obj.append("text")
+export function addSelectionHeading(svg, name, value) {
+    svg.append("text")
         .attr("class", "SVGText SVGHeading")
         .attr("x", 650)
         .attr("y", padding)
@@ -19,14 +19,19 @@ export function addSelectionHeading(obj, name, value) {
     //.attr("text-overflow", "ellipsis")
     // .attr("text-anchor", "middle") 
     //.attr("transform", "scale(2)")
-    obj.append("text")
+    svg.append("text")
         .attr("class", "SVGText")
         .attr("x", 700)
         .attr("y", 60)
         .attr("dy", "0em")
         .text(`${value} Tonnes`);
 }
-
+export function removeSelectionHeading() {
+    document.querySelectorAll(".SVGText")
+        .forEach((text) => {
+            text.remove()
+        });
+}
 export function getCommonName(name) {
     switch (name) {
         case "landFill":
