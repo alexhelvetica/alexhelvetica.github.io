@@ -1,21 +1,13 @@
 import { width, height, padding, red, green, yellow, addSelectionHeading, removeSelectionHeading, getCommonName, createSvgCanvas } from "./common.js";
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@5/+esm";
 
-var lineWasteModifier = document.getElementById("lineWasteModifier");
-
 var lineJson;
 var svg;
 var lineXScale;
-var lineYScale;
 
 //Waste Per Capita vs Total Selector
-d3.select("#lineWasteModifier")
-    .on("change", () => lineVisUpdate());
-
-//Waste Category Update
-d3.selectAll('input[name="lineWasteType"]')
-    .on("change", () => lineVisUpdate());
-
+document.getElementById("lineWasteModifier")
+    .onchange = lineVisUpdate;
 
 export function createLine() {
     d3.csv("linev2.csv")
@@ -42,9 +34,9 @@ function lineGetXScale() {
         .call(lineXAxis);
 }
 
-function lineGetYScale() {
-    lineYScale = d3.scaleLinear()
-        .domain([0, d3.max(lineJson, (d) => d3.max(d.values, (e) => lineCheckedThing(e) * 1.5))])
+function lineGetYScale(event) {
+    var lineYScale = d3.scaleLinear()
+        .domain([0, d3.max(lineJson, (d) => d3.max(d.values, (e) => lineCheckedThing(e, event) * 1.5))])
         .range([height - padding, 0]);
 
     var lineYAxis = d3.axisLeft()
@@ -55,6 +47,7 @@ function lineGetYScale() {
         .attr("class", "yAxis")
         .attr("transform", `translate(${padding}, 0)`)
         .call(lineYAxis);
+    return lineYScale;
 }
 
 function lineGetColor(d) {
@@ -80,12 +73,12 @@ function lineVis() {
     svg = createSvgCanvas(d3, "lineChart");
 
     lineGetXScale();
-    lineGetYScale();
     lineJson.map((d) => d.key);
     lineDraw();
 }
 
-function lineDraw() {
+function lineDraw(event) {
+    var lineYScale = lineGetYScale(event);
     // Draw the line
     svg.selectAll(".line")
         .data(lineJson)
@@ -96,7 +89,7 @@ function lineDraw() {
         .attr("d", (d) =>
             d3.line()
                 .x((d) => lineXScale(d.Reference_Year))
-                .y((d) => lineYScale(lineCheckedThing(d)))
+                .y((d) => lineYScale(lineCheckedThing(d, event)))
                 (d.values)
         )
         .on("mouseover", function (event, d) {
@@ -109,14 +102,11 @@ function lineDraw() {
         .text((d) => getCommonName(d.key));
 }
 
-function lineCheckedThing(d) {
-    return +d.Value / (lineWasteModifier.checked ? +d.Estimated_Adult_Population : 1);
+function lineCheckedThing(d, event) {
+    return +d.Value / (event?.target.checked ?? false ? +d.Estimated_Adult_Population : 1);
 }
 
-function lineVisUpdate() {
-    svg.selectAll(".line").remove();
-    svg.selectAll(".yAxis").remove();
-
-    lineGetYScale();
-    lineDraw();
+function lineVisUpdate(event) {
+    svg.selectAll(".line,.yAxis").remove();
+    lineDraw(event);
 }
