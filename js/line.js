@@ -19,18 +19,17 @@ d3.selectAll('input[name="lineWasteType"]')
 
 export function createLine() {
     d3.csv("linev2.csv")
-        .then(function (data) {
-            lineJson = d3.nest()
+        .then(async function (data) {
+            lineJson = await d3.nest()
                 .key((d) => d.Type)
                 .entries(data);
-
-            lineVis(data);
+            lineVis();
         })
 }
 
-function lineGetXScale(data) {
+function lineGetXScale() {
     lineXScale = d3.scaleLinear()
-        .domain(d3.extent(data, (d) => d.Reference_Year))
+        .domain(d3.extent(lineJson[0].values, (d) => d.Reference_Year))
         .range([padding, width]);
 
     var lineXAxis = d3.axisBottom()
@@ -43,9 +42,9 @@ function lineGetXScale(data) {
         .call(lineXAxis);
 }
 
-function lineGetYScale(data) {
+function lineGetYScale() {
     lineYScale = d3.scaleLinear()
-        .domain([0, d3.max(data, (d) => lineCheckedThing(d) * 1.5)])
+        .domain([0, d3.max(lineJson, (d) => d3.max(d.values, (e) => lineCheckedThing(e) * 1.5))])
         .range([height - padding, 0]);
 
     var lineYAxis = d3.axisLeft()
@@ -77,11 +76,11 @@ function lineGetColor(d) {
     }
 }
 
-function lineVis(data) {
+function lineVis() {
     svg = createSvgCanvas(d3, "lineChart");
 
-    lineGetXScale(data);
-    lineGetYScale(data);
+    lineGetXScale();
+    lineGetYScale();
     lineJson.map((d) => d.key);
     lineDraw();
 }
@@ -111,9 +110,7 @@ function lineDraw() {
 }
 
 function lineCheckedThing(d) {
-    if (lineWasteModifier.checked)
-        return +d.Value /*+eval(`d.${lineWasteType}`)*/ / +d.Estimated_Adult_Population;
-    return +d.Value /*+eval(`d.${lineWasteType}`)*/;
+    return +d.Value / (lineWasteModifier.checked ? +d.Estimated_Adult_Population : 1);
 }
 
 function lineVisUpdate() {
