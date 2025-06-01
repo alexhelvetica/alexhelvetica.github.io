@@ -27,8 +27,6 @@ export function createTree() {
         });
 }
 
-
-
 //https://www.d3-graph-gallery.com/graph/treemap_custom.html
 function treeVis() {
     // Then d3.treemap computes the position of each element of the hierarchy
@@ -72,8 +70,6 @@ function treeText() {
         .attr("x", (d) => d.x0)
         .attr("y", (d) => d.y0 + 21)
         .text((d) => getCommonName(d.data.name))
-        .attr("font-size", "19px")
-        .attr("fill", "black");
 }
 
 function treeGetTreeData() {
