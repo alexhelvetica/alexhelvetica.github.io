@@ -1,7 +1,5 @@
-import { width, height, padding, red, yellow, green, addSelectionHeading, removeSelectionHeading, getCommonName, createSvgCanvas, getCategoryColour } from "./common.js";
+import { width, height, padding, addSelectionHeading, removeSelectionHeading, getCommonName, createSvgCanvas, getCategoryColour } from "./common.js";
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@5/+esm";
-
-var treeYearSelect = document.getElementById("treeYearSelection").value;
 
 var treeJson;
 
@@ -11,11 +9,8 @@ var treeHierarchy
 var treeColor;
 
 //Waste Per Capita vs Total Selector
-d3.select("#treeYearSelection")
-    .on("change", function () {
-        treeYearSelect = this.value;
-        treeVisUpdate();
-    });
+document.getElementById("treeYearSelection")
+    .onchange = treeVisUpdate;
 
 export function createTree() {
     svg = createSvgCanvas(d3, "treeChart");
@@ -30,8 +25,8 @@ export function createTree() {
 //https://www.d3-graph-gallery.com/graph/treemap_custom.html
 function treeVis() {
     // Then d3.treemap computes the position of each element of the hierarchy
-    treeGetTreeData();
-    
+    treeGetTreeData("2009-2010");
+
     // use this information to add rectangles:
     svg.selectAll("rect")
         .data(treeHierarchy.leaves())
@@ -67,8 +62,8 @@ function treeText() {
         .text((d) => getCommonName(d.data.name))
 }
 
-function treeGetTreeData() {
-    treeHierarchy = d3.hierarchy(treeJson.children[+treeYearSelect])
+function treeGetTreeData(event) {
+    treeHierarchy = d3.hierarchy(treeJson.children[+event.target.value])
         .sum((d) => d.value);
 
     d3.treemap()
@@ -81,8 +76,8 @@ function treeGetTreeData() {
         (treeHierarchy);
 }
 
-function treeVisUpdate() {
-    treeGetTreeData();
+function treeVisUpdate(event) {
+    treeGetTreeData(event);
 
     var values = svg.selectAll("rect")
         .data(treeHierarchy.leaves());
