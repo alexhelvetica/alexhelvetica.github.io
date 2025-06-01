@@ -9,7 +9,6 @@ var svg;
 
 var treeHierarchy
 var treeColor;
-var treeOpacity;
 
 //Waste Per Capita vs Total Selector
 d3.select("#treeYearSelection")
@@ -28,13 +27,6 @@ export function createTree() {
         });
 }
 
-function treeOpacitySet() {
-    // And a opacity scale	----------------------------------------------------------------- need to fix
-    treeOpacity = d3.scaleLinear()
-        .domain(d3.extent(treeHierarchy.leaves(), (d) => d.data.value))
-        //.domain([10, 30])
-        .range([1, 1]);
-}
 
 
 //https://www.d3-graph-gallery.com/graph/treemap_custom.html
@@ -47,8 +39,6 @@ function treeVis() {
         .domain(["landFill", "recyclingWastage", "recyclingProcessed", "gardenWastage", "gardenProcessed"])
         .range([red[4], yellow[8], yellow[4], green[8], green[4]]);
 
-    treeOpacitySet();
-
     // use this information to add rectangles:
     svg.selectAll("rect")
         .data(treeHierarchy.leaves())
@@ -60,7 +50,6 @@ function treeVis() {
         .attr("width", (d) => d.x1 - d.x0)
         .attr("height", (d) => d.y1 - d.y0)
         .style("fill", (d) => treeColor(d.parent.data.name))
-        .style("opacity", (d) => treeOpacity(d.data.value))
         .on("mouseover", function (event, d) {
             addSelectionHeading(svg, treeHierarchy.leaves()[d]?.data.name, treeHierarchy.leaves()[d]?.data.value);
         })
@@ -117,7 +106,6 @@ function treeVisUpdate() {
         .attr("width", (d) => d.x1 - d.x0)
         .attr("height", (d) => d.y1 - d.y0)
         .style("fill", (d) => treeColor(d.parent.data.name))
-        .style("opacity", (d) => treeOpacity(d.data.value));
 
     d3.selectAll(".titles").remove();
 
