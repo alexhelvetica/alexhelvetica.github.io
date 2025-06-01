@@ -1,4 +1,4 @@
-import { width, height, padding, red, green, yellow, addSelectionHeading, removeSelectionHeading, getCommonName, createSvgCanvas } from "./common.js";
+import { width, height, padding, red, green, yellow, addSelectionHeading, removeSelectionHeading, getCommonName, createSvgCanvas, getCategoryColour } from "./common.js";
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@5/+esm";
 
 var json;
@@ -52,25 +52,6 @@ function getYAxisScale(event) {
     return yAxisScale;
 }
 
-function getLineColour(d) {
-    switch (d) {
-        case "gardenTotal":
-            return green[8];
-        case "gardenProcessed":
-            return green[4];
-        case "recyclingTotal":
-            return yellow[8];
-        case "recyclingProcessed":
-            return yellow[4];
-        case "landFill":
-            return red[4];
-        case "Wastage":
-            return red[8];
-        default:
-            return "black";
-    }
-}
-
 function lineVis() {
     svg = createSvgCanvas(d3, "lineChart");
 
@@ -87,7 +68,7 @@ function drawLineChart(event) {
         .enter()
         .append("path")
         .attr("class", "line")
-        .attr("stroke", (d) => getLineColour(d.key))
+        .attr("stroke", (d) => getCategoryColour(d.key))
         .attr("d", (d) =>
             d3.line()
                 .x((d) => xAxisScale(d.Reference_Year))

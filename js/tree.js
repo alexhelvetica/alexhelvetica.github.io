@@ -1,4 +1,4 @@
-import { width, height, padding, red, yellow, green, addSelectionHeading, removeSelectionHeading, getCommonName, createSvgCanvas } from "./common.js";
+import { width, height, padding, red, yellow, green, addSelectionHeading, removeSelectionHeading, getCommonName, createSvgCanvas, getCategoryColour } from "./common.js";
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@5/+esm";
 
 var treeYearSelect = document.getElementById("treeYearSelection").value;
@@ -31,12 +31,7 @@ export function createTree() {
 function treeVis() {
     // Then d3.treemap computes the position of each element of the hierarchy
     treeGetTreeData();
-
-    // prepare a color scale
-    treeColor = d3.scaleOrdinal()
-        .domain(["landFill", "recyclingWastage", "recyclingProcessed", "gardenWastage", "gardenProcessed"])
-        .range([red[4], yellow[8], yellow[4], green[8], green[4]]);
-
+    
     // use this information to add rectangles:
     svg.selectAll("rect")
         .data(treeHierarchy.leaves())
@@ -47,7 +42,7 @@ function treeVis() {
         .attr("y", (d) => d.y0)
         .attr("width", (d) => d.x1 - d.x0)
         .attr("height", (d) => d.y1 - d.y0)
-        .style("fill", (d) => treeColor(d.parent.data.name))
+        .style("fill", (d) => getCategoryColour(d.parent.data.name))
         .on("mouseover", function (event, d) {
             addSelectionHeading(svg, treeHierarchy.leaves()[d]?.data.name, treeHierarchy.leaves()[d]?.data.value);
         })
