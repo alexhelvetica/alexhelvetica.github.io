@@ -7,7 +7,7 @@ var xAxisScale;
 
 //Waste Per Capita vs Total Selector
 document.getElementById("lineWasteModifier")
-    .onchange = scaleChart;
+    .onchange = updateScale;
 
 export async function initialiseLineChart() {
     await d3.csv("linev2.csv")
@@ -84,7 +84,7 @@ function scaleWasteByPopulation(d, event) {
     return +d.Value / (event?.target.checked ?? false ? +d.Estimated_Adult_Population : 1);
 }
 
-function scaleChart(event) {
+function updateScale(event) {
     svg.selectAll(".line,.yAxis").remove();
     drawLineChart(event);
 }
