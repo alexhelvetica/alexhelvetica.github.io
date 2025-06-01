@@ -9,14 +9,17 @@ var xAxisScale;
 document.getElementById("lineWasteModifier")
     .onchange = scaleChart;
 
-export function initialiseLineChart() {
-    d3.csv("linev2.csv")
-        .then(async function (data) {
-            json = await d3.nest()
+export async function initialiseLineChart() {
+    await d3.csv("linev2.csv")
+        .then(function (data) {
+            json = d3.nest()
                 .key((d) => d.Type)
                 .entries(data);
-            lineVis();
-        })
+        });
+
+    svg = createSvgCanvas(d3, "lineChart");
+    xAxisScale = getXAxisScale();
+    drawLineChart();
 }
 
 function getXAxisScale() {
@@ -50,14 +53,6 @@ function getYAxisScale(event) {
         .attr("transform", `translate(${padding}, 0)`)
         .call(yAxis);
     return yAxisScale;
-}
-
-function lineVis() {
-    svg = createSvgCanvas(d3, "lineChart");
-
-    xAxisScale = getXAxisScale();
-    json.map((d) => d.key);
-    drawLineChart();
 }
 
 function drawLineChart(event) {
