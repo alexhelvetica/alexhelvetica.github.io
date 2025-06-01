@@ -12,20 +12,16 @@ var treeColor;
 document.getElementById("treeYearSelection")
     .onchange = treeVisUpdate;
 
-export function createTree() {
+export async function createTree() {
     svg = createSvgCanvas(d3, "treeChart");
-
-    d3.json("tree.json")
-        .then(function (data) {
-            treeJson = data;
-            treeVis();
-        });
+    treeJson = await d3.json("tree.json")
+    treeVis();
 }
 
 //https://www.d3-graph-gallery.com/graph/treemap_custom.html
 function treeVis() {
     // Then d3.treemap computes the position of each element of the hierarchy
-    treeGetTreeData("2009-2010");
+    treeGetTreeData();
 
     // use this information to add rectangles:
     svg.selectAll("rect")
@@ -63,7 +59,7 @@ function treeText() {
 }
 
 function treeGetTreeData(event) {
-    treeHierarchy = d3.hierarchy(treeJson.children[+event.target.value])
+    treeHierarchy = d3.hierarchy(treeJson.children[event?.target.value ?? 8])
         .sum((d) => d.value);
 
     d3.treemap()
@@ -91,7 +87,7 @@ function treeVisUpdate(event) {
         .attr("y", (d) => d.y0)
         .attr("width", (d) => d.x1 - d.x0)
         .attr("height", (d) => d.y1 - d.y0)
-        .style("fill", (d) => treeColor(d.parent.data.name))
+        .style("fill", (d) => getCategoryColour(d.parent.data.name))
 
     d3.selectAll(".titles").remove();
 
