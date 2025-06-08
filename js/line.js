@@ -5,9 +5,9 @@ var json;
 var svg;
 var xAxisScale;
 var yAxisScale;
-var wasteModifier = document.getElementById("lineWasteModifier");
 
 //Waste Per Capita vs Total Selector
+const wasteModifier = document.getElementById("lineWasteModifier");
 wasteModifier.onchange = updateScale;
 
 const line = d3.line()
