@@ -26,69 +26,72 @@
     </nav>
     <main>
         <div id="choropleth">
-            <div class="HTMLtext">
-                <h2>Choropleth</h2>
-                <div class="interactiveElements">
-                    <h3>Year Selection</h3>
-                    <select name="Year Selection" id="YearSelection">
-                        <!--<option value="2001-2002">2001-2002</option>
+            <form name="choropleth">
+                <div class="HTMLtext">
+                    <h2>Choropleth</h2>
+                    <div class="interactiveElements">
+                        <h3>Year Selection</h3>
+                        <select name="Year Selection" id="YearSelection">
+                            <!--<option value="2001-2002">2001-2002</option>
                             <option value="2002-2003">2002-2003</option>
                             <option value="2003-2004">2003-2004</option>
                             <option value="2004-2005">2004-2005</option>
                             <option value="2005-2006">2005-2006</option>
                             <option value="2006-2007">2006-2007</option>-->
-                        <option value="2007-2008">2007-2008</option>
-                        <option value="2008-2009">2008-2009</option>
-                        <option value="2009-2010" selected="true">2009-2010</option>
-                        <option value="2010-2011">2010-2011</option>
-                        <option value="2011-2012">2011-2012</option>
-                        <option value="2012-2013">2012-2013</option>
-                        <option value="2013-2014">2013-2014</option>
-                        <option value="2014-2015">2014-2015</option>
-                        <option value="2015-2016">2015-2016</option>
-                        <!--<option value="2016-2017">2016-2017</option>
+                            <option value="2007-2008">2007-2008</option>
+                            <option value="2008-2009">2008-2009</option>
+                            <option value="2009-2010" selected="true">2009-2010</option>
+                            <option value="2010-2011">2010-2011</option>
+                            <option value="2011-2012">2011-2012</option>
+                            <option value="2012-2013">2012-2013</option>
+                            <option value="2013-2014">2013-2014</option>
+                            <option value="2014-2015">2014-2015</option>
+                            <option value="2015-2016">2015-2016</option>
+                            <!--<option value="2016-2017">2016-2017</option>
                             <option value="2017-2018">2017-2018</option>
                             <option value="2018-2019">2018-2019</option>-->
-                    </select>
+                        </select>
+                    </div>
+                    <div class="interactiveElements">
+                        <h3>Waste Per Capita</h3>
+                        <label class="switch">
+                            <input type="checkbox" id="wasteModifier">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="interactiveElements">
+                        <h3>Melbourne</h3>
+                        <label class="switch">
+                            <input type="checkbox" id="melbourne">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="interactiveElements1">
+                        <h3>Waste Collection</h3>
+                        <input type="radio" id="landFill" name="wasteType" value="landFill" checked="checked">
+                        <label for="landFill">Land Fill</label>
+                        <input type="radio" id="recyclingTotal" name="wasteType" value="recyclingTotal">
+                        <label for="recyclingTotal">Recycling</label>
+                        <input type="radio" id="recyclingProcessed" name="wasteType" value="recyclingProcessed">
+                        <label for="recyclingProcessed">Recycling Processed</label>
+                        <input type="radio" id="gardenTotal" name="wasteType" value="gardenTotal">
+                        <label for="gardenTotal">Garden Total</label>
+                        <input type="radio" id="gardenProcessed" name="wasteType" value="gardenProcessed">
+                        <label for="gardenProcessed">Garden Processed</label>
+                        <input type="radio" id="wasteTotal" name="wasteType" value="wasteTotal">
+                        <label for="wasteTotal">Waste Total</label>
+                        <input type="radio" id="wasteProcessed" name="wasteType" value="wasteProcessed">
+                        <label for="wasteProcessed">Waste Processed</label>
+                    </div>
+                    <p>This Visualisation shows waste generation by Local Government Area (LGA).</br>
+                        The darker the shade of the colour, the more waste that LGA produced in that category.</br>
+                        Areas without a Local Government (French Island, and Ski Resorts..) will be black and value will
+                        be undefined. They have no available data, and most likely don't offer kerbside waste
+                        collection.</br>
+                        Some Local Governments do not have kerbside Garden Waste collection. Most LGAs have free Garden
+                        Waste drop-off sites. Check your Local Government's website for more information.</p>
                 </div>
-                <div class="interactiveElements">
-                    <h3>Waste Per Capita</h3>
-                    <label class="switch">
-                        <input type="checkbox" id="wasteModifier">
-                        <span class="slider"></span>
-                    </label>
-                </div>
-                <div class="interactiveElements">
-                    <h3>Melbourne</h3>
-                    <label class="switch">
-                        <input type="checkbox" id="melbourne">
-                        <span class="slider"></span>
-                    </label>
-                </div>
-                <div class="interactiveElements1">
-                    <h3>Waste Collection</h3>
-                    <input type="radio" id="landFill" name="wasteType" value="landFill" checked="checked">
-                    <label for="landFill">Land Fill</label>
-                    <input type="radio" id="recyclingTotal" name="wasteType" value="recyclingTotal">
-                    <label for="recyclingTotal">Recycling</label>
-                    <input type="radio" id="recyclingProcessed" name="wasteType" value="recyclingProcessed">
-                    <label for="recyclingProcessed">Recycling Processed</label>
-                    <input type="radio" id="gardenTotal" name="wasteType" value="gardenTotal">
-                    <label for="gardenTotal">Garden Total</label>
-                    <input type="radio" id="gardenProcessed" name="wasteType" value="gardenProcessed">
-                    <label for="gardenProcessed">Garden Processed</label>
-                    <input type="radio" id="wasteTotal" name="wasteType" value="wasteTotal">
-                    <label for="wasteTotal">Waste Total</label>
-                    <input type="radio" id="wasteProcessed" name="wasteType" value="wasteProcessed">
-                    <label for="wasteProcessed">Waste Processed</label>
-                </div>
-                <p>This Visualisation shows waste generation by Local Government Area (LGA).</br>
-                    The darker the shade of the colour, the more waste that LGA produced in that category.</br>
-                    Areas without a Local Government (French Island, and Ski Resorts..) will be black and value will be
-                    undefined. They have no available data, and most likely don't offer kerbside waste collection.</br>
-                    Some Local Governments do not have kerbside Garden Waste collection. Most LGAs have free Garden
-                    Waste drop-off sites. Check your Local Government's website for more information.</p>
-            </div>
+            </form>
             <div class="visualisations">
                 <p id="geoPath"></p>
             </div>

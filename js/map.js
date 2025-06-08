@@ -2,48 +2,32 @@ import { width, height, padding, red, yellow, green, blue, addSelectionHeading, 
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 
 var dataset;
-var yearSelect = document.getElementById("YearSelection").value;
-var wasteModifier = document.getElementById("wasteModifier");
-var wasteType = d3.select('input[name="wasteType"]:checked').node().value;
-var mapView = document.getElementById("melbourne");
+const yearSelect = document.getElementById("YearSelection");
+const wasteModifier = document.getElementById("wasteModifier");
+const wasteType = document.choropleth.wasteType;
+const mapView = document.getElementById("melbourne");
 
 var svg;
 var projection;
-
 var geoPathjson;
 var city;
 
 //Waste Year Selection Update
-d3.select("#YearSelection")
-    .on("change", function () {
-        yearSelect = this.value;
-        getGeoPathJson(geoPathjson);
+yearSelect.onchange = yearSelectionChange;
 
-        replaceGeoPath();
-    });
+// terrible, I will fix this later.
+function yearSelectionChange() {
+    getGeoPathJson(geoPathjson);
 
+    replaceGeoPath();
+}
 //Waste Per Capita vs Total Selector
-d3.select("#wasteModifier")
-    .on("change", function () {
-        wasteModifier = this;
-
-        replaceGeoPath();
-    });
+wasteModifier.onchange = replaceGeoPath;
 
 //Waste Category Update
-d3.selectAll('input[name="wasteType"]')
-    .on("change", function () {
-        wasteType = this.value;
+wasteType.forEach((t) => t.onchange = replaceGeoPath);
 
-        replaceGeoPath();
-    });
-
-d3.select("#melbourne")
-    .on("change", function () {
-        mapView = this;
-
-        setNewProjection();
-    });
+mapView.onchange = setNewProjection;
 
 export function createMap() {
     d3.csv("geopath.csv")
@@ -107,7 +91,7 @@ function getGeoPathJson(json) {
         for (var j = 0; j < json.features.length; j++) {
             var jsonLGA = json.features[j].properties.LGA_name;
 
-            if (jsonLGA == dataLGA && dataYear == yearSelect) {
+            if (jsonLGA == dataLGA && dataYear == yearSelect.value) {
                 json.features[j].properties.landFill = parseFloat(dataset[i].landFill);
                 json.features[j].properties.recyclingTotal = parseFloat(dataset[i].recyclingTotal);
                 json.features[j].properties.recyclingProcessed = parseFloat(dataset[i].recyclingProcessed);
@@ -123,7 +107,7 @@ function getGeoPathJson(json) {
 }
 
 function selectGeoPathColor() {
-    switch (wasteType) {
+    switch (wasteType.value) {
         case "landFill":
             return red;
         case "recyclingTotal":
@@ -143,10 +127,10 @@ function getColour() {
         .range(selectGeoPathColor())
         .domain([
             d3.min(geoPathjson.features, (d) =>
-                eval(`d.properties.${wasteType}`) / (wasteModifier.checked ? d.properties.Population : 1)
+                eval(`d.properties.${wasteType.value}`) / (wasteModifier.checked ? d.properties.Population : 1)
             ),
             d3.max(geoPathjson.features, (d) =>
-                eval(`d.properties.${wasteType}`) / (wasteModifier.checked ? d.properties.Population : 1)
+                eval(`d.properties.${wasteType.value}`) / (wasteModifier.checked ? d.properties.Population : 1)
             )
         ]);
 }
@@ -160,18 +144,18 @@ function setPath(path, colour) {
         .attr("d", path)
         .style("fill", (d) => setGeoPathFill(d, colour))
         .on("mouseover", function (event, d) {
-            addSelectionHeading(svg, d.properties.LGA_name, eval(`d.properties.${wasteType}`));
+            addSelectionHeading(svg, d.properties.LGA_name, eval(`d.properties.${wasteType.value}`));
         })
         .on("mouseout", function (event, d) {
             removeSelectionHeading();
         })
         .append("title")
-        .text((d) => `This Value is ${d.properties.LGA_name} ${eval(`d.properties.${wasteType}`)} Tonnes`);
+        .text((d) => `This Value is ${d.properties.LGA_name} ${eval(`d.properties.${wasteType.value}`)} Tonnes`);
 }
 
 function setGeoPathFill(d, colour) {
-    if (eval(`d.properties.${wasteType}`) != undefined) { //if LGA is not in dataset. Will be ares without an LGA, or the 3 LGAs that make up the former Delatite LGA for the 2001-2002 data.
-        return colour(eval(`d.properties.${wasteType}`) / (wasteModifier.checked ? d.properties.Population : 1));
+    if (eval(`d.properties.${wasteType.value}`) != undefined) { //if LGA is not in dataset. Will be ares without an LGA, or the 3 LGAs that make up the former Delatite LGA for the 2001-2002 data.
+        return colour(eval(`d.properties.${wasteType.value}`) / (wasteModifier.checked ? d.properties.Population : 1));
     }
     return "black";
 }
