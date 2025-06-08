@@ -72,23 +72,32 @@ function treeGetTreeData() {
 function treeVisUpdate() {
     treeGetTreeData();
 
-    var values = svg.selectAll("rect")
-        .data(treeHierarchy.leaves());
-
-    values.exit().remove();
-
-    values.enter()
+    svg.selectAll("rect")
+        .data(treeHierarchy.leaves())
+        .join(
+            function (enter) {
+                var rect = enter
         .append("rect")
-        .merge(values)
-        .transition()
-        .duration(50)
+                    .attr("class", "shape");
+
+                rect.append("title")
+                    .text((d) => `This Value is ${d.data.name} ${d.data.value} Tonnes`)
+                    .select((d) => d.parentNode);
+                return rect;
+            },
+            function (update) {
+                update.select("title")
+                    .text((d) => `This Value is ${d.data.name} ${d.data.value} Tonnes`)
+                    .select((d) => d.parentNode);
+
+                return update;
+            },
+        )
         .attr("x", (d) => d.x0)
         .attr("y", (d) => d.y0)
         .attr("width", (d) => d.x1 - d.x0)
         .attr("height", (d) => d.y1 - d.y0)
-        .style("fill", (d) => getCategoryColour(d.parent.data.name))
-        .select("title")
-        .text((d) => `This Value is ${d.data.name} ${d.data.value} Tonnes`)
+        .style("fill", (d) => getCategoryColour(d.parent.data.name));
 
     d3.selectAll(".titles").remove();
 
