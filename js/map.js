@@ -1,5 +1,5 @@
 import { width, height, padding, red, yellow, green, blue, addSelectionHeading, removeSelectionHeading, createSvgCanvas } from "./common.js";
-import * as d3 from "https://cdn.jsdelivr.net/npm/d3@5/+esm";
+import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 
 var dataset;
 var yearSelect = document.getElementById("YearSelection").value;
@@ -160,7 +160,7 @@ function setPath(path, colour) {
         .attr("d", path)
         .style("fill", (d) => setGeoPathFill(d, colour))
         .on("mouseover", function (event, d) {
-            addSelectionHeading(svg, geoPathjson.features[d].properties.LGA_name, eval(`geoPathjson.features[d].properties.${wasteType}`));
+            addSelectionHeading(svg, d.properties.LGA_name, eval(`d.properties.${wasteType}`));
         })
         .on("mouseout", function (event, d) {
             removeSelectionHeading();
