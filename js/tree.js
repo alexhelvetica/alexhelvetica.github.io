@@ -42,14 +42,12 @@ function treeVis() {
                     .attr("class", "shape");
 
                 rect.append("title")
-                    .text((d) => `This Value is ${d.data.name} ${d.data.value} Tonnes`)
-                    .select((d) => d.parentNode);
+                    .text((d) => `This Value is ${d.data.name} ${d.data.value} Tonnes`);
                 return rect;
             },
             function (update) {
                 update.select("title")
-                    .text((d) => `This Value is ${d.data.name} ${d.data.value} Tonnes`)
-                    .select((d) => d.parentNode);
+                    .text((d) => `This Value is ${d.data.name} ${d.data.value} Tonnes`);
 
                 return update;
             },
