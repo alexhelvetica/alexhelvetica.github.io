@@ -1,5 +1,5 @@
 import { width, height, padding, addSelectionHeading, removeSelectionHeading, getCommonName, createSvgCanvas, getCategoryColour } from "./common.js";
-import * as d3 from "https://cdn.jsdelivr.net/npm/d3@5/+esm";
+import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 
 var json;
 var svg;
@@ -32,7 +32,7 @@ function treeVis() {
         .attr("height", (d) => d.y1 - d.y0)
         .style("fill", (d) => getCategoryColour(d.parent.data.name))
         .on("mouseover", function (event, d) {
-            addSelectionHeading(svg, treeHierarchy.leaves()[d]?.data.name, treeHierarchy.leaves()[d]?.data.value);
+            addSelectionHeading(svg, d.data.name, d.data.value);
         })
         .on("mouseout", function (event, d) {
             removeSelectionHeading();
