@@ -32,14 +32,14 @@ function getXAxisScale() {
         .domain(d3.extent(json.entries().next().value[1], (d) => d.Reference_Year))
         .range([padding, width]);
 
-    var xAxias = d3.axisBottom()
+    var xAxis = d3.axisBottom()
         .ticks(5)
         .scale(xAxisScale);
 
     svg.append("g")
         .attr("class", "xAxis")
         .attr("transform", `translate(0, ${height - padding})`)
-        .call(xAxias);
+        .call(xAxis);
 
     return xAxisScale;
 }
@@ -47,12 +47,12 @@ function getXAxisScale() {
 function getYAxisScale() {
     var yAxisScale = d3.scaleLinear()
         .range([height - padding, 0]);
-    updateYAxiasScale(yAxisScale);
+    updateYAxisScale(yAxisScale);
 
     return yAxisScale;
 }
 
-function updateYAxiasScale(yAxisScale) {
+function updateYAxisScale(yAxisScale) {
     svg.selectAll(".yAxis").remove();
 
     yAxisScale
@@ -102,6 +102,6 @@ function scaleWasteByPopulation(d) {
 }
 
 function updateScale(event) {
-    updateYAxiasScale(yAxisScale);
+    updateYAxisScale(yAxisScale);
     drawLineChart();
 }
