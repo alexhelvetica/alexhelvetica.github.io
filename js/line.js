@@ -71,14 +71,19 @@ function updateYAxiasScale(yAxisScale) {
 }
 
 function drawLineChart() {
-    svg.selectAll(".line").remove();
-
     // Draw the line
     svg.selectAll(".line")
         .data(json.entries())
-        .enter()
-        .append("path")
-        .attr("class", "line")
+        .join(
+            function (enter) {
+                var path = enter
+                    .append("path")
+                    .attr("class", "line");
+
+                path.append("title")
+                return path;
+            },
+        )
         .attr("stroke", (d) => getCategoryColour(d[0]))
         .attr("d", (d) => line(d[1])
         )
@@ -88,7 +93,7 @@ function drawLineChart() {
         .on("mouseout", function (event, d) {
             removeSelectionHeading();
         })
-        .append("title")
+        .select("title")
         .text((d) => getCommonName(d[0]));
 }
 
