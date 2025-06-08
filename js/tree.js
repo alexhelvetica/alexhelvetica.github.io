@@ -42,21 +42,16 @@ function treeVis() {
                     .attr("class", "shape");
 
                 rect.append("title")
-                    .text((d) => `This Value is ${d.data.name} ${d.data.value} Tonnes`);
                 return rect;
-            },
-            function (update) {
-                update.select("title")
-                    .text((d) => `This Value is ${d.data.name} ${d.data.value} Tonnes`);
-
-                return update;
             },
         )
         .attr("x", (d) => d.x0)
         .attr("y", (d) => d.y0)
         .attr("width", (d) => d.x1 - d.x0)
         .attr("height", (d) => d.y1 - d.y0)
-        .style("fill", (d) => getCategoryColour(d.parent.data.name));
+        .style("fill", (d) => getCategoryColour(d.parent.data.name))
+        .select("title")
+        .text((d) => `This Value is ${d.data.name} ${d.data.value} Tonnes`);;
 
     d3.selectAll(".titles").remove();
 
