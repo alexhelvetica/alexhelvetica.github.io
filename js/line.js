@@ -22,6 +22,7 @@ export async function initialiseLineChart() {
     );
 
     svg = createSvgCanvas(d3, "lineChart");
+    yAxisScale = getYAxisScale();
     xAxisScale = getXAxisScale();
     drawLineChart();
 }
@@ -45,10 +46,19 @@ function getXAxisScale() {
 
 function getYAxisScale() {
     var yAxisScale = d3.scaleLinear()
+        .range([height - padding, 0]);
+    updateYAxiasScale(yAxisScale);
+
+    return yAxisScale;
+}
+
+function updateYAxiasScale(yAxisScale) {
+    svg.selectAll(".yAxis").remove();
+
+    yAxisScale
         .domain([0, d3.max(json.entries(), (d) =>
             d3.max(d[1], (e) => scaleWasteByPopulation(e) * 1.5)
-        )])
-        .range([height - padding, 0]);
+        )]);
 
     var yAxis = d3.axisLeft()
         .ticks(5)
@@ -58,11 +68,11 @@ function getYAxisScale() {
         .attr("class", "yAxis")
         .attr("transform", `translate(${padding}, 0)`)
         .call(yAxis);
-    return yAxisScale;
 }
 
 function drawLineChart() {
-    yAxisScale = getYAxisScale();
+    svg.selectAll(".line").remove();
+
     // Draw the line
     svg.selectAll(".line")
         .data(json.entries())
@@ -87,6 +97,6 @@ function scaleWasteByPopulation(d) {
 }
 
 function updateScale(event) {
-    svg.selectAll(".line,.yAxis").remove();
+    updateYAxiasScale(yAxisScale);
     drawLineChart();
 }
