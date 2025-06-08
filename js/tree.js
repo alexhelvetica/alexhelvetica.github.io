@@ -24,15 +24,11 @@ export async function createTree() {
     treeVis();
 }
 
-function treeGetTreeData() {
+function treeVis() {
     treeHierarchy = d3.hierarchy(json.children[treeYearSelection.value])
         .sum((d) => d.value);
 
     treemap(treeHierarchy);
-}
-
-function treeVis() {
-    treeGetTreeData();
 
     svg.selectAll("rect")
         .data(treeHierarchy.leaves())
@@ -41,7 +37,6 @@ function treeVis() {
                 var rect = enter
                     .append("rect")
                     .attr("class", "shape");
-
                 rect.append("title")
                 return rect;
             },
@@ -52,7 +47,7 @@ function treeVis() {
         .attr("height", (d) => d.y1 - d.y0)
         .style("fill", (d) => getCategoryColour(d.parent.data.name))
         .select("title")
-        .text((d) => `This Value is ${d.data.name} ${d.data.value} Tonnes`);;
+        .text((d) => `This Value is ${d.data.name} ${d.data.value} Tonnes`);
 
     svg.selectAll(".titles")
         .data(treeHierarchy.descendants().filter((d) => d.depth == 1))
