@@ -6,8 +6,8 @@ var svg;
 var treeHierarchy
 
 //Waste Per Capita vs Total Selector
-document.getElementById("treeYearSelection")
-    .onchange = treeVisUpdate;
+const treeYearSelection = document.getElementById("treeYearSelection");
+treeYearSelection.onchange = treeVisUpdate;
 
 export async function createTree() {
     json = await d3.json("tree.json")
@@ -55,8 +55,8 @@ function treeText() {
         .text((d) => getCommonName(d.data.name))
 }
 
-function treeGetTreeData(event) {
-    treeHierarchy = d3.hierarchy(json.children[event?.target.value ?? 8])
+function treeGetTreeData() {
+    treeHierarchy = d3.hierarchy(json.children[treeYearSelection.value])
         .sum((d) => d.value);
 
     d3.treemap()
@@ -69,8 +69,8 @@ function treeGetTreeData(event) {
         (treeHierarchy);
 }
 
-function treeVisUpdate(event) {
-    treeGetTreeData(event);
+function treeVisUpdate() {
+    treeGetTreeData();
 
     var values = svg.selectAll("rect")
         .data(treeHierarchy.leaves());
