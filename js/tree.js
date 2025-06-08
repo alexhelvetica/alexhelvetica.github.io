@@ -75,6 +75,8 @@ function treeVisUpdate() {
     var values = svg.selectAll("rect")
         .data(treeHierarchy.leaves());
 
+    values.exit().remove();
+
     values.enter()
         .append("rect")
         .merge(values)
