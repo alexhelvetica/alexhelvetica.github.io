@@ -15,17 +15,6 @@ export async function createTree() {
     treeVis();
 }
 
-function treeText() {
-    // Add title for the 3 groups
-    svg.selectAll("titles")
-        .data(treeHierarchy.descendants().filter((d) => d.depth == 1))
-        .enter()
-        .append("text")
-        .attr("class", "titles")
-        .attr("x", (d) => d.x0)
-        .attr("y", (d) => d.y0 + 21)
-        .text((d) => getCommonName(d.data.name))
-}
 
 function treeGetTreeData() {
     treeHierarchy = d3.hierarchy(json.children[treeYearSelection.value])
@@ -73,5 +62,18 @@ function treeVis() {
 
     d3.selectAll(".titles").remove();
 
-    treeText();
+    svg.selectAll("titles")
+        .data(treeHierarchy.descendants().filter((d) => d.depth == 1))
+        .join(
+            function (enter) {
+                var title = enter
+                    .append("text")
+                    .attr("class", "titles")
+
+                return title;
+            },
+        )
+        .attr("x", (d) => d.x0)
+        .attr("y", (d) => d.y0 + 21)
+        .text((d) => getCommonName(d.data.name))
 }
