@@ -7,40 +7,12 @@ var treeHierarchy
 
 //Waste Per Capita vs Total Selector
 const treeYearSelection = document.getElementById("treeYearSelection");
-treeYearSelection.onchange = treeVisUpdate;
+treeYearSelection.onchange = treeVis;
 
 export async function createTree() {
     json = await d3.json("tree.json")
     svg = createSvgCanvas(d3, "treeChart");
     treeVis();
-}
-
-//https://www.d3-graph-gallery.com/graph/treemap_custom.html
-function treeVis() {
-    // Then d3.treemap computes the position of each element of the hierarchy
-    treeGetTreeData();
-
-    // use this information to add rectangles:
-    svg.selectAll("rect")
-        .data(treeHierarchy.leaves())
-        .enter()
-        .append("rect")
-        .attr("class", "shape")
-        .attr("x", (d) => d.x0)
-        .attr("y", (d) => d.y0)
-        .attr("width", (d) => d.x1 - d.x0)
-        .attr("height", (d) => d.y1 - d.y0)
-        .style("fill", (d) => getCategoryColour(d.parent.data.name))
-        .on("mouseover", function (event, d) {
-            addSelectionHeading(svg, d.data.name, d.data.value);
-        })
-        .on("mouseout", function (event, d) {
-            removeSelectionHeading();
-        })
-        .append("title")
-        .text((d) => `This Value is ${d.data.name} ${d.data.value} Tonnes`);
-
-    treeText();
 }
 
 function treeText() {
@@ -69,7 +41,7 @@ function treeGetTreeData() {
         (treeHierarchy);
 }
 
-function treeVisUpdate() {
+function treeVis() {
     treeGetTreeData();
 
     svg.selectAll("rect")
@@ -77,7 +49,7 @@ function treeVisUpdate() {
         .join(
             function (enter) {
                 var rect = enter
-        .append("rect")
+                    .append("rect")
                     .attr("class", "shape");
 
                 rect.append("title")
