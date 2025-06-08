@@ -125,14 +125,11 @@ function selectGeoPathColor() {
 function getColour() {
     return d3.scaleQuantize()
         .range(selectGeoPathColor())
-        .domain([
-            d3.min(geoPathjson.features, (d) =>
-                eval(`d.properties.${wasteType.value}`) / (wasteModifier.checked ? d.properties.Population : 1)
+        .domain(
+            d3.extent(geoPathjson.features, (d) =>
+                d.properties[wasteType.value] / (wasteModifier.checked ? d.properties.Population : 1)
             ),
-            d3.max(geoPathjson.features, (d) =>
-                eval(`d.properties.${wasteType.value}`) / (wasteModifier.checked ? d.properties.Population : 1)
-            )
-        ]);
+        );
 }
 
 function setPath(path, colour) {
@@ -144,18 +141,18 @@ function setPath(path, colour) {
         .attr("d", path)
         .style("fill", (d) => setGeoPathFill(d, colour))
         .on("mouseover", function (event, d) {
-            addSelectionHeading(svg, d.properties.LGA_name, eval(`d.properties.${wasteType.value}`));
+            addSelectionHeading(svg, d.properties.LGA_name, d.properties[wasteType.value]);
         })
         .on("mouseout", function (event, d) {
             removeSelectionHeading();
         })
         .append("title")
-        .text((d) => `This Value is ${d.properties.LGA_name} ${eval(`d.properties.${wasteType.value}`)} Tonnes`);
+        .text((d) => `This Value is ${d.properties.LGA_name} ${d.properties[wasteType.value]} Tonnes`);
 }
 
 function setGeoPathFill(d, colour) {
-    if (eval(`d.properties.${wasteType.value}`) != undefined) { //if LGA is not in dataset. Will be ares without an LGA, or the 3 LGAs that make up the former Delatite LGA for the 2001-2002 data.
-        return colour(eval(`d.properties.${wasteType.value}`) / (wasteModifier.checked ? d.properties.Population : 1));
+    if (d.properties[wasteType.value] != undefined) { //if LGA is not in dataset. Will be areas without an LGA, or the 3 LGAs that make up the former Delatite LGA for the 2001-2002 data.
+        return colour(d.properties[wasteType.value] / (wasteModifier.checked ? d.properties.Population : 1));
     }
     return "black";
 }
