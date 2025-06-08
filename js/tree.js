@@ -54,16 +54,13 @@ function treeVis() {
         .select("title")
         .text((d) => `This Value is ${d.data.name} ${d.data.value} Tonnes`);;
 
-    d3.selectAll(".titles").remove();
-
-    svg.selectAll("titles")
+    svg.selectAll(".titles")
         .data(treeHierarchy.descendants().filter((d) => d.depth == 1))
         .join(
             function (enter) {
                 var title = enter
                     .append("text")
                     .attr("class", "titles")
-
                 return title;
             },
         )
