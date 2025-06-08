@@ -5,14 +5,15 @@ var json;
 var svg;
 var xAxisScale;
 var yAxisScale;
+var yAxis;
 
 //Waste Per Capita vs Total Selector
 const wasteModifier = document.getElementById("lineWasteModifier");
-wasteModifier.onchange = updateScale;
+wasteModifier.onchange = drawLineChart;
 
 const line = d3.line()
     .x((d) => xAxisScale(d.Reference_Year))
-    .y((d) => yAxisScale(scaleWasteByPopulation(d, false)));
+    .y((d) => yAxisScale(scaleWasteByPopulation(d)));
 
 export async function initialiseLineChart() {
     var data = await d3.csv("linev2.csv");
@@ -52,26 +53,21 @@ function getYAxisScale() {
         .attr("class", "yAxis")
         .attr("transform", `translate(${padding}, 0)`);
 
-    updateYAxisScale(yAxisScale);
+    yAxis = d3.axisLeft()
+        .ticks(5);
 
     return yAxisScale;
 }
 
-function updateYAxisScale(yAxisScale) {
+function drawLineChart() {
     yAxisScale
         .domain([0, d3.max(json.entries(), (d) =>
-            d3.max(d[1], (e) => scaleWasteByPopulation(e) * 1.5)
+            d3.max(d[1], (d) => scaleWasteByPopulation(d) * 1.5)
         )]);
 
-    var yAxis = d3.axisLeft()
-        .ticks(5)
-        .scale(yAxisScale);
+    svg.selectAll(".yAxis")
+        .call(yAxis.scale(yAxisScale));
 
-        svg.selectAll(".yAxis")
-        .call(yAxis);
-}
-
-function drawLineChart() {
     // Draw the line
     svg.selectAll(".line")
         .data(json.entries())
@@ -100,9 +96,4 @@ function drawLineChart() {
 
 function scaleWasteByPopulation(d) {
     return +d.Value / (wasteModifier.checked ?? false ? +d.Estimated_Adult_Population : 1);
-}
-
-function updateScale(event) {
-    updateYAxisScale(yAxisScale);
-    drawLineChart();
 }
