@@ -1,13 +1,22 @@
 import { width, height, padding, addSelectionHeading, removeSelectionHeading, getCommonName, createSvgCanvas, getCategoryColour } from "./common.js";
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 
+//Waste Per Capita vs Total Selector
+const treeYearSelection = document.getElementById("treeYearSelection");
+treeYearSelection.onchange = treeVis;
+
 var json;
 var svg;
 var treeHierarchy
 
-//Waste Per Capita vs Total Selector
-const treeYearSelection = document.getElementById("treeYearSelection");
-treeYearSelection.onchange = treeVis;
+const treemap = d3.treemap()
+    .size([width, height])
+    .paddingTop(50)
+    .paddingRight(7)
+    .paddingInner(3);
+// Padding between each rectangle
+//.paddingOuter(6)
+//.padding(20);
 
 export async function createTree() {
     json = await d3.json("tree.json")
@@ -15,19 +24,11 @@ export async function createTree() {
     treeVis();
 }
 
-
 function treeGetTreeData() {
     treeHierarchy = d3.hierarchy(json.children[treeYearSelection.value])
         .sum((d) => d.value);
 
-    d3.treemap()
-        .size([width, height])
-        .paddingTop(50)
-        .paddingRight(7)
-        .paddingInner(3)      // Padding between each rectangle
-        //.paddingOuter(6)
-        //.padding(20)
-        (treeHierarchy);
+    treemap(treeHierarchy);
 }
 
 function treeVis() {
