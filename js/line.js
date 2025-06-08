@@ -10,18 +10,16 @@ var wasteModifier = document.getElementById("lineWasteModifier");
 //Waste Per Capita vs Total Selector
 wasteModifier.onchange = updateScale;
 
-const line =  d3.line()
+const line = d3.line()
     .x((d) => xAxisScale(d.Reference_Year))
     .y((d) => yAxisScale(scaleWasteByPopulation(d, false)));
 
 export async function initialiseLineChart() {
-    await d3.csv("linev2.csv")
-        .then(function (data) {
-            json = d3.group(
-                data,
-                (d) => d.Type
-            );
-        });
+    var data = await d3.csv("linev2.csv");
+    json = await d3.group(
+        data,
+        (d) => d.Type
+    );
 
     svg = createSvgCanvas(d3, "lineChart");
     xAxisScale = getXAxisScale();
@@ -47,7 +45,7 @@ function getXAxisScale() {
 
 function getYAxisScale() {
     var yAxisScale = d3.scaleLinear()
-        .domain([0, d3.max(json.entries(), (d) => 
+        .domain([0, d3.max(json.entries(), (d) =>
             d3.max(d[1], (e) => scaleWasteByPopulation(e) * 1.5)
         )])
         .range([height - padding, 0]);
