@@ -47,14 +47,17 @@ function getXAxisScale() {
 function getYAxisScale() {
     var yAxisScale = d3.scaleLinear()
         .range([height - padding, 0]);
+
+    svg.append("g")
+        .attr("class", "yAxis")
+        .attr("transform", `translate(${padding}, 0)`);
+
     updateYAxisScale(yAxisScale);
 
     return yAxisScale;
 }
 
 function updateYAxisScale(yAxisScale) {
-    svg.selectAll(".yAxis").remove();
-
     yAxisScale
         .domain([0, d3.max(json.entries(), (d) =>
             d3.max(d[1], (e) => scaleWasteByPopulation(e) * 1.5)
@@ -64,9 +67,7 @@ function updateYAxisScale(yAxisScale) {
         .ticks(5)
         .scale(yAxisScale);
 
-    svg.append("g")
-        .attr("class", "yAxis")
-        .attr("transform", `translate(${padding}, 0)`)
+        svg.selectAll(".yAxis")
         .call(yAxis);
 }
 
