@@ -82,3 +82,11 @@ export function getCategoryColour(d) {
 export function scaleWasteByPopulation(value, population, scaleWasteByPopulation) {
     return (value ?? 0) / (scaleWasteByPopulation ?? false ? population ?? 0 : 1);
 }
+
+export function mapToJson(map) {
+    const obj = {};
+    for (const [key, value] of map) {
+        obj[key] = value instanceof Map ? mapToJson(value) : value;
+    }
+    return JSON.stringify(obj);
+}
