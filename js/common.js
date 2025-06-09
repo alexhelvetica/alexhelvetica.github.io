@@ -78,3 +78,7 @@ export function getCategoryColour(d) {
             return "black";
     }
 }
+
+export function scaleWasteByPopulation(value, population, scaleWasteByPopulation) {
+    return value / (scaleWasteByPopulation ?? false ? population : 1);
+}

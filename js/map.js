@@ -1,4 +1,4 @@
-import { width, height, padding, red, yellow, green, blue, addSelectionHeading, removeSelectionHeading, createSvgCanvas } from "./common.js";
+import { width, height, padding, red, yellow, green, blue, addSelectionHeading, removeSelectionHeading, createSvgCanvas, scaleWasteByPopulation } from "./common.js";
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 
 var dataset;
@@ -127,7 +127,7 @@ function getColour() {
         .range(selectGeoPathColor())
         .domain(
             d3.extent(geoPathjson.features, (d) =>
-                d.properties[wasteType.value] / (wasteModifier.checked ? d.properties.Population : 1)
+                scaleWasteByPopulation(d.properties[wasteType.value], d.properties.Population, wasteModifier.checked)
             ),
         );
 }
@@ -152,7 +152,7 @@ function setPath(path, colour) {
 
 function setGeoPathFill(d, colour) {
     if (d.properties[wasteType.value] != undefined) { //if LGA is not in dataset. Will be areas without an LGA, or the 3 LGAs that make up the former Delatite LGA for the 2001-2002 data.
-        return colour(d.properties[wasteType.value] / (wasteModifier.checked ? d.properties.Population : 1));
+        return colour(scaleWasteByPopulation(d.properties[wasteType.value], d.properties.Population, wasteModifier.checked));
     }
     return "black";
 }
