@@ -58,8 +58,23 @@ export function createSvgCanvas(d3, id) {
         .attr("height", height);
 }
 
-export function getCategoryColour(d) {
-    switch (d) {
+export function getCategoryColourGroup(group) {
+    switch (group) {
+        case "landFill":
+            return red;
+        case "recyclingTotal":
+        case "recyclingProcessed":
+            return yellow;
+        case "gardenTotal":
+        case "gardenProcessed":
+            return green;
+        case "wasteTotal":
+        case "wasteProcessed":
+            return blue;
+    }
+}
+export function getCategoryColour(group) {
+    switch (group) {
         case "gardenTotal":
         case "gardenWastage":
             return green[8];

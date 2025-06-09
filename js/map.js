@@ -1,4 +1,4 @@
-import { width, height, padding, red, yellow, green, blue, addSelectionHeading, removeSelectionHeading, createSvgCanvas, scaleWasteByPopulation } from "./common.js";
+import { width, height, padding, addSelectionHeading, removeSelectionHeading, createSvgCanvas, scaleWasteByPopulation, getCategoryColourGroup } from "./common.js";
 import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
 
 var dataset;
@@ -106,25 +106,9 @@ function getGeoPathJson(json) {
     geoPathjson = json;
 }
 
-function selectGeoPathColor() {
-    switch (wasteType.value) {
-        case "landFill":
-            return red;
-        case "recyclingTotal":
-        case "recyclingProcessed":
-            return yellow;
-        case "gardenTotal":
-        case "gardenProcessed":
-            return green;
-        case "wasteTotal":
-        case "wasteProcessed":
-            return blue;
-    }
-}
-
 function getColour() {
     return d3.scaleQuantize()
-        .range(selectGeoPathColor())
+        .range(getCategoryColourGroup(wasteType.value))
         .domain(
             d3.extent(geoPathjson.features, (d) =>
                 scaleWasteByPopulation(d.properties[wasteType.value], d.properties.Population, wasteModifier.checked)
