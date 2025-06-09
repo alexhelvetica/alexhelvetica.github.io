@@ -47,7 +47,7 @@ function treeVis() {
         .attr("height", (d) => d.y1 - d.y0)
         .style("fill", (d) => getCategoryColour(d.parent.data.name))
         .select("title")
-        .text((d) => `This Value is ${d.data.name} ${d.data.value} Tonnes`);
+        .text((d) => `This Value is ${d.data.name} ${d.data.value ?? 0} Tonnes`);
 
     svg.selectAll(".titles")
         .data(treeHierarchy.descendants().filter((d) => d.depth == 1))

@@ -24,7 +24,7 @@ export function addSelectionHeading(svg, name, value) {
         .attr("x", 700)
         .attr("y", 60)
         .attr("dy", "0em")
-        .text(`${value} Tonnes`);
+        .text(`${value ?? 0} Tonnes`);
 }
 export function removeSelectionHeading() {
     document.querySelectorAll(".SVGText")
@@ -80,5 +80,5 @@ export function getCategoryColour(d) {
 }
 
 export function scaleWasteByPopulation(value, population, scaleWasteByPopulation) {
-    return value / (scaleWasteByPopulation ?? false ? population : 1);
+    return (value ?? 0) / (scaleWasteByPopulation ?? false ? population ?? 0 : 1);
 }

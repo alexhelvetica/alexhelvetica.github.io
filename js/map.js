@@ -147,14 +147,14 @@ function setPath(path, colour) {
             removeSelectionHeading();
         })
         .append("title")
-        .text((d) => `This Value is ${d.properties.LGA_name} ${d.properties[wasteType.value]} Tonnes`);
+        .text((d) => `This Value is ${d.properties.LGA_name} ${d.properties[wasteType.value] ?? 0} Tonnes`);
 }
 
 function setGeoPathFill(d, colour) {
-    if (d.properties[wasteType.value] != undefined) { //if LGA is not in dataset. Will be areas without an LGA, or the 3 LGAs that make up the former Delatite LGA for the 2001-2002 data.
-        return colour(scaleWasteByPopulation(d.properties[wasteType.value], d.properties.Population, wasteModifier.checked));
-    }
-    return "black";
+    // if (d.properties[wasteType.value] != undefined) { //if LGA is not in dataset. Will be areas without an LGA, or the 3 LGAs that make up the former Delatite LGA for the 2001-2002 data.
+    return colour(scaleWasteByPopulation(d.properties[wasteType.value], d.properties.Population, wasteModifier.checked));
+    // }
+    // return "white";
 }
 
 function setNewPath(colour) {
