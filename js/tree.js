@@ -46,6 +46,12 @@ function treeVis() {
         .attr("width", (d) => d.x1 - d.x0)
         .attr("height", (d) => d.y1 - d.y0)
         .style("fill", (d) => getCategoryColour(d.parent.data.name))
+        .on("mouseover", function (event, d) {
+            addSelectionHeading(svg, d.data.name, d.data.value);
+        })
+        .on("mouseout", function (event, d) {
+            removeSelectionHeading();
+        })
         .select("title")
         .text((d) => `This Value is ${d.data.name} ${d.data.value ?? 0} Tonnes`);
 
