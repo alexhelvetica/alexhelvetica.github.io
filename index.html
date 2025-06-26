@@ -31,8 +31,8 @@
             <h2>Choropleth</h2>
             <form name="choropleth">
                 <div class="interactiveElement left">
-                    <h3>Year Selection</h3>
-                    <select name="Year Selection" id="YearSelection">
+                    <h3>Year</h3>
+                    <select name="YearSelection" id="YearSelection">
                         <!--
                             <option value="2001-2002">2001-2002</option>
                             <option value="2002-2003">2002-2003</option>
@@ -58,41 +58,30 @@
                     </select>
                 </div>
                 <div class="interactiveElement left">
-                    <h3>Waste Per Capita</h3>
+                    <h3>Per Capita</h3>
                     <label class="switch">
                         <input type="checkbox" id="wasteModifier" />
                         <span class="slider"></span>
                     </label>
                 </div>
                 <div class="interactiveElement left">
-                    <h3>Melbourne</h3>
+                    <h3>VIC / MEL</h3>
                     <label class="switch">
                         <input type="checkbox" id="melbourne" />
                         <span class="slider"></span>
                     </label>
                 </div>
                 <div class="interactiveElement">
-                    <h3>Waste Collection</h3>
-                    <input type="radio" id="landFill" name="wasteType" value="landFill" checked="checked" />
-                    <label for="landFill">Land Fill</label>
-
-                    <input type="radio" id="recyclingTotal" name="wasteType" value="recyclingTotal" />
-                    <label for="recyclingTotal">Recycling</label>
-
-                    <input type="radio" id="recyclingProcessed" name="wasteType" value="recyclingProcessed" />
-                    <label for="recyclingProcessed">Recycling Processed</label>
-
-                    <input type="radio" id="gardenTotal" name="wasteType" value="gardenTotal" />
-                    <label for="gardenTotal">Garden Total</label>
-
-                    <input type="radio" id="gardenProcessed" name="wasteType" value="gardenProcessed" />
-                    <label for="gardenProcessed">Garden Processed</label>
-
-                    <input type="radio" id="wasteTotal" name="wasteType" value="wasteTotal" />
-                    <label for="wasteTotal">Waste Total</label>
-
-                    <input type="radio" id="wasteProcessed" name="wasteType" value="wasteProcessed" />
-                    <label for="wasteProcessed">Waste Processed</label>
+                    <h3>Collection Type</h3>
+                    <select name="wasteType" id="wasteType">
+                        <option value="landFill" selected="true">Land Fill</option>
+                        <option value="recyclingTotal">Recycling</option>
+                        <option value="recyclingProcessed">Recycling Processed</option>
+                        <option value="gardenTotal">Garden Total</option>
+                        <option value="gardenProcessed">Garden Processed</option>
+                        <option value="wasteTotal">Waste Total</option>
+                        <option value="wasteProcessed">Waste Processed</option>
+                    </select>
                 </div>
             </form>
             <p>This Visualisation shows waste generation by Local Government Area (LGA).</br>
@@ -107,7 +96,7 @@
             <h2>Line</h2>
             <form name="line">
                 <div class="interactiveElement">
-                    <h3>Waste Per Capita</h3>
+                    <h3>Per Capita</h3>
                     <label class="switch">
                         <input type="checkbox" id="lineWasteModifier" />
                         <span class="slider"></span>
@@ -145,8 +134,8 @@
             <h2>Tree Map</h2>
             <form name="tree">
                 <div class="interactiveElement">
-                    <h3>Year Selection</h3>
-                    <select name="Year Selection" id="treeYearSelection">
+                    <h3>Year</h3>
+                    <select name="YearSelection" id="treeYearSelection">
                         <!--
                             <option value="0">2001-2002</option>
                             <option value="1">2002-2003</option>

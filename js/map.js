@@ -25,7 +25,7 @@ function yearSelectionChange() {
 wasteModifier.onchange = replaceGeoPath;
 
 //Waste Category Update
-wasteType.forEach((t) => t.onchange = replaceGeoPath);
+wasteType.onchange = replaceGeoPath;
 
 mapView.onchange = setNewProjection;
 
