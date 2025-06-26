@@ -23,15 +23,33 @@
 
 body {
     font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    background-color: #E8EEE3;
+    background-color: #48483D;
+    /* background-color: #E8EEE3; */
     color: #1D2616;
     margin: 0px 0px 0px 0px;
+}
+
+main {
+    width: calc(100% - 120px);
+    background-color: #E8EEE3;
+    align-content: center;
+    margin: auto;
+}
+
+.visGroup {
+    margin: 20px 20px 20px 20px;
 }
 
 header {
     background-color: #38482D;
     color: #E8EEE3;
-    padding: 350px 400px;
+    height: 100vh;
+    justify-content: center;
+    display: grid;
+}
+
+.pageTitle {
+    margin: auto;
 }
 
 footer {
@@ -72,20 +90,25 @@ nav li a:hover {
     background-color: #38482D;
 }
 
+.SVGHeading,
+h2 {
+    font-size: 48px !important;
+}
+
 .SVGText,
 h2 {
     font-family: "Times New Roman", serif;
     font-size: 22px;
+    width: 100%;
+    margin: 5px 0px;
 }
 
 h1 {
     font-size: 72px;
+    margin: 25px 0px;
 }
 
-.SVGHeading,
-h2 {
-    font-size: 48px;
-}
+
 
 SVG {
     background-color: #DDE6D6;
@@ -95,22 +118,16 @@ SVG {
     border-color: black;
 }
 
-.HTMLtext {
-    display: flex;
-    margin: 20px 20px 20px 20px;
-    /*background-color: black;*/
-}
-
-.interactiveElements,
-.interactiveElements1 {
-    background-color: #E8EEE3;
-    margin: 0px 0px 10px 10px;
+.interactiveElement {
+    padding-right: 5px;
+    width: fit-content;
     overflow: hidden;
 }
 
-.interactiveElements {
+.interactiveElement.left {
     float: left;
-    overflow: hidden;
+    display: grid;
+    justify-content: center;
 }
 
 .visualisations {
@@ -119,4 +136,12 @@ SVG {
 
 h3 {
     margin: 0px 0px;
+}
+
+select {
+    width: 100%;
+}
+
+.switch {
+    margin: auto;
 }
