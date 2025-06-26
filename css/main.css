@@ -107,14 +107,6 @@ h3 {
 }
 
 
-svg {
-    background-color: #DDE6D6;
-    padding: 40px 40px;
-    border-style: solid;
-    border: 2px;
-    border-color: black;
-}
-
 form {
     display: flex;
 }
