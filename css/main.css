@@ -28,35 +28,16 @@ body {
     margin: 0px 0px 0px 0px;
 }
 
-main {
-    width: calc(100% - 120px);
-    background-color: #E8EEE3;
-    align-content: center;
-    margin: auto;
-}
-
-.visGroup {
-    margin: 20px 20px 20px 20px;
-}
-
 header {
     background-color: #38482D;
     color: #E8EEE3;
     height: 100vh;
     justify-content: center;
     display: grid;
-}
 
-.pageTitle {
-    margin: auto;
-}
-
-footer {
-    background-color: #38482D;
-    color: #E8EEE3;
-    width: calc(100% - 32px);
-    padding: 14px 16px;
-    font-size: 14px
+    .pageTitle {
+        margin: auto;
+    }
 }
 
 nav ul {
@@ -65,23 +46,40 @@ nav ul {
     padding: 0;
     overflow: hidden;
     background-color: #6A8755;
+
+    li {
+        float: left;
+        max-height: 48px;
+
+        a {
+            display: block;
+            color: #E8EEE3;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+
+            &:hover {
+                background-color: #38482D;
+            }
+        }
+    }
 }
 
-nav li {
-    float: left;
-    max-height: 48px;
+main {
+    width: calc(100% - 120px);
+    background-color: #E8EEE3;
+    align-content: center;
+    margin: auto;
+    padding: 20px 20px 20px 20px;
 }
 
-nav li a {
-    display: block;
+footer {
+    background-color: #6A8755;
     color: #E8EEE3;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-nav li a:hover {
-    background-color: #38482D;
+    width: calc(100% - 100px);
+    padding: 14px 50px;
+    font-size: 14px;
+    margin: auto;
 }
 
 h1 {
@@ -92,18 +90,17 @@ h1 {
 .SVGHeading,
 h2 {
     font-size: 48px !important;
-}
-
-.SVGText,
-h2 {
-    font-family: "Times New Roman", serif;
-    font-size: 22px;
     width: 100%;
     margin: 5px 0px;
 }
 
 h3 {
     margin: 0px 0px;
+}
+
+.SVGText {
+    font-family: "Times New Roman", serif;
+    font-size: 22px;
 }
 
 form {
@@ -114,12 +111,4 @@ form {
     margin: 0px auto 0px 0px;
     overflow: hidden;
     display: grid;
-}
-
-.visualisations {
-    float: none;
-}
-
-select {
-    width: 100%;
 }
