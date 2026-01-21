@@ -8,7 +8,7 @@ export const blue = ["#f2f0f7", "#cbc9e2", "#9e9ac8", "#756bb1", "#54278f"];
 
 export function addSelectionHeading(svg, name, value) {
     svg.append("text")
-        .attr("class", "SVGText SVGHeading")
+        .attr("class", "heading")
         .attr("x", 650)
         .attr("y", padding)
         .attr("textLength", "550px")
@@ -20,14 +20,14 @@ export function addSelectionHeading(svg, name, value) {
     // .attr("text-anchor", "middle") 
     //.attr("transform", "scale(2)")
     svg.append("text")
-        .attr("class", "SVGText")
+        .attr("class", "headingDescription")
         .attr("x", 700)
         .attr("y", 60)
         .attr("dy", "0em")
         .text(`${value ?? 0} Tonnes`);
 }
 export function removeSelectionHeading() {
-    document.querySelectorAll(".SVGText")
+    document.querySelectorAll(".heading,.headingDescription")
         .forEach((text) => {
             text.remove()
         });
