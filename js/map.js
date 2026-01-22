@@ -119,8 +119,7 @@ function getColour() {
 function setPath(path, colour) {
     svg.selectAll("path")
         .data(geoPathjson.features)
-        .enter()
-        .append("path")
+        .join("path")
         .attr("class", "shape")
         .attr("d", path)
         .style("fill", (d) => setGeoPathFill(d, colour))
@@ -185,16 +184,14 @@ function setCities() {
 
             svg.selectAll("text")
                 .data(city)
-                .enter()
-                .append("text")
+                .join("text")
                 .attr("x", (d) => projection([d.lon, d.lat])[0])
                 .attr("y", (d) => projection([d.lon, d.lat])[1])
                 .text((d) => d.place);
 
             svg.selectAll("circle")
                 .data(city)
-                .enter()
-                .append("circle")
+                .join("circle")
                 .attr("cx", (d) => projection([d.lon, d.lat])[0])
                 .attr("cy", (d) => projection([d.lon, d.lat])[1])
                 .attr("r", 2)

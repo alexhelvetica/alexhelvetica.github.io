@@ -32,15 +32,8 @@ function treeVis() {
 
     svg.selectAll("rect")
         .data(treeHierarchy.leaves())
-        .join(
-            function (enter) {
-                var rect = enter
-                    .append("rect")
-                    .attr("class", "shape");
-                rect.append("title")
-                return rect;
-            },
-        )
+        .join("rect")
+        .attr("class", "shape")
         .attr("x", (d) => d.x0)
         .attr("y", (d) => d.y0)
         .attr("width", (d) => d.x1 - d.x0)
@@ -52,19 +45,13 @@ function treeVis() {
         .on("mouseout", function (event, d) {
             removeSelectionHeading();
         })
-        .select("title")
+        .append("title")
         .text((d) => `This Value is ${d.data.name} ${d.data.value ?? 0} Tonnes`);
 
     svg.selectAll(".categoryTitle")
         .data(treeHierarchy.descendants().filter((d) => d.depth == 1))
-        .join(
-            function (enter) {
-                var title = enter
-                    .append("text")
-                    .attr("class", "categoryTitle")
-                return title;
-            },
-        )
+        .join("text")
+        .attr("class", "categoryTitle")
         .attr("x", (d) => d.x0)
         .attr("y", (d) => d.y0 + 21)
         .text((d) => getCommonName(d.data.name))

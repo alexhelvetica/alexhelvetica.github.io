@@ -71,16 +71,8 @@ function drawLineChart() {
     // Draw the line
     svg.selectAll(".line")
         .data(json.entries())
-        .join(
-            function (enter) {
-                var path = enter
-                    .append("path")
-                    .attr("class", "line");
-
-                path.append("title")
-                return path;
-            },
-        )
+        .join("path")
+        .attr("class", "line")
         .attr("stroke", (d) => getCategoryColour(d[0]))
         .attr("d", (d) => line(d[1])
         )
@@ -90,6 +82,6 @@ function drawLineChart() {
         .on("mouseout", function (event, d) {
             removeSelectionHeading();
         })
-        .select("title")
+        .append("title")
         .text((d) => getCommonName(d[0]));
 }
