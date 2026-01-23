@@ -1,5 +1,4 @@
-import { width, height, padding, addSelectionHeading, removeSelectionHeading, getCommonName, createSvgCanvas, getCategoryColour } from "./common.js";
-import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
+import { d3, width, height, padding, addSelectionHeading, removeSelectionHeading, getCommonName, createSvgCanvas, getCategoryColour } from "./common.js";
 
 //Waste Per Capita vs Total Selector
 const treeYearSelection = document.getElementById("treeYearSelection");
@@ -20,7 +19,7 @@ const treemap = d3.treemap()
 
 export async function createTree() {
     json = await d3.json("tree.json")
-    svg = createSvgCanvas(d3, "treeChart");
+    svg = createSvgCanvas("treeChart");
     treeVis();
 }
 

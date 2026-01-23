@@ -1,5 +1,4 @@
-import { width, height, padding, addSelectionHeading, removeSelectionHeading, getCommonName, createSvgCanvas, getCategoryColour, scaleWasteByPopulation } from "./common.js";
-import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
+import { d3, width, height, padding, addSelectionHeading, removeSelectionHeading, getCommonName, createSvgCanvas, getCategoryColour, scaleWasteByPopulation } from "./common.js";
 
 var json;
 var svg;
@@ -17,12 +16,12 @@ const line = d3.line()
 
 export async function initialiseLineChart() {
     var data = await d3.csv("linev2.csv");
-    json = await d3.group(
+    json = d3.group(
         data,
         (d) => d.Type
     );
 
-    svg = createSvgCanvas(d3, "lineChart");
+    svg = createSvgCanvas("lineChart");
     yAxisScale = getYAxisScale();
     xAxisScale = getXAxisScale();
     drawLineChart();

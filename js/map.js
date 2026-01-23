@@ -1,5 +1,4 @@
-import { width, height, padding, addSelectionHeading, removeSelectionHeading, createSvgCanvas, scaleWasteByPopulation, getCategoryColourGroup } from "./common.js";
-import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
+import { d3, width, height, padding, addSelectionHeading, removeSelectionHeading, createSvgCanvas, scaleWasteByPopulation, getCategoryColourGroup } from "./common.js";
 
 var dataset;
 const yearSelect = document.getElementById("YearSelection");
@@ -44,7 +43,7 @@ function replaceGeoPath() {
 }
 
 function getGeoPathCanvas() {
-    svg = createSvgCanvas(d3, "geoPath");
+    svg = createSvgCanvas("geoPath");
 }
 
 function getGeoPathProjection() {

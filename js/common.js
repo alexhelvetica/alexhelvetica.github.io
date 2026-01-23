@@ -1,3 +1,6 @@
+import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
+export * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
+
 export const width = 1200;
 export const height = 900;
 export const padding = 40;
@@ -51,7 +54,7 @@ export function getCommonName(name) {
     }
 }
 
-export function createSvgCanvas(d3, id) {
+export function createSvgCanvas(id) {
     return d3.select(`#${id}`)
         .append("svg")
         .attr("width", width)
