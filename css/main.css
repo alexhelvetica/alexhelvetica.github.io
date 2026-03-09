@@ -21,14 +21,14 @@ footer {
     margin: auto;
 }
 
-.heading,
-h2 {
+.heading {
     font-size: 48px !important;
     width: 100%;
     margin: 5px 0px;
 }
 
 text {
+    fill: #E8EEE3;
     font-family: "Times New Roman", serif;
     font-size: 22px;
 }
