@@ -29,7 +29,7 @@ wasteType.onchange = replaceGeoPath;
 mapView.onchange = setNewProjection;
 
 export function createMap() {
-    d3.csv("geopath.csv")
+    d3.csv("./geopath.csv")
         .then(function (data) {
             dataset = data;
         });
@@ -71,7 +71,7 @@ function getGeoPath() {
     getGeoPathProjection();
     var path = getGeoPathPath();
 
-    d3.json("LGA_VIC.json")
+    d3.json("./LGA_VIC.json")
         .then(function (json) {
             getGeoPathJson(json);
         }).then(function () {
@@ -177,7 +177,7 @@ function setNewProjection() {
 }
 
 function setCities() {
-    d3.csv("VIC_city.csv")
+    d3.csv("./VIC_city.csv")
         .then(function (data) {
             city = data;
 

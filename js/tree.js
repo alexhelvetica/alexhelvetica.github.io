@@ -18,7 +18,7 @@ const treemap = d3.treemap()
 //.padding(20);
 
 export async function createTree() {
-    json = await d3.json("tree.json")
+    json = await d3.json("./tree.json")
     svg = createSvgCanvas("treeChart");
     treeVis();
 }

@@ -15,7 +15,7 @@ const line = d3.line()
     .y((d) => yAxisScale(scaleWasteByPopulation(d.Value, d.Estimated_Adult_Population, wasteModifier.checked)));
 
 export async function initialiseLineChart() {
-    var data = await d3.csv("linev2.csv");
+    var data = await d3.csv("./linev2.csv");
     json = d3.group(
         data,
         (d) => d.Type
